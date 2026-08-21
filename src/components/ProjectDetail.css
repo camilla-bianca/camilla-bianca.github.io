@@ -1,0 +1,263 @@
+.project-detail-header {
+  border-bottom: 0.5px solid var(--border-default);
+}
+
+.project-detail-header-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-link {
+  color: var(--accent-primary);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.project-detail-logo {
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.project-detail-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.project-hero {
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  margin-top: 28px;
+  background: #3A3A3A;
+  border: 2px dashed #555555;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: #999999;
+}
+
+.project-hero svg {
+  width: 22px;
+  height: 22px;
+}
+
+.project-hero span {
+  font-size: 11px;
+}
+
+.project-body {
+  padding: 36px 0;
+}
+
+.project-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.project-title-row h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.15;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.status {
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-top: 6px;
+  display: inline-block;
+}
+
+.status.shipped {
+  color: var(--status-shipped);
+  background: rgba(95, 232, 150, 0.18);
+}
+
+.status.in-dev {
+  color: var(--status-in-dev);
+  background: rgba(102, 180, 255, 0.2);
+}
+
+.status.pre-prod {
+  color: var(--status-pre-prod);
+  background: rgba(226, 199, 163, 0.18);
+}
+
+.project-origin {
+  font-size: 14px;
+  margin-bottom: 26px;
+}
+
+.project-origin .role-company {
+  color: var(--accent-secondary);
+  font-weight: 500;
+}
+
+.project-origin .separator {
+  color: var(--text-primary);
+  margin: 0 8px;
+}
+
+/* line separator because the one in the font is too short
+.project-origin .separator {
+  display: inline-block;
+  width: 1px;
+  height: 14px;
+  background: var(--text-primary);
+  margin: 0 10px;
+  vertical-align: middle;
+}
+*/
+
+.project-description {
+  font-size: 15px;
+  color: #B5B5B5;
+  line-height: 1.65;
+  max-width: 520px;
+  margin: 0 0 26px;
+}
+
+.metadata-row {
+  display: grid;
+  grid-template-columns: repeat(3, 100px) minmax(0, 1fr);
+  justify-content: start;
+  gap: 24px;
+  padding: 16px 0;
+  border-top: 0.5px solid var(--border-default);
+  border-bottom: 0.5px solid var(--border-default);
+  margin-bottom: 28px;
+}
+
+.metadata-label {
+  color: var(--text-muted);
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+}
+
+.metadata-value {
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.metadata-value.mono {
+  font-family: monospace;
+}
+
+.metadata-value a {
+  color: var(--accent-primary);
+  text-decoration: none;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.gallery-item {
+  height: 110px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #3A3A3A;
+  border: 2px dashed #555555;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: #999999;
+  transition: opacity 0.15s ease;
+}
+
+.gallery-item:hover {
+  opacity: 0.8;
+}
+
+.gallery-item svg {
+  width: 20px;
+  height: 20px;
+}
+
+.gallery-item span {
+  font-size: 10px;
+}
+
+.external-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--accent-primary);
+  color: var(--accent-primary);
+  font-size: 14px;
+  padding: 11px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.project-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 0.5px solid var(--border-default);
+}
+
+.project-nav a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.project-nav .next {
+  margin-left: auto;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.lightbox-content {
+  background: #2E2E2E;
+  border: 2px dashed #555555;
+  width: 80%;
+  max-width: 700px;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: #999;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  color: #ccc;
+  font-size: 14px;
+  cursor: pointer;
+}
