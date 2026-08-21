@@ -25,7 +25,7 @@ function ShowreelModal({ onClose }) {
         </div>
         <div className="showreel-frame-wrap">
           <iframe
-            src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}`}
+            src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&mute=1`}
             title="Showreel"
             allow="autoplay; encrypted-media"
             allowFullScreen
