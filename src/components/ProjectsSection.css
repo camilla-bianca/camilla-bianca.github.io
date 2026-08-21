@@ -1,0 +1,40 @@
+.projects-section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 28px 36px;
+}
+
+.section-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 500;
+  font-family: var(--font-display);
+  color: var(--text-primary);
+}
+
+.toggle-btn {
+  color: var(--accent-primary);
+  font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 640px) {
+  .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

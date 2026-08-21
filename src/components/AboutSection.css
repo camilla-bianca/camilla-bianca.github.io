@@ -1,0 +1,91 @@
+.about-section {
+  background: var(--bg-section-alt);
+}
+
+.about-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 28px 36px;
+}
+
+.about-section .section-title {
+  padding-top: 22px;
+}
+
+.about-section p.intro {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 580px;
+  margin: 0 0 20px;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 36px;
+}
+
+.stat-value {
+  color: var(--accent-secondary);
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.timeline-title {
+  display: block;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: var(--font-display);
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.timeline {
+  border-left: 1.5px solid var(--border-strong);
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-bottom: 40px;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -23px;
+  top: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--bg-page);
+  border: 1.5px solid var(--accent-secondary);
+}
+
+.timeline-role {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.timeline-period {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.timeline-description {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 6px;
+  max-width: 540px;
+}

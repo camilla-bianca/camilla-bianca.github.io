@@ -1,0 +1,30 @@
+.footer {
+  border-top: 0.5px solid var(--border-default);
+}
+
+.footer-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.footer-logo {
+  width: 16px;
+  height: 16px;
+  background: var(--bg-card-image);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+.footer-logo svg {
+  width: 10px;
+  height: 10px;
+}

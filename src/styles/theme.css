@@ -1,0 +1,23 @@
+:root {
+  --bg-page: #232323;
+  --bg-card: #1E1E1E;
+  --bg-card-image: #2E2E2E;
+  --bg-section-alt: #1E1E1E;
+  --border-default: #333333;
+  --border-strong: #3A3A3A;
+
+  --text-primary: #EDEDED;
+--text-secondary: #B5B5B5;
+--text-muted: #909090;
+
+  --accent-primary: #2ED573;
+  --accent-primary-on: #08210F;
+  --accent-secondary: #9985D6;
+
+  --status-shipped: #5FE896;
+  --status-in-dev: #66B4FF;
+  --status-pre-prod: #E2C7A3;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Manrope', -apple-system, sans-serif;
+}
