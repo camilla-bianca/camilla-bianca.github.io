@@ -52,17 +52,17 @@ export const projects = [
     slug: 'game-jam-esempio',
     title: 'Game Jam',
     status: 'shipped',
-    origin: 'personal',
-    role: 'Solo Developer',
-    company: null,
-    companyUrl: null,
+    origin: 'game-jam',
+    role: 'Game Jam',
+    company: 'Nome della Jam',
+    companyUrl: 'https://itch.io/jam/nome-jam',
     stack: 'C# · Unity',
     duration: '48 ore',
-    team: 'Solo',
+    team: '4 persone',
     description: 'Descrizione del progetto.',
     externalLink: { label: 'Guarda su itch.io', url: 'https://itch.io' },
     gallery: [1, 2, 3],
-    },
+  },
 ]
 
 export function getProjectBySlug(slug) {

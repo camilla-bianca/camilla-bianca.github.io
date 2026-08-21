@@ -17,7 +17,10 @@ function getFourthField(project) {
   if (project.origin === 'course') {
     return { label: 'CORSO', value: project.company, url: project.companyUrl }
   }
-  return { label: 'ORIGINE', value: 'Progetto personale', url: null }
+  if (project.origin === 'game-jam') {
+    return { label: 'GAME JAM', value: project.company, url: project.companyUrl }
+  }
+  return { label: 'TIPO', value: 'Progetto Personale', url: null }
 }
 
 function ProjectDetail() {
@@ -67,8 +70,12 @@ function ProjectDetail() {
 
           <div className="project-origin">
             <span className="role-company">{project.role}</span>
-            <span className="separator"> · </span>
-            <span className="role-company">{project.company || 'Solo'}</span>
+            {project.company && (
+              <>
+                <span className="separator"> · </span>
+                <span className="role-company">{project.company}</span>
+              </>
+            )}
           </div>
 
           <p className="project-description">{project.description}</p>

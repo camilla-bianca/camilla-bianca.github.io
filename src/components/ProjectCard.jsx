@@ -10,8 +10,10 @@ const statusLabels = {
 const originIcons = {
   company: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="7" width="20" height="14" rx="2" />
-      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+      <path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+      <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
+      <path d="M12 12l0 .01" />
+      <path d="M3 13a20 20 0 0 0 18 0" />
     </svg>
   ),
   personal: (
@@ -22,8 +24,13 @@ const originIcons = {
   ),
   course: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M22 10 12 5 2 10l10 5 10-5Z" />
-      <path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5" />
+      <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
+      <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
+    </svg>
+  ),
+  'game-jam': (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" />
     </svg>
   ),
 }
