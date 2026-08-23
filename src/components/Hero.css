@@ -20,6 +20,12 @@
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%);
 }
 
+.hero-bg-fallback {
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+}
+
 @media (max-width: 640px) {
   .hero-bg {
     mask-image: none;
