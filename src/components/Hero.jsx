@@ -1,20 +1,46 @@
+import { useEffect, useRef, useState } from 'react'
 import './Hero.css'
 
 function Hero({ onWatchShowreel }) {
+  const videoRef = useRef(null)
+  const [autoplayFailed, setAutoplayFailed] = useState(false)
+
   const scrollToProjects = () => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
   }
 
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    video.muted = true
+    video.defaultMuted = true
+
+    const playPromise = video.play()
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        setAutoplayFailed(true)
+      })
+    }
+  }, [])
+
   return (
     <div className="hero">
-      <video
-        className="hero-bg"
-        src="/videos/video-hero.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
+      {autoplayFailed ? (
+        <div
+          className="hero-bg hero-bg-fallback"
+          style={{ backgroundImage: 'url(/videos/hero-poster.jpg)' }}
+        />
+      ) : (
+        <video
+          ref={videoRef}
+          className="hero-bg"
+          src="/videos/video-hero.mp4"
+          muted
+          loop
+          playsInline
+        />
+      )}
 
       <div className="hero-scrim"></div>
 
