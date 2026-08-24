@@ -24,3 +24,26 @@
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Manrope', -apple-system, sans-serif;
 }
+
+.btn-primary {
+  background: var(--accent-primary);
+  color: var(--accent-primary-on);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 22px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-secondary {
+  border: 1px solid var(--accent-primary);
+  color: var(--accent-primary);
+  font-size: 14px;
+  padding: 12px 22px;
+  border-radius: 6px;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}

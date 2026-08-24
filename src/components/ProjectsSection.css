@@ -7,7 +7,7 @@
 .section-title-row {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   margin-bottom: 16px;
 }
 
@@ -16,15 +16,6 @@
   font-weight: 500;
   font-family: var(--font-display);
   color: var(--text-primary);
-}
-
-.toggle-btn {
-  color: var(--accent-primary);
-  font-size: 14px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
 }
 
 .project-grid {
@@ -37,4 +28,22 @@
   .project-grid {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+.toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 160px;
+}
+
+.toggle-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.toggle-icon.open {
+  transform: rotate(180deg);
 }
