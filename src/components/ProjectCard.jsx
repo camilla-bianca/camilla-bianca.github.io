@@ -1,11 +1,6 @@
 import { Link } from 'react-router-dom'
+import { engineLabels } from '../data/projects'
 import './ProjectCard.css'
-
-const statusLabels = {
-  shipped: 'SHIPPED',
-  'in-dev': 'IN DEVELOPMENT',
-  'pre-prod': 'PRE-PRODUCTION',
-}
 
 const originIcons = {
   company: (
@@ -36,8 +31,6 @@ const originIcons = {
 }
 
 function ProjectCard({ project }) {
-  const originLabel = project.company || project.role
-
   return (
     <Link to={`/progetti/${project.slug}`} className="card">
       <div className="card-media">
@@ -60,11 +53,11 @@ function ProjectCard({ project }) {
       <div className="card-body">
         <div className="card-title-row">
           <span className="card-title">{project.title}</span>
-          <span className={`status ${project.status}`}>{statusLabels[project.status]}</span>
+          <span className={`engine-badge ${project.engine}`}>{engineLabels[project.engine]}</span>
         </div>
         <div className="card-origin">
           {originIcons[project.origin]}
-          {originLabel}
+          {project.role}{project.company ? ` | ${project.company}` : ''}
         </div>
         <div className="card-stack">{project.stack}</div>
       </div>

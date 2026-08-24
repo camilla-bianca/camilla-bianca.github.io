@@ -1,12 +1,12 @@
 // Projects ordered from the oldest to the newest
-// status: 'shipped' | 'in-dev' | 'pre-prod'
+// engine: 'unity' | 'unreal'
 // origin: 'company' | 'personal' | 'course'
 
 export const projects = [
   {
     slug: 'progetto-aziendale',
     title: 'Progetto aziendale',
-    status: 'shipped',
+    engine: 'unity',
     origin: 'company',
     role: 'Gameplay Programmer',
     company: 'One-O-One Games',
@@ -21,7 +21,7 @@ export const projects = [
   {
     slug: 'progetto-personale',
     title: 'Progetto personale',
-    status: 'in-dev',
+    engine: 'unreal',
     origin: 'personal',
     role: 'Solo Developer',
     company: null,
@@ -36,7 +36,7 @@ export const projects = [
   {
     slug: 'progetto-corso',
     title: 'Progetto corso',
-    status: 'pre-prod',
+    engine: 'unity',
     origin: 'course',
     role: 'Gameplay Programmer',
     company: 'Nome Corso',
@@ -51,7 +51,7 @@ export const projects = [
   {
     slug: 'game-jam-esempio',
     title: 'Game Jam',
-    status: 'shipped',
+    engine: 'unity',
     origin: 'game-jam',
     role: 'Gameplay Programmer',
     company: 'Nome della Jam',
@@ -66,7 +66,7 @@ export const projects = [
   {
     slug: 'progetto-corso 2',
     title: 'Progetto Test 32',
-    status: 'shipped',
+    engine: 'unreal',
     origin: 'course',
     role: 'Gameplay Programmer',
     company: 'Nome del Corso',
@@ -90,4 +90,9 @@ export function getAdjacentProjects(slug) {
     previous: index > 0 ? projects[index - 1] : null,
     next: index < projects.length - 1 ? projects[index + 1] : null,
   }
+}
+
+export const engineLabels = {
+  unity: 'UNITY',
+  unreal: 'UNREAL',
 }

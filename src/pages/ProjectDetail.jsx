@@ -1,14 +1,8 @@
 import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { getProjectBySlug, getAdjacentProjects } from '../data/projects'
+import { getProjectBySlug, getAdjacentProjects, engineLabels } from '../data/projects'
 import Header from '../components/Header'
 import '../components/ProjectDetail.css'
-
-const statusLabels = {
-  shipped: 'SHIPPED',
-  'in-dev': 'IN DEVELOPMENT',
-  'pre-prod': 'PRE-PRODUCTION',
-}
 
 function getFourthField(project) {
   if (project.origin === 'company') {
@@ -65,7 +59,7 @@ function ProjectDetail() {
         <div className="project-body">
           <div className="project-title-row">
             <h1>{project.title}</h1>
-            <span className={`status ${project.status}`}>{statusLabels[project.status]}</span>
+            <span className={`engine-badge ${project.engine}`}>{engineLabels[project.engine]}</span>
           </div>
 
           <div className="project-origin">

@@ -47,7 +47,7 @@
   align-items: center;
   justify-content: center;
   opacity: 0;
-  color: var(--status-shipped);
+  color: var(--preview-accent);
   gap: 5px;
   font-size: 10px;
 }
@@ -82,27 +82,23 @@
   color: var(--text-primary);
 }
 
-.status {
+.engine-badge {
   font-size: 11px;
   letter-spacing: 0.03em;
   padding: 3px 9px;
   border-radius: 4px;
   display: inline-block;
+  font-family: monospace;
 }
 
-.status.shipped {
-  color: var(--status-shipped);
-  background: rgba(95, 232, 150, 0.18);
+.engine-badge.unity {
+  color: var(--engine-unity);
+  background: var(--engine-unity-bg);
 }
 
-.status.in-dev {
-  color: var(--status-in-dev);
-  background: rgba(102, 180, 255, 0.2);
-}
-
-.status.pre-prod {
-  color: var(--status-pre-prod);
-  background: rgba(226, 199, 163, 0.18);
+.engine-badge.unreal {
+  color: var(--engine-unreal);
+  background: var(--engine-unreal-bg);
 }
 
 .card-origin {
