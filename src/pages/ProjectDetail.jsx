@@ -37,7 +37,7 @@ function ProjectHero({ hero, title }) {
         src={hero.src}
         title={title}
         allowFullScreen
-        style={{ aspectRatio: `${hero.width} / ${hero.height}` }}
+        //style={{ aspectRatio: `${hero.width} / ${hero.height}` }}
       />
     )
   }
