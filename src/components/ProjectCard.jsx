@@ -57,7 +57,10 @@ function ProjectCard({ project }) {
         </div>
         <div className="card-origin">
           {originIcons[project.origin]}
-          {project.role}{project.company ? ` | ${project.company}` : ''}
+          <div className="card-origin-text">
+            <div>{project.role}</div>
+            {project.company && <div className="card-origin-company">{project.company}</div>}
+          </div>
         </div>
         <div className="card-stack">{project.stack}</div>
       </div>

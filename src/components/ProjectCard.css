@@ -5,7 +5,8 @@
   position: relative;
   overflow: hidden;
   text-decoration: none;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-media {
@@ -67,6 +68,9 @@
 
 .card-body {
   padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .card-title-row {
@@ -103,7 +107,7 @@
 
 .card-origin {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 5px;
   color: var(--text-secondary);
   font-size: 13px;
@@ -113,11 +117,23 @@
   width: 15px;
   height: 15px;
   flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.card-origin-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.card-origin-company {
+  color: var(--accent-secondary);
 }
 
 .card-stack {
   font-family: monospace;
   color: var(--text-muted);
   font-size: 13px;
-  margin-top: 6px;
+  margin-top: auto;
+  padding-top: 6px;
 }
