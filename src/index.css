@@ -10,3 +10,7 @@ body {
   color: var(--text-primary);
   font-family: var(--font-body);
 }
+
+#hero, #projects, #about, #contact {
+  scroll-margin-top: 65px;
+}

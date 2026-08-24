@@ -25,7 +25,7 @@ function Hero({ onWatchShowreel }) {
   }, [])
 
   return (
-    <div className="hero">
+    <div className="hero" id="hero">
       {autoplayFailed ? (
         <div
           className="hero-bg hero-bg-fallback"
