@@ -1,4 +1,5 @@
 import { stats, workExperience, education } from '../data/experience'
+import SkillsSection from './SkillsSection'
 import './AboutSection.css'
 
 function TimelineList({ items }) {
@@ -32,6 +33,8 @@ function AboutSection() {
             </div>
           ))}
         </div>
+
+        <SkillsSection />
 
         <span className="timeline-title">Esperienza</span>
         <TimelineList items={workExperience} />

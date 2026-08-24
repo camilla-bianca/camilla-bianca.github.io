@@ -23,6 +23,9 @@
 
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Manrope', -apple-system, sans-serif;
+
+  --skill-badge-bg: #E8E6E0;
+  --skill-badge-icon: #232323;
 }
 
 .btn-primary {
