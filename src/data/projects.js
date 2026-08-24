@@ -1,23 +1,32 @@
 // Projects ordered from the oldest to the newest
+
 // engine: 'unity' | 'unreal'
 // origin: 'company' | 'personal' | 'course'
+// hero.type: 'image' | 'video' | 'embed'
 
 export const projects = [
   {
-    slug: 'progetto-aziendale',
-    title: 'Progetto aziendale',
-    engine: 'unity',
+    slug: 'curse-of-the-crimson-stag',
+    title: 'Curse of the Crimson Stag',
+    engine: 'unreal',
     origin: 'company',
-    role: 'Gameplay Programmer',
+    role: 'Gameplay Programmer · QA',
     company: 'One-O-One Games',
-    companyUrl: 'https://example.com',
-    stack: 'C# · Unity',
-    duration: '8 mesi',
-    team: '6 persone',
-    description: 'Descrizione del progetto.',
-    externalLink: { label: 'Guarda su Steam', url: 'https://store.steampowered.com' },
-    gallery: [1, 2, 3],
-    },
+    companyUrl: 'https://www.oneoonegames.com/',
+    stack: 'C++ · Unreal',
+    duration: '2 anni',
+    team: '10+ persone',
+    description: 'Curse of the Crimson Stag è un thriller incentrato sulla trama in cui esplori il labile confine tra eventi soprannaturali e tragedie del passato. Scopri il motivo per cui il lussuoso Whiteroot Hotel è stato abbandonato. I miti locali parlano di uno spirito collerico chiamato il Cervo Cremisi...',
+    externalLink: { label: 'Guarda su Steam', url: 'https://store.steampowered.com/app/4669670/Curse_of_the_Crimson_Stag/' },
+    hero: { type: 'image', src: '/images/projects/curse-of-the-crimson-stag/gallery-1.jpg' },
+    cover: '/images/projects/curse-of-the-crimson-stag/gallery-1.jpg',
+    preview: '/videos/video-hero.mp4',
+    gallery: [
+      '/images/projects/curse-of-the-crimson-stag/gallery-1.jpg',
+      '/images/projects/curse-of-the-crimson-stag/gallery-2.jpg',
+      '/images/projects/curse-of-the-crimson-stag/gallery-3.jpg',
+    ],
+  },
   {
     slug: 'progetto-personale',
     title: 'Progetto personale',
@@ -31,6 +40,9 @@ export const projects = [
     team: 'Solo',
     description: 'Descrizione del progetto.',
     externalLink: { label: 'Guarda su itch.io', url: 'https://itch.io' },
+    hero: { type: 'video', src: '/videos/video-hero.mp4' },
+    cover: '/images/projects/curse-of-the-crimson-stag/gallery-2.jpg',
+    preview: '/videos/video-hero.mp4',
     gallery: [1, 2, 3],
   },
   {
@@ -46,6 +58,9 @@ export const projects = [
     team: 'Solo',
     description: 'Descrizione del progetto.',
     externalLink: { label: 'Guarda su itch.io', url: 'https://itch.io' },
+    hero: { type: 'embed', src: 'https://itch.io/embed-upload/5475631?color=232323', width: 960, height: 660 },
+    cover: '/images/projects/curse-of-the-crimson-stag/gallery-3.jpg',
+    preview: '/videos/video-hero.mp4',
     gallery: [1, 2, 3],
   },
   {
@@ -61,6 +76,9 @@ export const projects = [
     team: '4 persone',
     description: 'Descrizione del progetto.',
     externalLink: { label: 'Guarda su itch.io', url: 'https://itch.io' },
+    hero: { type: 'image', src: '/images/projects/curse-of-the-crimson-stag/gallery-1.jpg' },
+    cover: '/images/projects/curse-of-the-crimson-stag/gallery-1.jpg',
+    preview: '/videos/video-hero.mp4',
     gallery: [1, 2, 3],
   },
   {
@@ -76,6 +94,9 @@ export const projects = [
     team: '6 persone',
     description: 'Descrizione del progetto.',
     externalLink: { label: 'Guarda su itch.io', url: 'https://itch.io' },
+    hero: { type: 'image', src: '/images/projects/curse-of-the-crimson-stag/gallery-2.jpg' },
+    cover: '/images/projects/curse-of-the-crimson-stag/gallery-2.jpg',
+    preview: '/videos/video-hero.mp4',
     gallery: [1, 2, 3, 4],
   },
 ]

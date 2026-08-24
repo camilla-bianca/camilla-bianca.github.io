@@ -17,6 +17,34 @@ function getFourthField(project) {
   return { label: 'TIPO', value: 'Progetto Personale', url: null }
 }
 
+function ProjectHero({ hero, title }) {
+  if (hero.type === 'video') {
+    return (
+      <video
+        src={hero.src}
+        autoPlay
+        loop
+        muted
+        playsInline
+        controls
+      />
+    )
+  }
+
+  if (hero.type === 'embed') {
+    return (
+      <iframe
+        src={hero.src}
+        title={title}
+        allowFullScreen
+        style={{ aspectRatio: `${hero.width} / ${hero.height}` }}
+      />
+    )
+  }
+
+  return <img src={hero.src} alt={title} />
+}
+
 function ProjectDetail() {
   const { slug } = useParams()
   const project = getProjectBySlug(slug)
@@ -48,12 +76,7 @@ function ProjectDetail() {
 
       <div className="project-detail-wrap">
         <div className="project-hero">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="3" y="3" width="18" height="18" rx="2" />
-            <circle cx="8.5" cy="8.5" r="1.5" />
-            <path d="m21 15-5-5L5 21" />
-          </svg>
-          <span>video, embed webGL o immagine</span>
+          <ProjectHero hero={project.hero} title={project.title} />
         </div>
 
         <div className="project-body">
@@ -102,14 +125,9 @@ function ProjectDetail() {
           </div>
 
           <div className="gallery">
-            {project.gallery.map((item, i) => (
+            {project.gallery.map((image, i) => (
               <div className="gallery-item" key={i} onClick={() => setLightboxIndex(i)}>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="3" y="3" width="18" height="18" rx="2" />
-                  <circle cx="8.5" cy="8.5" r="1.5" />
-                  <path d="m21 15-5-5L5 21" />
-                </svg>
-                <span>immagine</span>
+                <img src={image} alt={`${project.title} - immagine ${i + 1}`} />
               </div>
             ))}
           </div>
@@ -131,9 +149,11 @@ function ProjectDetail() {
 
       {lightboxIndex !== null && (
         <div className="lightbox" onClick={() => setLightboxIndex(null)}>
-          <div className="lightbox-content">
-            <span>immagine {lightboxIndex + 1} ingrandita</span>
-          </div>
+          <img
+            src={project.gallery[lightboxIndex]}
+            alt={`${project.title} - immagine ${lightboxIndex + 1} ingrandita`}
+            className="lightbox-content"
+          />
           <span className="lightbox-close">Chiudi ✕</span>
         </div>
       )}
