@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { getProjectBySlug, getAdjacentProjects, engineLabels } from '../data/projects'
+import { useMediaQuery } from '../hooks/useMediaQuery'
 import Header from '../components/Header'
 import '../components/ProjectDetail.css'
 
@@ -17,7 +18,92 @@ function getFourthField(project) {
   return { label: 'TIPO', value: 'Progetto Personale', url: null }
 }
 
-function ProjectHero({ hero, title }) {
+function EmbedHero({ hero, title }) {
+  const wrapperRef = useRef(null)
+  const [scale, setScale] = useState(1)
+
+  useEffect(() => {
+    const wrapper = wrapperRef.current
+    if (!wrapper) return
+
+    const updateScale = () => {
+      setScale(wrapper.offsetWidth / hero.width)
+    }
+
+    updateScale()
+    const observer = new ResizeObserver(updateScale)
+    observer.observe(wrapper)
+    return () => observer.disconnect()
+  }, [hero.width])
+
+  return (
+    <div ref={wrapperRef} className="embed-wrapper">
+      <iframe
+        src={hero.src}
+        title={title}
+        width={hero.width}
+        height={hero.height}
+        allowFullScreen
+        scrolling="no"
+        style={{
+          transform: `scale(${scale})`,
+          transformOrigin: 'top left',
+          imageRendering: 'pixelated',
+        }}
+      />
+    </div>
+  )
+}
+
+function EmbedFallback({ project }) {
+  return (
+    <div
+      className="embed-fallback"
+      style={{ backgroundImage: `url(${project.cover})` }}
+    >
+      <div className="embed-fallback-overlay">
+        <p>Gioca su desktop</p>
+        <a
+          href={project.externalLink.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="external-cta"
+        >
+          Vai su itch.io ↗
+        </a>
+      </div>
+    </div>
+  )
+}
+
+function EmbedClickToPlay({ hero, title, project }) {
+  const [activated, setActivated] = useState(false)
+
+  if (activated) {
+    return <EmbedHero hero={hero} title={title} />
+  }
+
+  return (
+    <div className="embed-click-overlay" onClick={() => setActivated(true)}>
+      <div
+        className="embed-click-image"
+        style={{ backgroundImage: `url(${project.cover})` }}
+      />
+      <div className="embed-click-scrim" />
+      <button className="play-button" aria-label="Avvia il gioco">
+        <svg viewBox="0 0 24 24">
+          <polygon points="9,6 9,18 18,12" />
+        </svg>
+      </button>
+    </div>
+  )
+}
+
+function ProjectHero({ hero, title, project, isMobile }) {
+  if (hero.type === 'embed' && isMobile) {
+    return <EmbedFallback project={project} />
+  }
+
   if (hero.type === 'video') {
     return (
       <video
@@ -32,14 +118,7 @@ function ProjectHero({ hero, title }) {
   }
 
   if (hero.type === 'embed') {
-    return (
-      <iframe
-        src={hero.src}
-        title={title}
-        allowFullScreen
-        style={{ aspectRatio: `${hero.width} / ${hero.height}` }}
-      />
-    )
+    return <EmbedClickToPlay hero={hero} title={title} project={project} />
   }
 
   return <img src={hero.src} alt={title} />
@@ -49,6 +128,8 @@ function ProjectDetail() {
   const { slug } = useParams()
   const project = getProjectBySlug(slug)
   const [lightboxIndex, setLightboxIndex] = useState(null)
+
+  const isMobile = useMediaQuery('(max-width: 640px)')
 
   if (!project) {
     return (
@@ -75,8 +156,15 @@ function ProjectDetail() {
       </header>
 
       <div className="project-detail-wrap">
-        <div className="project-hero">
-          <ProjectHero hero={project.hero} title={project.title} />
+        <div
+          className="project-hero"
+          style={
+            project.hero.type === 'embed' && !isMobile
+              ? { aspectRatio: `${project.hero.width} / ${project.hero.visibleHeight ?? project.hero.height}` }
+              : undefined
+          }
+        >
+          <ProjectHero hero={project.hero} title={project.title} project={project} isMobile={isMobile} />
         </div>
 
         <div className="project-body">

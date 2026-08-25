@@ -58,7 +58,7 @@ export const projects = [
     team: 'Solo',
     description: 'Descrizione del progetto.',
     externalLink: { label: 'Guarda su itch.io', url: 'https://itch.io' },
-    hero: { type: 'embed', src: 'https://itch.io/embed-upload/5475631?color=232323', width: 960, height: 660 },
+    hero: { type: 'embed', src: 'https://itch.io/embed-upload/5475631?color=232323', width: 960, height: 640, visibleHeight: 590  },
     cover: '/images/projects/curse-of-the-crimson-stag/gallery-3.jpg',
     preview: '/videos/video-hero.mp4',
     gallery: [1, 2, 3],
