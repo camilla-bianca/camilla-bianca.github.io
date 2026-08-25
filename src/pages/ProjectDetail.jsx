@@ -76,26 +76,48 @@ function EmbedFallback({ project }) {
   )
 }
 
-function EmbedClickToPlay({ hero, title, project }) {
+function ClickToPlayOverlay({ cover, children }) {
   const [activated, setActivated] = useState(false)
 
   if (activated) {
-    return <EmbedHero hero={hero} title={title} />
+    return children
   }
 
   return (
     <div className="embed-click-overlay" onClick={() => setActivated(true)}>
       <div
         className="embed-click-image"
-        style={{ backgroundImage: `url(${project.cover})` }}
+        style={{ backgroundImage: `url(${cover})` }}
       />
       <div className="embed-click-scrim" />
-      <button className="play-button" aria-label="Avvia il gioco">
+      <button className="play-button" aria-label="Avvia il video">
         <svg viewBox="0 0 24 24">
           <polygon points="9,6 9,18 18,12" />
         </svg>
       </button>
     </div>
+  )
+}
+
+function EmbedClickToPlay({ hero, title, project }) {
+  return (
+    <ClickToPlayOverlay cover={project.cover}>
+      <EmbedHero hero={hero} title={title} />
+    </ClickToPlayOverlay>
+  )
+}
+
+function YoutubeHero({ hero, title, project }) {
+  return (
+    <ClickToPlayOverlay cover={project.cover}>
+      <iframe
+        className="youtube-iframe"
+        src={`https://www.youtube.com/embed/${hero.videoId}?autoplay=1`}
+        title={title}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    </ClickToPlayOverlay>
   )
 }
 
@@ -119,6 +141,10 @@ function ProjectHero({ hero, title, project, isMobile }) {
 
   if (hero.type === 'embed') {
     return <EmbedClickToPlay hero={hero} title={title} project={project} />
+  }
+
+  if (hero.type === 'youtube') {
+    return <YoutubeHero hero={hero} title={title} project={project} />
   }
 
   return <img src={hero.src} alt={title} />

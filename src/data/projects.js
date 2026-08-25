@@ -2,7 +2,7 @@
 
 // engine: 'unity' | 'unreal'
 // origin: 'company' | 'personal' | 'course'
-// hero.type: 'image' | 'video' | 'embed'
+// hero.type: 'image' | 'video' | 'embed' | 'youtube'
 
 export const projects = [
   {
@@ -94,7 +94,7 @@ export const projects = [
     team: '6 persone',
     description: 'Descrizione del progetto.',
     externalLink: { label: 'Guarda su itch.io', url: 'https://itch.io' },
-    hero: { type: 'image', src: '/images/projects/curse-of-the-crimson-stag/gallery-2.jpg' },
+    hero: { type: 'youtube', videoId: 'dQw4w9WgXcQ' },
     cover: '/images/projects/curse-of-the-crimson-stag/gallery-2.jpg',
     preview: '/videos/video-hero.mp4',
     gallery: [1, 2, 3, 4],
