@@ -10,7 +10,7 @@ export const projects = [
     title: 'Curse of the Crimson Stag',
     engine: 'unreal',
     origin: 'company',
-    role: 'Gameplay Programmer · QA',
+    role: 'Gameplay Programmer',
     company: 'One-O-One Games',
     companyUrl: 'https://www.oneoonegames.com/',
     stack: 'C++ · Unreal',

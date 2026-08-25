@@ -3,19 +3,12 @@ import { useParams, Link } from 'react-router-dom'
 import { getProjectBySlug, getAdjacentProjects, engineLabels } from '../data/projects'
 import { useMediaQuery } from '../hooks/useMediaQuery'
 import { IoGameControllerOutline } from 'react-icons/io5'
-import { GrGamepad } from "react-icons/gr";
-import { BiSolidMoviePlay, BiSolidMovie, BiGame, } from 'react-icons/bi'
 import { TbMovie } from "react-icons/tb";
 import Header from '../components/Header'
 import '../components/ProjectDetail.css'
 
-// const gameBadgeIcon = <IoGameControllerOutline />
-// const gameBadgeIcon = <GrGamepad />
-const gameBadgeIcon = <BiGame />
-
-// const videoBadgeIcon = <BiSolidMoviePlay />
-// const videoBadgeIcon = <TbMovie />
-const videoBadgeIcon = <BiSolidMovie />
+const gameBadgeIcon = <IoGameControllerOutline />
+const videoBadgeIcon = <TbMovie />
 
 function getFourthField(project) {
   if (project.origin === 'company') {
