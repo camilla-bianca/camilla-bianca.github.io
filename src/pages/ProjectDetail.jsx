@@ -67,7 +67,7 @@ function EmbedFallback({ project }) {
           href={project.externalLink.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="external-cta"
+          className="btn-secondary external-cta"
         >
           Vai su itch.io ↗
         </a>
@@ -154,6 +154,18 @@ function ProjectDetail() {
   const { slug } = useParams()
   const project = getProjectBySlug(slug)
   const [lightboxIndex, setLightboxIndex] = useState(null)
+
+  useEffect(() => {
+  if (lightboxIndex !== null) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = ''
+  }
+
+  return () => {
+    document.body.style.overflow = ''
+  }
+}, [lightboxIndex])
 
   const isMobile = useMediaQuery('(max-width: 640px)')
 
@@ -242,11 +254,12 @@ function ProjectDetail() {
             {project.gallery.map((image, i) => (
               <div className="gallery-item" key={i} onClick={() => setLightboxIndex(i)}>
                 <img src={image} alt={`${project.title} - immagine ${i + 1}`} />
+                <div className="gallery-item-scrim" />
               </div>
             ))}
           </div>
 
-          <a href={project.externalLink.url} className="external-cta" target="_blank" rel="noopener noreferrer">
+          <a href={project.externalLink.url} className="btn-secondary external-cta" target="_blank" rel="noopener noreferrer">
             {project.externalLink.label} ↗
           </a>
 

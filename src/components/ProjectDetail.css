@@ -188,7 +188,7 @@
   border-radius: 6px;
   cursor: pointer;
   overflow: hidden;
-  transition: opacity 0.15s ease;
+  position: relative;
 }
 
 .gallery-item img {
@@ -196,21 +196,29 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.4s ease;
 }
 
-.gallery-item:hover {
-  opacity: 0.8;
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.gallery-item-scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  transition: background 0.2s ease;
+}
+
+.gallery-item:hover .gallery-item-scrim {
+  background: rgba(0, 0, 0, 0);
+}
 }
 
 .external-cta {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  border: 1px solid var(--accent-primary);
-  color: var(--accent-primary);
-  font-size: 14px;
-  padding: 11px 20px;
-  border-radius: 6px;
   text-decoration: none;
 }
 
