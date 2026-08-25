@@ -2,8 +2,20 @@ import { useState, useEffect, useRef } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { getProjectBySlug, getAdjacentProjects, engineLabels } from '../data/projects'
 import { useMediaQuery } from '../hooks/useMediaQuery'
+import { IoGameControllerOutline } from 'react-icons/io5'
+import { GrGamepad } from "react-icons/gr";
+import { BiSolidMoviePlay, BiSolidMovie, BiGame, } from 'react-icons/bi'
+import { TbMovie } from "react-icons/tb";
 import Header from '../components/Header'
 import '../components/ProjectDetail.css'
+
+// const gameBadgeIcon = <IoGameControllerOutline />
+// const gameBadgeIcon = <GrGamepad />
+const gameBadgeIcon = <BiGame />
+
+// const videoBadgeIcon = <BiSolidMoviePlay />
+// const videoBadgeIcon = <TbMovie />
+const videoBadgeIcon = <BiSolidMovie />
 
 function getFourthField(project) {
   if (project.origin === 'company') {
@@ -76,7 +88,7 @@ function EmbedFallback({ project }) {
   )
 }
 
-function ClickToPlayOverlay({ cover, children }) {
+function ClickToPlayOverlay({ cover, badgeIcon, children }) {
   const [activated, setActivated] = useState(false)
 
   if (activated) {
@@ -90,19 +102,41 @@ function ClickToPlayOverlay({ cover, children }) {
         style={{ backgroundImage: `url(${cover})` }}
       />
       <div className="embed-click-scrim" />
-      <button className="play-button" aria-label="Avvia il video">
+      <button className="play-button" aria-label="Avvia">
         <svg viewBox="0 0 24 24">
           <polygon points="9,6 9,18 18,12" />
         </svg>
       </button>
+      {badgeIcon && <div className="type-badge">{badgeIcon}</div>}
     </div>
   )
 }
 
 function EmbedClickToPlay({ hero, title, project }) {
   return (
-    <ClickToPlayOverlay cover={project.cover}>
+    <ClickToPlayOverlay
+      cover={project.cover}
+      badgeIcon={gameBadgeIcon}
+    >
       <EmbedHero hero={hero} title={title} />
+    </ClickToPlayOverlay>
+  )
+}
+
+function VideoClickToPlay({ hero, title, project }) {
+  return (
+    <ClickToPlayOverlay
+      cover={project.cover}
+      badgeIcon={videoBadgeIcon}
+    >
+      <video
+        src={hero.src}
+        title={title}
+        autoPlay
+        loop
+        playsInline
+        controls
+      />
     </ClickToPlayOverlay>
   )
 }
@@ -127,16 +161,7 @@ function ProjectHero({ hero, title, project, isMobile }) {
   }
 
   if (hero.type === 'video') {
-    return (
-      <video
-        src={hero.src}
-        autoPlay
-        loop
-        muted
-        playsInline
-        controls
-      />
-    )
+    return <VideoClickToPlay hero={hero} title={title} project={project} />
   }
 
   if (hero.type === 'embed') {
