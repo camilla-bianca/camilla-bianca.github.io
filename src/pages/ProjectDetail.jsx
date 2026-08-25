@@ -143,7 +143,7 @@ function VideoClickToPlay({ hero, title, project }) {
 
 function YoutubeHero({ hero, title, project }) {
   return (
-    <ClickToPlayOverlay cover={project.cover}>
+    <ClickToPlayOverlay cover={project.cover} badgeIcon={videoBadgeIcon}>
       <iframe
         className="youtube-iframe"
         src={`https://www.youtube.com/embed/${hero.videoId}?autoplay=1`}

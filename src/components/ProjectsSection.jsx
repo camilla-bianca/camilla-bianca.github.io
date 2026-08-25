@@ -1,11 +1,16 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ProjectCard from './ProjectCard'
 import { projects } from '../data/projects'
 import { useMediaQuery } from '../hooks/useMediaQuery'
 import './ProjectsSection.css'
 
 function ProjectsSection() {
-  const [showAll, setShowAll] = useState(false)
+  const [showAll, setShowAll] = useState(() => sessionStorage.getItem('projects-show-all') === 'true')
+
+  useEffect(() => {
+  sessionStorage.setItem('projects-show-all', showAll)
+}, [showAll])
+
   const isMobile = useMediaQuery('(max-width: 640px)')
   const defaultCount = isMobile ? 2 : 3
 
