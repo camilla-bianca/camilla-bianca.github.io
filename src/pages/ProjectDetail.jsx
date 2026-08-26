@@ -49,7 +49,7 @@ function ProjectDetail() {
             <LuLayoutGrid />
             <span>Torna ai progetti</span>
           </Link>
-          <Link to="/" className="project-detail-logo">Nome Cognome</Link>
+          <Link to="/" className="project-detail-logo">Camilla Bianca</Link>
         </div>
       </header>
 
