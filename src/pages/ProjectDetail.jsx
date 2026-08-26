@@ -4,6 +4,7 @@ import { getProjectBySlug, getAdjacentProjects, engineLabels } from '../data/pro
 import { useMediaQuery } from '../hooks/useMediaQuery'
 import { IoGameControllerOutline } from 'react-icons/io5'
 import { TbMovie } from "react-icons/tb";
+import { LuLayoutGrid } from "react-icons/lu";
 import Header from '../components/Header'
 import '../components/ProjectDetail.css'
 
@@ -206,7 +207,10 @@ function ProjectDetail() {
     <div>
       <header className="project-detail-header">
         <div className="project-detail-header-inner">
-          <Link to="/#projects" className="back-link">Torna ai progetti</Link>
+          <Link to="/#projects" className="back-link">
+            <LuLayoutGrid />
+            <span>Torna ai progetti</span>
+          </Link>
           <Link to="/" className="project-detail-logo">Nome Cognome</Link>
         </div>
       </header>
@@ -247,12 +251,12 @@ function ProjectDetail() {
               <div className="metadata-value mono">{project.stack}</div>
             </div>
             <div>
-              <div className="metadata-label">DURATA</div>
+              <div className="metadata-label">PERIODO</div>
               <div className="metadata-value">{project.duration}</div>
             </div>
             <div>
-              <div className="metadata-label">TEAM</div>
-              <div className="metadata-value">{project.team}</div>
+              <div className="metadata-label">PIATTAFORMA</div>
+              <div className="metadata-value">{project.platform}</div>
             </div>
             <div>
               <div className="metadata-label">{fourthField.label}</div>

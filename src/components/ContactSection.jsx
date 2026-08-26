@@ -10,12 +10,18 @@ function ContactSection() {
       </p>
 
       <div className="contact-list">
-        {contactInfo.map((item) => (
-          <div className="contact-row" key={item.label}>
-            <span className="contact-label">{item.label}</span>
-            <a href={item.href} className="contact-value clickable">{item.value}</a>
-          </div>
-        ))}
+        {contactInfo.map((item) => {
+          const Icon = item.icon
+          return (
+            <div className="contact-row" key={item.label}>
+              <span className="contact-label">
+                <Icon className="contact-label-icon" aria-hidden="true" />
+                {item.label}
+              </span>
+              <a href={item.href} className="contact-value clickable">{item.value}</a>
+            </div>
+          )
+        })}
       </div>
 
       <a href={cvUrl} className="btn-cv" download>
