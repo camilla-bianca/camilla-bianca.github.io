@@ -201,6 +201,7 @@ export const projects = [
       '/images/projects/cubethon/gallery-1.jpg',
       '/images/projects/cubethon/gallery-2.jpg',
       '/images/projects/cubethon/gallery-3.jpg',
+      '/images/projects/cubethon/gallery-4.jpg',
     ],
   },
   {
