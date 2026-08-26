@@ -15,7 +15,7 @@ export const projects = [
     companyUrl: 'https://www.oneoonegames.com/',
     stack: 'C++ · Unreal',
     duration: '2 anni',
-    platform: 'PC',
+    platform: 'PC', // TODO: verifica piattaforme reali del progetto
     description: 'Curse of the Crimson Stag è un thriller incentrato sulla trama in cui esplori il labile confine tra eventi soprannaturali e tragedie del passato. Scopri il motivo per cui il lussuoso Whiteroot Hotel è stato abbandonato. I miti locali parlano di uno spirito collerico chiamato il Cervo Cremisi...',
     externalLink: { label: 'Guarda su Steam', url: 'https://store.steampowered.com/app/4669670/Curse_of_the_Crimson_Stag/' },
     hero: { type: 'image', src: '/images/projects/curse-of-the-crimson-stag/gallery-1.jpg' },
@@ -37,7 +37,7 @@ export const projects = [
     companyUrl: null,
     stack: 'C++ · Unreal',
     duration: 'In corso',
-    platform: 'PC',
+    platform: 'PC', // TODO: verifica piattaforme reali del progetto
     description: 'Descrizione del progetto.',
     externalLink: { label: 'Guarda su itch.io', url: 'https://itch.io' },
     hero: { type: 'video', src: '/videos/video-hero.mp4' },
@@ -55,7 +55,7 @@ export const projects = [
     companyUrl: 'https://example.com',
     stack: 'C# · Unity',
     duration: '3 mesi',
-    platform: 'PC',
+    platform: 'PC', // TODO: verifica piattaforme reali del progetto
     description: 'Descrizione del progetto.',
     externalLink: { label: 'Guarda su itch.io', url: 'https://itch.io' },
     hero: { type: 'embed', src: 'https://itch.io/embed-upload/5475631?color=232323', width: 960, height: 640, visibleHeight: 590  },
@@ -73,7 +73,7 @@ export const projects = [
     companyUrl: 'https://itch.io/jam/nome-jam',
     stack: 'C# · Unity',
     duration: '48 ore',
-    platform: 'PC',
+    platform: 'PC', // TODO: verifica piattaforme reali del progetto
     description: 'Descrizione del progetto.',
     externalLink: { label: 'Guarda su itch.io', url: 'https://itch.io' },
     hero: { type: 'image', src: '/images/projects/curse-of-the-crimson-stag/gallery-1.jpg' },
@@ -91,7 +91,7 @@ export const projects = [
     companyUrl: 'https://itch.io/jam/nome-jam',
     stack: 'C++ · Unreal',
     duration: '4 mesi',
-    platform: 'PC',
+    platform: 'PC', // TODO: verifica piattaforme reali del progetto
     description: 'Descrizione del progetto.',
     externalLink: { label: 'Guarda su itch.io', url: 'https://itch.io' },
     hero: { type: 'youtube', videoId: 'CgECediqz7U' },
@@ -111,6 +111,21 @@ export function getAdjacentProjects(slug) {
     previous: index > 0 ? projects[index - 1] : null,
     next: index < projects.length - 1 ? projects[index + 1] : null,
   }
+}
+
+// Fourth metadata field on the project detail page: label and value change
+// depending on where the project comes from (company, course, game jam, personal).
+export function getFourthField(project) {
+  if (project.origin === 'company') {
+    return { label: 'AZIENDA', value: project.company, url: project.companyUrl }
+  }
+  if (project.origin === 'course') {
+    return { label: 'CORSO', value: project.company, url: project.companyUrl }
+  }
+  if (project.origin === 'game-jam') {
+    return { label: 'GAME JAM', value: project.company, url: project.companyUrl }
+  }
+  return { label: 'TIPO', value: 'Progetto Personale', url: null }
 }
 
 export const engineLabels = {
