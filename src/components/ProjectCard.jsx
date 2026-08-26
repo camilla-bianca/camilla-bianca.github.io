@@ -81,7 +81,7 @@ function ProjectCard({ project }) {
             {project.company && <div className="card-origin-company">{project.company}</div>}
           </div>
         </div>
-        <div className="card-stack">{project.stack}</div>
+        <div className="card-platform">{project.platform}</div>
       </div>
     </Link>
   )

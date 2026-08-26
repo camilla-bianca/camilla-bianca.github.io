@@ -26,6 +26,11 @@
   margin-bottom: 36px;
 }
 
+.stats > div {
+  width: 100px;
+  flex-shrink: 0;
+}
+
 .stat-value {
   color: var(--accent-secondary);
   font-size: 26px;

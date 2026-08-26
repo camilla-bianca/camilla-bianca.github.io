@@ -86,7 +86,7 @@ function ProjectDetail() {
           <div className="metadata-row">
             <div>
               <div className="metadata-label">STACK</div>
-              <div className="metadata-value mono">{project.stack}</div>
+              <div className="metadata-value">{project.stack}</div>
             </div>
             <div>
               <div className="metadata-label">PERIODO</div>

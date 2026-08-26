@@ -97,8 +97,8 @@
   color: var(--accent-secondary);
 }
 
-.card-stack {
-  font-family: monospace;
+.card-platform {
+  /*font-family: monospace;*/
   color: var(--text-muted);
   font-size: 13px;
   margin-top: auto;

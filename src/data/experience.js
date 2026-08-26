@@ -1,7 +1,7 @@
 export const stats = [
-  { value: '2+', label: 'anni nel game dev' },
+  { value: '2+', label: 'anni di game dev' },
   { value: '3+', label: "anni nell'IT" },
-  { value: '12', label: 'progetti completati' },
+  { value: '12', label: 'progetti' },
 ]
 
 export const workExperience = [
@@ -33,7 +33,7 @@ export const workExperience = [
     role: 'Consulente Microsoft CRM',
     company: 'Cluster Reply',
     period: 'Mag 2020 → Set 2021',
-    description: "Sviluppo logica custom front-end/back-end (C#, JavaScript) su piattaforme CRM (Microsoft Dynamics 365 e Power Platform).",
+    description: "Sviluppo logica custom front-end/back-end (C# e JavaScript) su piattaforme CRM (Microsoft Dynamics 365 e Power Platform).",
   },
   {
     role: 'Sistemista di rete',
