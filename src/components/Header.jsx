@@ -68,13 +68,13 @@ function Header() {
   return (
     <header className="header">
       <div className="header-inner">
-        <Link to="/" className="logo">Nome Cognome</Link>
+        <Link to="/" className="logo">Camilla Bianca</Link>
 
         <nav className="nav">
           <a href="#hero" className={linkClass('hero')} onClick={() => handleNavClick('hero')}>Home</a>
           <a href="#projects" className={linkClass('projects')} onClick={() => handleNavClick('projects')}>Progetti</a>
-          <a href="#about" className={linkClass('about')} onClick={() => handleNavClick('about')}>About</a>
-          <a href="#contact" className={linkClass('contact')} onClick={() => handleNavClick('contact')}>Contact</a>
+          <a href="#about" className={linkClass('about')} onClick={() => handleNavClick('about')}>Chi sono</a>
+          <a href="#contact" className={linkClass('contact')} onClick={() => handleNavClick('contact')}>Contatti</a>
           <button className="lang-switch">
             <span>IT</span>
             <span style={{ color: 'var(--text-muted)' }}>/</span>
@@ -105,8 +105,8 @@ function Header() {
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
         <a href="#hero" className={linkClass('hero')} onClick={() => handleNavClick('hero')}>Home</a>
         <a href="#projects" className={linkClass('projects')} onClick={() => handleNavClick('projects')}>Progetti</a>
-        <a href="#about" className={linkClass('about')} onClick={() => handleNavClick('about')}>About</a>
-        <a href="#contact" className={linkClass('contact')} onClick={() => handleNavClick('contact')}>Contact</a>
+        <a href="#about" className={linkClass('about')} onClick={() => handleNavClick('about')}>Chi sono</a>
+        <a href="#contact" className={linkClass('contact')} onClick={() => handleNavClick('contact')}>Contatti</a>
         <button className="lang-switch">
           <span>IT</span>
           <span style={{ color: 'var(--text-muted)' }}>/</span>

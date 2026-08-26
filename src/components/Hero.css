@@ -49,8 +49,6 @@
   /*background: linear-gradient(to right, rgba(15,15,15,0.6) 0%, rgba(15,15,15,0.2) 60%);*/
 }
 
-
-
 .hero-content-wrap {
   position: relative;
   width: 100%;
@@ -62,6 +60,17 @@
   position: relative;
   padding: 52px 28px;
   max-width: 580px;
+}
+
+/* Small label above the title, showing the role. */
+.hero-eyebrow {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-secondary);
+  margin: 0 0 12px;
 }
 
 .hero-content h1 {

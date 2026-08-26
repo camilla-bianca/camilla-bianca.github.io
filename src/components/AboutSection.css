@@ -77,9 +77,16 @@
   color: var(--text-primary);
 }
 
+.timeline-company {
+  font-size: 13px;
+  color: var(--accent-secondary);
+  margin-top: 2px;
+}
+
 .timeline-period {
   color: var(--text-muted);
   font-size: 14px;
+  margin-top: 4px;
 }
 
 .timeline-description {

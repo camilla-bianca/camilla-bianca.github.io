@@ -6,7 +6,7 @@ function ContactSection() {
     <section className="contact-section" id="contact">
       <span className="section-title">Contatti</span>
       <p className="contact-intro">
-        Aperta a ruoli come Game Programmer, anche (e soprattutto) da remoto.
+        Aperta a ruoli come Game Programmer, preferibilmente da remoto.
       </p>
 
       <div className="contact-list">

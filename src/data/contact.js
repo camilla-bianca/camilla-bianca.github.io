@@ -6,32 +6,32 @@ import { ImBehance2 } from "react-icons/im";
 export const contactInfo = [
   {
     label: 'Email',
-    value: 'nome@email.com',
-    href: 'mailto:nome@email.com',
+    value: 'cam.bianca@outlook.com',
+    href: 'mailto:cam.bianca@outlook.com',
     icon: FiMail,
   },
   {
     label: 'LinkedIn',
-    value: 'linkedin.com/in/nomecognome',
-    href: 'https://linkedin.com/in/nomecognome',
+    value: 'linkedin.com/in/camilla-bianca',
+    href: 'https://www.linkedin.com/in/camilla-bianca/',
     icon: GrLinkedin,
   },
   {
     label: 'GitHub',
-    value: 'github.com/nomecognome',
-    href: 'https://github.com/nomecognome',
+    value: 'github.com/camilla-bianca',
+    href: 'https://github.com/camilla-bianca',
     icon: SiGithub,
   },
   {
-    label: 'itch.io',
-    value: 'nomecognome.itch.io',
-    href: 'https://nomecognome.itch.io',
+    label: 'itch',
+    value: 'camilla-bianca.itch.io',
+    href: 'https://camilla-bianca.itch.io/',
     icon: SiItchdotio,
   },
   {
     label: 'Behance',
-    value: 'behance.net/nomecognome',
-    href: 'https://behance.net/nomecognome',
+    value: 'behance.net/camilla-bianca',
+    href: 'https://www.behance.net/camilla-bianca',
     icon: ImBehance2,
   },
 ]

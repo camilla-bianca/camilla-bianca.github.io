@@ -8,6 +8,9 @@ function TimelineList({ items }) {
       {items.map((item, i) => (
         <div className="timeline-item" key={i}>
           <div className="timeline-role">{item.role}</div>
+          {item.company && (
+            <div className="timeline-company">{item.company}</div>
+          )}
           <div className="timeline-period">{item.period}</div>
           <div className="timeline-description">{item.description}</div>
         </div>
@@ -22,7 +25,9 @@ function AboutSection() {
       <div className="about-inner">
         <span className="section-title">Chi sono</span>
         <p className="intro">
-          Game Programmer con base in C# e C++, con esperienza sia su titoli shippati che su prototipi indie costruiti da sola o in team.
+          Programmo videogiochi in Unreal Engine e Unity, tra C++, Blueprint e C#. 
+          <br/>
+          Un percorso iniziato dallo sviluppo software generalista, proseguito su titoli pubblicati in team e su prototipi indie realizzati sia in autonomia che in collaborazione.
         </p>
 
         <div className="stats">
