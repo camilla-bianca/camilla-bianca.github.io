@@ -12,13 +12,20 @@ function ContactSection() {
       <div className="contact-list">
         {contactInfo.map((item) => {
           const Icon = item.icon
+          const isExternal = !item.href.startsWith('mailto:')
           return (
             <div className="contact-row" key={item.label}>
               <span className="contact-label">
                 <Icon className="contact-label-icon" aria-hidden="true" />
                 {item.label}
               </span>
-              <a href={item.href} className="contact-value clickable">{item.value}</a>
+              <a
+                href={item.href}
+                className="contact-value clickable"
+                {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              >
+                {item.value}
+              </a>
             </div>
           )
         })}

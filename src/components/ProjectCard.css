@@ -41,9 +41,6 @@
 }
 
 .card-title-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
   margin-bottom: 6px;
 }
 
@@ -60,6 +57,7 @@
   border-radius: 4px;
   display: inline-block;
   font-family: monospace;
+  flex-shrink: 0;
 }
 
 .engine-badge.unity {
@@ -97,10 +95,20 @@
   color: var(--accent-secondary);
 }
 
-.card-platform {
-  /*font-family: monospace;*/
-  color: var(--text-muted);
-  font-size: 13px;
+.card-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: auto;
   padding-top: 6px;
+  gap: 8px;
+}
+
+.card-platform {
+  color: var(--text-muted);
+  font-size: 13px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

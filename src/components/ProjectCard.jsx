@@ -72,7 +72,6 @@ function ProjectCard({ project }) {
       <div className="card-body">
         <div className="card-title-row">
           <span className="card-title">{project.title}</span>
-          <span className={`engine-badge ${project.engine}`}>{engineLabels[project.engine]}</span>
         </div>
         <div className="card-origin">
           {originIcons[project.origin]}
@@ -81,7 +80,10 @@ function ProjectCard({ project }) {
             {project.company && <div className="card-origin-company">{project.company}</div>}
           </div>
         </div>
-        <div className="card-platform">{project.platform}</div>
+        <div className="card-footer-row">
+          <span className="card-platform">{project.platform}</span>
+          <span className={`engine-badge ${project.engine}`}>{engineLabels[project.engine]}</span>
+        </div>
       </div>
     </Link>
   )

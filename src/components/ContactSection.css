@@ -23,7 +23,8 @@
 .contact-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 12px;
   padding-bottom: 12px;
   border-bottom: 0.5px solid var(--border-default);
 }
@@ -36,6 +37,7 @@
   font-size: 12px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  flex-shrink: 0;
 }
 
 .contact-label-icon {
@@ -48,6 +50,9 @@
   color: var(--text-primary);
   font-size: 14px;
   text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  text-align: right;
 }
 
 .contact-value.clickable {

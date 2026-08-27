@@ -27,8 +27,8 @@
 }
 
 .stats > div {
-  width: 100px;
-  flex-shrink: 0;
+  min-width: 0;
+  flex: 0 1 100px;
 }
 
 .stat-value {
