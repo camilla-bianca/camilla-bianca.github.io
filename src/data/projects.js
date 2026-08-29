@@ -20,7 +20,7 @@ export const projects = [
     externalLink: { label: 'Guarda su Steam', url: 'https://store.steampowered.com/app/4669670/Curse_of_the_Crimson_Stag/' },
     hero: { type: 'youtube', videoId: 'PL7cK2nvVZI' },
     cover: '/images/projects/curse-of-the-crimson-stag/gallery-1.jpg',
-    preview: '/videos/video-hero.mp4',
+    preview: '/videos/previews/preview-tcs.mp4',
     gallery: [
       '/images/projects/curse-of-the-crimson-stag/gallery-1.jpg',
       '/images/projects/curse-of-the-crimson-stag/gallery-2.jpg',
@@ -42,7 +42,7 @@ export const projects = [
     externalLink: { label: 'Guarda sul sito', url: 'https://www.miniclip.com/games/golf-battle' },
     hero: { type: 'youtube', videoId: 'iU-9jAWHeig' },
     cover: '/images/projects/golf-battle/gallery-1.jpg',
-    preview: '/videos/video-hero.mp4',
+    preview: '/videos/previews/preview-gb.mp4',
     gallery: [
       '/images/projects/golf-battle/gallery-1.jpg',
       '/images/projects/golf-battle/gallery-2.jpg',
@@ -64,7 +64,7 @@ export const projects = [
     externalLink: { label: 'Guarda su Steam', url: 'https://store.steampowered.com/app/3919440/Project_ReMind/' },
     hero: { type: 'youtube', videoId: 'amHyGmdQ1NM' },
     cover: '/images/projects/project-remind/gallery-1.jpg',
-    preview: '/videos/video-hero.mp4',
+    preview: '/videos/previews/preview-pr.mp4',
     gallery: [
       '/images/projects/project-remind/gallery-1.jpg',
       '/images/projects/project-remind/gallery-2.jpg',
@@ -86,7 +86,7 @@ export const projects = [
     externalLink: { label: 'Guarda su itch.io', url: 'https://camilla-bianca.itch.io/call-of-ilaria' },
     hero: { type: 'youtube', videoId: '-Ze_h8uSDOo' },
     cover: '/images/projects/call-of-ilaria/gallery-1.jpg',
-    preview: '/videos/video-hero.mp4',
+    preview: '/videos/previews/preview-coi.mp4',
     gallery: [
       '/images/projects/call-of-ilaria/gallery-1.jpg',
       '/images/projects/call-of-ilaria/gallery-2.jpg',
@@ -108,7 +108,7 @@ export const projects = [
     externalLink: { label: 'Guarda su itch.io', url: 'https://daniele-fasano.itch.io/timetorest' },
     hero: { type: 'image', src: '/images/projects/time-to-rest/gallery-1.jpg' },
     cover: '/images/projects/time-to-rest/gallery-1.jpg',
-    preview: '/videos/video-hero.mp4',
+    preview: '/videos/previews/preview-ttr.mp4',
     gallery: [
       '/images/projects/time-to-rest/gallery-1.jpg',
       '/images/projects/time-to-rest/gallery-2.jpg',
@@ -130,7 +130,7 @@ export const projects = [
     externalLink: { label: 'Guarda su itch.io', url: 'https://camilla-bianca.itch.io/bosque' },
     hero: { type: 'youtube', videoId: 'JFvAPJgv0ZI' },
     cover: '/images/projects/bosque/gallery-1.jpg',
-    preview: '/videos/video-hero.mp4',
+    preview: '/videos/previews/preview-bosque.mp4',
     gallery: [
       '/images/projects/bosque/gallery-1.jpg',
       '/images/projects/bosque/gallery-2.jpg',
