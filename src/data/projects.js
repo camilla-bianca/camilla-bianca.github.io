@@ -152,7 +152,7 @@ export const projects = [
     externalLink: { label: 'Guarda su itch.io', url: 'https://camilla-bianca.itch.io/astrofox' },
     hero: { type: 'youtube', videoId: 'aKSP9HECTCU' },
     cover: '/images/projects/af/img-1.jpg',
-    preview: '/videos/video-hero.mp4',
+    preview: '/videos/previews/preview-af.mp4',
     gallery: [
       '/images/projects/af/img-1.jpg',
       '/images/projects/af/img-2.jpg',
@@ -173,12 +173,12 @@ export const projects = [
     description: "Games Bond è un'esperienza di gamification volta a sensibilizzare i giovani in età pre-lavorativa sulla cybersecurity, sviluppata in Unity e C# assieme ai compagni del corso Game Developer dell'ITS Lazio Digital. Nel gioco, affronterai sfide come l'eliminazione di email di phishing e la difesa di dati sensibili. Un percorso coinvolgente e divertente per apprendere come muoverti in sicurezza nel mondo digitale! ***2° POSTO!!***",
     externalLink: { label: 'Guarda su itch.io', url: 'https://camilla-bianca.itch.io/games-bond' },
     hero: { type: 'youtube', videoId: 'BvZ9ox9Xo5I' },
-    cover: '/images/projects/gb-its/img-1.jpg',
-    preview: '/videos/video-hero.mp4',
+    cover: '/images/projects/gbnd/img-1.jpg',
+    preview: '/videos/previews/preview-gbnd.mp4',
     gallery: [
-      '/images/projects/gb-its/img-1.jpg',
-      '/images/projects/gb-its/img-2.jpg',
-      '/images/projects/gb-its/img-3.jpg',
+      '/images/projects/gbnd/img-1.jpg',
+      '/images/projects/gbnd/img-2.jpg',
+      '/images/projects/gbnd/img-3.jpg',
     ],
   },
   {
@@ -196,7 +196,7 @@ export const projects = [
     externalLink: { label: 'Guarda su itch.io', url: 'https://camilla-bianca.itch.io/cubethon' },
     hero: { type: 'embed', src: 'https://itch.io/embed-upload/6894832?color=232323', width: 960, height: 640, visibleHeight: 590  },
     cover: '/images/projects/ct/img-1.jpg',
-    preview: '/videos/video-hero.mp4',
+    preview: '/videos/previews/preview-ct.mp4',
     gallery: [
       '/images/projects/ct/img-1.jpg',
       '/images/projects/ct/img-2.jpg',
@@ -219,7 +219,7 @@ export const projects = [
     externalLink: { label: 'Guarda su itch.io', url: 'https://camilla-bianca.itch.io/space-debris-3d' },
     hero: { type: 'embed', src: 'https://itch.io/embed-upload/6651420?color=232323', width: 960, height: 640, visibleHeight: 590  },
     cover: '/images/projects/sd3/img-1.jpg',
-    preview: '/videos/video-hero.mp4',
+    preview: '/videos/previews/preview-sd3.mp4',
     gallery: [
       '/images/projects/sd3/img-1.jpg',
       '/images/projects/sd3/img-2.jpg',
@@ -241,7 +241,7 @@ export const projects = [
     externalLink: { label: 'Guarda su itch.io', url: 'https://camilla-bianca.itch.io/space-debris-2' },
     hero: { type: 'embed', src: 'https://itch.io/embed-upload/5800334?color=232323', width: 960, height: 640, visibleHeight: 590  },
     cover: '/images/projects/sd2/img-1.jpg',
-    preview: '/videos/video-hero.mp4',
+    preview: '/videos/previews/preview-sd2.mp4',
     gallery: [
       '/images/projects/sd2/img-1.jpg',
       '/images/projects/sd2/img-2.jpg',
@@ -262,12 +262,12 @@ export const projects = [
     description: " Space Debris è un 2D Shooter, il mio primo progetto in assoluto realizzato in Unity e C#. Pilota un'astronave attraverso ondate di nemici spaziali, mettendo alla prova le tue abilità di sopravvivenza. Utilizza agili manovre per evitare i proiettili e sconfiggi i nemici per avanzare nei livelli!",
     externalLink: { label: 'Guarda su itch.io', url: 'https://camilla-bianca.itch.io/space-debris' },
     hero: { type: 'embed', src: 'https://itch.io/embed-upload/5475631?color=232323', width: 960, height: 640, visibleHeight: 590  },
-    cover: '/images/projects/sd/img-1.jpg',
-    preview: '/videos/video-hero.mp4',
+    cover: '/images/projects/sd1/img-1.jpg',
+    preview: '/videos/previews/preview-sd1.mp4',
     gallery: [
-      '/images/projects/sd/img-1.jpg',
-      '/images/projects/sd/img-2.jpg',
-      '/images/projects/sd/img-3.jpg',
+      '/images/projects/sd1/img-1.jpg',
+      '/images/projects/sd1/img-2.jpg',
+      '/images/projects/sd1/img-3.jpg',
     ],
   },
 ]
