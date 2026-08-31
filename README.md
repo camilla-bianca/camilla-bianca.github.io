@@ -2,7 +2,7 @@
 
 Personal portfolio website for a Game Programmer (me!), built to showcase professional and personal game development projects.
 
-🔗 **Live site:** [camilla-bianca.github.io](https://camilla-bianca.github.io) *(coming soon)*
+🔗 **Live site:** [camilla-bianca.github.io](https://camilla-bianca.github.io)
 
 ## Built with
 
