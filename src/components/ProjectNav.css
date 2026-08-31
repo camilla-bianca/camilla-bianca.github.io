@@ -1,0 +1,26 @@
+.project-nav-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg-page);
+  border-top: 0.5px solid var(--border-default);
+  z-index: 5;
+}
+
+.project-nav-fixed-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-nav-fixed-inner a {
+  font-size: 14px;
+}
+
+.project-nav-fixed-inner .next {
+  margin-left: auto;
+}

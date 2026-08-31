@@ -5,6 +5,7 @@ import { useMediaQuery } from '../hooks/useMediaQuery'
 import { LuLayoutGrid } from 'react-icons/lu'
 import Header from '../components/Header'
 import ProjectHero from '../components/ProjectHero'
+import ProjectNav from '../components/ProjectNav'
 import '../components/ProjectDetail.css'
 
 function ProjectDetail() {
@@ -85,7 +86,7 @@ function ProjectDetail() {
 
           <div className="metadata-row">
             <div>
-              <div className="metadata-label">STACK</div>
+              <div className="metadata-label">TECNOLOGIE</div>
               <div className="metadata-value">{project.stack}</div>
             </div>
             <div>
@@ -122,17 +123,10 @@ function ProjectDetail() {
           <a href={project.externalLink.url} className="btn-secondary external-cta" target="_blank" rel="noopener noreferrer">
             <span className="btn-text">{project.externalLink.label} ↗</span>
           </a>
-
-          <div className="project-nav">
-            {previous ? (
-              <Link to={`/progetti/${previous.slug}`} className="link-accent">← Progetto precedente</Link>
-            ) : <span></span>}
-            {next && (
-              <Link to={`/progetti/${next.slug}`} className="next link-accent">Progetto successivo →</Link>
-            )}
-          </div>
         </div>
       </div>
+
+      <ProjectNav previous={previous} next={next} />
 
       {lightboxIndex !== null && (
         <div className="lightbox" onClick={() => setLightboxIndex(null)}>

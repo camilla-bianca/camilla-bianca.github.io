@@ -58,7 +58,7 @@
 }
 
 .project-body {
-  padding: 36px 0;
+  padding: 36px 0 90px;
 }
 
 .project-title-row {
@@ -209,23 +209,6 @@
   text-decoration: none;
   min-width: 190px;
   white-space: nowrap;
-}
-
-.project-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 36px;
-  padding-top: 24px;
-  border-top: 0.5px solid var(--border-default);
-}
-
-.project-nav a {
-  font-size: 14px;
-}
-
-.project-nav .next {
-  margin-left: auto;
 }
 
 .lightbox {
