@@ -2,11 +2,23 @@ import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { getProjectBySlug, getAdjacentProjects, getFourthField, engineLabels } from '../data/projects'
 import { useMediaQuery } from '../hooks/useMediaQuery'
-import { LuLayoutGrid } from 'react-icons/lu'
+import { LuLayoutGrid, LuMonitor } from 'react-icons/lu'
+import { SiApple, SiAndroid } from 'react-icons/si'
+import { IoLogoAndroid } from "react-icons/io";
+import { BsNintendoSwitch, BsPlaystation, BsXbox } from "react-icons/bs";
 import Header from '../components/Header'
 import ProjectHero from '../components/ProjectHero'
 import ProjectNav from '../components/ProjectNav'
 import '../components/ProjectDetail.css'
+
+const platformIconMap = {
+  pc: { Icon: LuMonitor, size: 18 },
+  ps5: { Icon: BsPlaystation, size: 18 },
+  xbox: { Icon: BsXbox },
+  switch: { Icon: BsNintendoSwitch},
+  ios: { Icon: SiApple, size: 18 },
+  android: { Icon: SiAndroid, size: 18 },
+}
 
 function ProjectDetail() {
   const { slug } = useParams()
@@ -90,12 +102,27 @@ function ProjectDetail() {
               <div className="metadata-value">{project.stack}</div>
             </div>
             <div>
-              <div className="metadata-label">PERIODO</div>
-              <div className="metadata-value">{project.duration}</div>
+              <div className="metadata-label">PIATTAFORME</div>
+              {project.platforms?.length > 0 && (
+                <div className="platform-icons">
+                  {project.platforms.map((key) => {
+                    const entry = platformIconMap[key]
+                    if (!entry) return null
+                    const { Icon, size } = entry
+                    return (
+                      <Icon
+                        key={key}
+                        title={key}
+                        style={size ? { width: size, height: size } : undefined}
+                      />
+                    )
+                  })}
+                </div>
+              )}
             </div>
             <div>
-              <div className="metadata-label">PIATTAFORMA</div>
-              <div className="metadata-value">{project.platform}</div>
+              <div className="metadata-label">PERIODO</div>
+              <div className="metadata-value">{project.duration}</div>
             </div>
             <div>
               <div className="metadata-label">{fourthField.label}</div>
