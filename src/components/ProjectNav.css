@@ -32,6 +32,10 @@
   text-align: right;
 }
 
+.nav-link::after {
+  content: none !important;
+}
+
 .nav-label {
   font-size: 11px;
   color: var(--text-muted);
@@ -44,4 +48,23 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
+  width: fit-content;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.nav-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent-primary);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover .nav-title::after {
+  width: 100%;
 }
