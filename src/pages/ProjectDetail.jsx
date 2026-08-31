@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import { useParams, Link } from 'react-router-dom'
 import { getProjectBySlug, getAdjacentProjects, getFourthField, engineLabels } from '../data/projects'
 import { useMediaQuery } from '../hooks/useMediaQuery'
@@ -24,18 +25,34 @@ function ProjectDetail() {
   const { slug } = useParams()
   const project = getProjectBySlug(slug)
   const [lightboxIndex, setLightboxIndex] = useState(null)
+  const [touchStart, setTouchStart] = useState(null)
+  const [touchDelta, setTouchDelta] = useState(0)
+  const [isSwiping, setIsSwiping] = useState(false)
+
+  const isLightboxOpen = lightboxIndex !== null
 
   useEffect(() => {
-    if (lightboxIndex !== null) {
-      document.body.style.overflow = 'hidden'
+    if (isLightboxOpen) {
+      const scrollY = window.scrollY
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${scrollY}px`
+      document.body.style.width = '100%'
     } else {
-      document.body.style.overflow = ''
+      const scrollY = document.body.style.top
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || '0', 10) * -1)
+      }
     }
 
     return () => {
-      document.body.style.overflow = ''
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
     }
-  }, [lightboxIndex])
+  }, [isLightboxOpen])
 
   useEffect(() => {
     if (lightboxIndex === null) return
@@ -46,7 +63,7 @@ function ProjectDetail() {
     }
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [lightboxIndex, project.gallery.length])
+  }, [lightboxIndex, project?.gallery?.length])
 
   const isMobile = useMediaQuery('(max-width: 640px)')
 
@@ -73,6 +90,54 @@ function ProjectDetail() {
   const goToNextImage = (e) => {
     e.stopPropagation()
     setLightboxIndex((i) => (i < project.gallery.length - 1 ? i + 1 : i))
+  }
+
+  const handleTouchStart = (e) => {
+    setTouchStart({ x: e.touches[0].clientX, y: e.touches[0].clientY })
+    setTouchDelta(0)
+    setIsSwiping(false)
+  }
+
+  const handleTouchMove = (e) => {
+    if (!touchStart) return
+    const dx = e.touches[0].clientX - touchStart.x
+    const dy = e.touches[0].clientY - touchStart.y
+
+    if (!isSwiping) {
+      if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 10) {
+        setIsSwiping(true)
+      } else {
+        return
+      }
+    }
+
+    const atFirstImage = lightboxIndex === 0
+    const atLastImage = lightboxIndex === project.gallery.length - 1
+
+    let clampedDx = dx
+    if (atFirstImage && dx > 0) clampedDx = dx * 0.3
+    if (atLastImage && dx < 0) clampedDx = dx * 0.3
+
+    setTouchDelta(clampedDx)
+  }
+
+  const handleTouchEnd = () => {
+    const minSwipeDistance = 50
+
+    if (touchDelta < -minSwipeDistance && lightboxIndex < project.gallery.length - 1) {
+      setLightboxIndex(lightboxIndex + 1)
+    } else if (touchDelta > minSwipeDistance && lightboxIndex > 0) {
+      setLightboxIndex(lightboxIndex - 1)
+    }
+
+    setTouchStart(null)
+    setTouchDelta(0)
+    setIsSwiping(false)
+  }
+
+  const trackStyle = {
+    transform: `translateX(calc(-${lightboxIndex ?? 0} * 100% + ${touchDelta}px))`,
+    transition: isSwiping ? 'none' : 'transform 0.3s ease',
   }
 
   return (
@@ -176,25 +241,41 @@ function ProjectDetail() {
 
       <ProjectNav previous={previous} next={next} />
 
-      {lightboxIndex !== null && (
-        <div className="lightbox" onClick={() => setLightboxIndex(null)}>
+      {lightboxIndex !== null && createPortal(
+        <div className="lightbox" onClick={() => { if (!isSwiping) setLightboxIndex(null) }}>
           {lightboxIndex > 0 && (
             <button className="lightbox-nav prev" onClick={goToPrevImage} aria-label="Immagine precedente">
               <LuChevronLeft />
             </button>
           )}
-          <img
-            src={project.gallery[lightboxIndex]}
-            alt={`${project.title} - immagine ${lightboxIndex + 1} ingrandita`}
-            className="lightbox-content"
-          />
+
+          <div
+            className="lightbox-viewport"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            <div className="lightbox-track" style={trackStyle}>
+              {project.gallery.map((image, i) => (
+                <div className="lightbox-slide" key={i}>
+                  <img
+                    src={image}
+                    alt={`${project.title} - immagine ${i + 1} ingrandita`}
+                    className="lightbox-content"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
           {lightboxIndex < project.gallery.length - 1 && (
             <button className="lightbox-nav next" onClick={goToNextImage} aria-label="Immagine successiva">
               <LuChevronRight />
             </button>
           )}
           <span className="lightbox-close">Chiudi ✕</span>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   )
