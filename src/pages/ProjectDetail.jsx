@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { getProjectBySlug, getAdjacentProjects, getFourthField, engineLabels } from '../data/projects'
 import { useMediaQuery } from '../hooks/useMediaQuery'
-import { LuLayoutGrid, LuMonitor } from 'react-icons/lu'
+import { LuLayoutGrid, LuMonitor, LuChevronLeft, LuChevronRight } from 'react-icons/lu'
 import { SiApple, SiAndroid } from 'react-icons/si'
 import { IoLogoAndroid } from "react-icons/io";
 import { BsNintendoSwitch, BsPlaystation, BsXbox } from "react-icons/bs";
@@ -37,6 +37,17 @@ function ProjectDetail() {
     }
   }, [lightboxIndex])
 
+  useEffect(() => {
+    if (lightboxIndex === null) return
+    const handleKeyDown = (e) => {
+      if (e.key === 'ArrowLeft' && lightboxIndex > 0) setLightboxIndex(lightboxIndex - 1)
+      if (e.key === 'ArrowRight' && lightboxIndex < project.gallery.length - 1) setLightboxIndex(lightboxIndex + 1)
+      if (e.key === 'Escape') setLightboxIndex(null)
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [lightboxIndex, project.gallery.length])
+
   const isMobile = useMediaQuery('(max-width: 640px)')
 
   if (!project) {
@@ -53,6 +64,16 @@ function ProjectDetail() {
 
   const { previous, next } = getAdjacentProjects(slug)
   const fourthField = getFourthField(project)
+
+  const goToPrevImage = (e) => {
+    e.stopPropagation()
+    setLightboxIndex((i) => (i > 0 ? i - 1 : i))
+  }
+
+  const goToNextImage = (e) => {
+    e.stopPropagation()
+    setLightboxIndex((i) => (i < project.gallery.length - 1 ? i + 1 : i))
+  }
 
   return (
     <div>
@@ -157,11 +178,21 @@ function ProjectDetail() {
 
       {lightboxIndex !== null && (
         <div className="lightbox" onClick={() => setLightboxIndex(null)}>
+          {lightboxIndex > 0 && (
+            <button className="lightbox-nav prev" onClick={goToPrevImage} aria-label="Immagine precedente">
+              <LuChevronLeft />
+            </button>
+          )}
           <img
             src={project.gallery[lightboxIndex]}
             alt={`${project.title} - immagine ${lightboxIndex + 1} ingrandita`}
             className="lightbox-content"
           />
+          {lightboxIndex < project.gallery.length - 1 && (
+            <button className="lightbox-nav next" onClick={goToNextImage} aria-label="Immagine successiva">
+              <LuChevronRight />
+            </button>
+          )}
           <span className="lightbox-close">Chiudi ✕</span>
         </div>
       )}
