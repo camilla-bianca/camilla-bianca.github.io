@@ -6,10 +6,16 @@ function ProjectNav({ previous, next }) {
     <div className="project-nav-fixed">
       <div className="project-nav-fixed-inner">
         {previous ? (
-          <Link to={`/progetti/${previous.slug}`} className="link-accent">← Progetto precedente</Link>
+          <Link to={`/progetti/${previous.slug}`} className="nav-link prev link-accent">
+            <span className="nav-label">← Precedente</span>
+            <span className="nav-title">{previous.title}</span>
+          </Link>
         ) : <span></span>}
         {next && (
-          <Link to={`/progetti/${next.slug}`} className="next link-accent">Progetto successivo →</Link>
+          <Link to={`/progetti/${next.slug}`} className="nav-link next link-accent">
+            <span className="nav-label">Successivo →</span>
+            <span className="nav-title">{next.title}</span>
+          </Link>
         )}
       </div>
     </div>

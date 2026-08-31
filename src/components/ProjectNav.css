@@ -11,16 +11,37 @@
 .project-nav-fixed-inner {
   max-width: 720px;
   margin: 0 auto;
-  padding: 16px 28px;
+  padding: 12px 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
 }
 
-.project-nav-fixed-inner a {
-  font-size: 14px;
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  max-width: 45%;
 }
 
-.project-nav-fixed-inner .next {
+.nav-link.next {
   margin-left: auto;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.nav-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+}
+
+.nav-title {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
