@@ -45,7 +45,7 @@ function ProjectDetail() {
     <div>
       <header className="project-detail-header">
         <div className="project-detail-header-inner">
-          <Link to="/#projects" className="back-link">
+          <Link to="/#projects" className="back-link link-accent">
             <LuLayoutGrid />
             <span>Torna ai progetti</span>
           </Link>
@@ -100,7 +100,7 @@ function ProjectDetail() {
               <div className="metadata-label">{fourthField.label}</div>
               <div className="metadata-value">
                 {fourthField.url ? (
-                  <a href={fourthField.url} target="_blank" rel="noopener noreferrer">
+                  <a href={fourthField.url} target="_blank" rel="noopener noreferrer" className="link-accent">
                     {fourthField.value} ↗
                   </a>
                 ) : (
@@ -120,15 +120,15 @@ function ProjectDetail() {
           </div>
 
           <a href={project.externalLink.url} className="btn-secondary external-cta" target="_blank" rel="noopener noreferrer">
-            {project.externalLink.label} ↗
+            <span className="btn-text">{project.externalLink.label} ↗</span>
           </a>
 
           <div className="project-nav">
             {previous ? (
-              <Link to={`/progetti/${previous.slug}`}>← Progetto precedente</Link>
+              <Link to={`/progetti/${previous.slug}`} className="link-accent">← Progetto precedente</Link>
             ) : <span></span>}
             {next && (
-              <Link to={`/progetti/${next.slug}`} className="next">Progetto successivo →</Link>
+              <Link to={`/progetti/${next.slug}`} className="next link-accent">Progetto successivo →</Link>
             )}
           </div>
         </div>

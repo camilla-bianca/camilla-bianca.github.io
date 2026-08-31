@@ -47,16 +47,11 @@
 }
 
 .contact-value {
-  color: var(--text-primary);
   font-size: 14px;
   text-decoration: none;
   min-width: 0;
   overflow-wrap: anywhere;
   text-align: right;
-}
-
-.contact-value.clickable {
-  color: var(--accent-primary);
 }
 
 .btn-cv {
@@ -72,10 +67,20 @@
   cursor: pointer;
   background: none;
   font-family: inherit;
+  transition: background 0.2s ease;
+}
+
+.btn-cv:hover {
+  background: rgba(46, 213, 115, 0.12);
 }
 
 .btn-cv svg {
   width: 16px;
   height: 16px;
   flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.btn-cv:hover svg {
+  transform: translateY(2px);
 }

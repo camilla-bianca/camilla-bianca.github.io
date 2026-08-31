@@ -21,7 +21,7 @@ function ContactSection() {
               </span>
               <a
                 href={item.href}
-                className="contact-value clickable"
+                className="contact-value link-accent"
                 {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
               >
                 {item.value}
@@ -32,7 +32,7 @@ function ContactSection() {
       </div>
 
       <a href={cvUrl} className="btn-cv" download>
-        Scarica il CV
+        <span className="btn-text">Scarica il CV</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 3v12m0 0-4-4m4 4 4-4" />
           <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />

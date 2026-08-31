@@ -35,7 +35,8 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
-  min-width: 160px;
+  min-width: 165px;
+  white-space: nowrap;
 }
 
 .toggle-icon {

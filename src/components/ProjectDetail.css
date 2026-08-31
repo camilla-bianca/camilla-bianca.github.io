@@ -16,9 +16,7 @@
 }
 
 .back-link {
-  color: var(--accent-primary);
   font-size: 14px;
-  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -166,11 +164,6 @@
   font-family: monospace;
 }
 
-.metadata-value a {
-  color: var(--accent-primary);
-  text-decoration: none;
-}
-
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -214,6 +207,8 @@
   align-items: center;
   gap: 6px;
   text-decoration: none;
+  min-width: 190px;
+  white-space: nowrap;
 }
 
 .project-nav {
@@ -226,8 +221,6 @@
 }
 
 .project-nav a {
-  color: var(--accent-primary);
-  text-decoration: none;
   font-size: 14px;
 }
 

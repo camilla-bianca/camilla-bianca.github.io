@@ -57,7 +57,7 @@ function EmbedFallback({ project }) {
           rel="noopener noreferrer"
           className="btn-secondary external-cta"
         >
-          Vai su itch.io ↗
+          <span className="btn-text">Vai su itch.io ↗</span>
         </a>
       </div>
     </div>

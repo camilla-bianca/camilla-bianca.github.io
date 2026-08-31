@@ -12,7 +12,17 @@ function Footer() {
           alt="Cama's Game Slice"
           className="footer-logo"
         />
-        <span className="footer-text-right">in origine Cama's Game Slice</span>
+        <span className="footer-text-right">
+          in origine{' '}
+          <a
+            href="https://camilla-bianca.itch.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-accent"
+          >
+            Cama's Game Slice
+          </a>
+        </span>
       </div>
     </footer>
   )
