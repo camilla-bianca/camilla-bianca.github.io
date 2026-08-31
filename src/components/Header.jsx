@@ -4,6 +4,13 @@ import './Header.css'
 
 const SECTIONS = ['hero', 'projects', 'about', 'contact']
 
+const NAV_ITEMS = [
+  { id: 'hero', label: 'Home' },
+  { id: 'projects', label: 'Progetti' },
+  { id: 'about', label: 'Chi sono' },
+  { id: 'contact', label: 'Contatti' },
+]
+
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('hero')
@@ -71,10 +78,16 @@ function Header() {
         <Link to="/" className="logo">Camilla Bianca</Link>
 
         <nav className="nav">
-          <a href="#hero" className={linkClass('hero')} onClick={() => handleNavClick('hero')}>Home</a>
-          <a href="#projects" className={linkClass('projects')} onClick={() => handleNavClick('projects')}>Progetti</a>
-          <a href="#about" className={linkClass('about')} onClick={() => handleNavClick('about')}>Chi sono</a>
-          <a href="#contact" className={linkClass('contact')} onClick={() => handleNavClick('contact')}>Contatti</a>
+          {NAV_ITEMS.map(({ id, label }) => (
+            <a
+              key={id}
+              href={`#${id}`}
+              className={linkClass(id)}
+              onClick={() => handleNavClick(id)}
+            >
+              {label}
+            </a>
+          ))}
           <button className="lang-switch">
             <span>IT</span>
             <span style={{ color: 'var(--text-muted)' }}>/</span>
@@ -103,10 +116,16 @@ function Header() {
       </div>
 
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
-        <a href="#hero" className={linkClass('hero')} onClick={() => handleNavClick('hero')}>Home</a>
-        <a href="#projects" className={linkClass('projects')} onClick={() => handleNavClick('projects')}>Progetti</a>
-        <a href="#about" className={linkClass('about')} onClick={() => handleNavClick('about')}>Chi sono</a>
-        <a href="#contact" className={linkClass('contact')} onClick={() => handleNavClick('contact')}>Contatti</a>
+        {NAV_ITEMS.map(({ id, label }) => (
+          <a
+            key={id}
+            href={`#${id}`}
+            className={linkClass(id)}
+            onClick={() => handleNavClick(id)}
+          >
+            {label}
+          </a>
+        ))}
         <button className="lang-switch">
           <span>IT</span>
           <span style={{ color: 'var(--text-muted)' }}>/</span>
