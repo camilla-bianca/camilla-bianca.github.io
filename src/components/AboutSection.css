@@ -24,13 +24,14 @@
 
 .stats {
   display: flex;
-  gap: 40px;
+  gap: 60px;
   margin-bottom: 36px;
 }
 
 .stats > div {
   min-width: 0;
   flex: 0 1 110px;
+  white-space: nowrap;
 }
 
 .stat-value {
