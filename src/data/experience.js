@@ -1,5 +1,5 @@
 export const stats = [
-  { value: '2+', label: 'anni di game dev' },
+  { value: '2+', label: 'anni nel Game Dev' },
   { value: '3+', label: "anni nell'IT" },
   { value: '12', label: 'progetti' },
 ]
@@ -7,27 +7,30 @@ export const stats = [
 export const workExperience = [
   {
     role: 'Game Programmer',
+    engine: 'unreal',
     company: 'One-O-One Games',
     period: 'Mag 2026 → oggi',
-    description: 'Descrizione.',
+    description: 'Sviluppo di sistemi di gameplay, UI e tech animation da zero. Reverse engineering di sistemi esistenti a supporto dello sviluppo di nuove feature.',
   },
   {
-    role: 'Game Developer',
+    role: 'Game Programmer',
+    engine: 'unity',
     company: 'Miniclip',
     period: 'Set 2024 → Mag 2026',
-    description: "Sviluppo sistemi di gameplay, meccaniche e UI in Unity (C#), con l'esperienza del giocatore come metro di giudizio. Implementazione di feature e test automatizzati, ottimizzazione delle performance mirate a videogiochi per mobile.",
+    description: "Implementazione di meccaniche di gameplay e UI con l'esperienza del giocatore come metro di giudizio. Sviluppo di live feature e test automatizzati, con ottimizzazione delle performance per il mobile.",
   },
   {
-    role: 'Game Developer',
+    role: 'Game Programmer',
+    engine: 'unreal',
     company: 'Red Hog Studio',
     period: 'Dic 2023 → Mag 2024',
-    description: "Sviluppo meccaniche di gameplay, feature e UI in Unreal Engine (C++ e Blueprint). Realizzazione di cinematiche con Sequencer, testing per la stabilità e documentazione tecnica a supporto del team.",
+    description: "Sviluppo di sistemi di gameplay, feature e UI, con cinematiche realizzate in Sequencer. Realizzazione di documentazione tecnica a supporto del team.",
   },
   {
     role: 'Analista funzionale',
     company: 'Leonardo (divisione Cybersecurity)',
     period: 'Ott 2021 → Nov 2022',
-    description: "Analisi dei requisiti funzionali, coordinamento tra team di sviluppo e cliente per allineare aspettative e avanzamento. Testing e documentazione a supporto della qualità.",
+    description: "Analisi dei requisiti funzionali e coordinamento tra sviluppo e cliente, con testing e documentazione a supporto della qualità.",
   },
   {
     role: 'Consulente Microsoft CRM',
@@ -39,7 +42,7 @@ export const workExperience = [
     role: 'Sistemista di rete',
     company: 'Bytewise',
     period: 'Ott 2016 → Feb 2017',
-    description: "Realizzazione e analisi di sistemi e reti di telecomunicazioni, con utilizzo di sistemi Linux per server e servizi.",
+    description: "Analisi e realizzazione di reti di telecomunicazione, con utilizzo di sistemi Linux per server e servizi.",
   },
 ]
 

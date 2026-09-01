@@ -51,26 +51,6 @@
   color: var(--text-primary);
 }
 
-.engine-badge {
-  font-size: 11px;
-  letter-spacing: 0.03em;
-  padding: 3px 9px;
-  border-radius: 4px;
-  display: inline-block;
-  font-family: monospace;
-  flex-shrink: 0;
-}
-
-.engine-badge.unity {
-  color: var(--engine-unity);
-  background: var(--engine-unity-bg);
-}
-
-.engine-badge.unreal {
-  color: var(--engine-unreal);
-  background: var(--engine-unreal-bg);
-}
-
 .card-origin {
   display: flex;
   align-items: flex-start;

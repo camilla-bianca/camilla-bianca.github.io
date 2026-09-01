@@ -47,8 +47,10 @@ function Hero({ onWatchShowreel }) {
       <div className="hero-content-wrap">
         <div className="hero-content">
           <span className="hero-eyebrow">Game Programmer</span>
-          <h1>Adoro i videogiochi.<br />Li costruisco anche.</h1>
-          <p>Dal software gestionale al gameplay.<br />Tre anni nell'IT, oltre due nel Game Dev.</p>
+          <h1>Adoro i videogiochi,<br />perciò li costruisco.</h1>
+          <p>Dal software gestionale al gameplay.
+            <br />Cinque anni nell'IT, gli ultimi due nel Game Dev.
+          </p>
           <div className="cta-row">
             <button className="btn-primary" onClick={scrollToProjects}>I miei progetti</button>
             <button className="btn-secondary" onClick={onWatchShowreel}>Showreel 2024</button>

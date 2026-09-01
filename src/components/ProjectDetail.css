@@ -84,25 +84,6 @@
   color: var(--text-primary);
 }
 
-.engine-badge {
-  font-size: 11px;
-  letter-spacing: 0.03em;
-  padding: 3px 9px;
-  border-radius: 4px;
-  display: inline-block;
-  font-family: monospace;
-}
-
-.engine-badge.unity {
-  color: var(--engine-unity);
-  background: var(--engine-unity-bg);
-}
-
-.engine-badge.unreal {
-  color: var(--engine-unreal);
-  background: var(--engine-unreal-bg);
-}
-
 .project-origin {
   font-size: 14px;
   margin-bottom: 26px;
@@ -131,10 +112,11 @@
 
 .project-description {
   font-size: 15px;
-  color: #B5B5B5;
+  color: var(--text-secondary);
   line-height: 1.65;
-  max-width: 520px;
   margin: 0 0 26px;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .metadata-row {

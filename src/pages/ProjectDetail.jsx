@@ -180,7 +180,7 @@ function ProjectDetail() {
             )}
           </div>
 
-          <p className="project-description">{project.description}</p>
+          <p className="project-description">{renderHighlights(project.description)}</p>
 
           <div className="metadata-row">
             <div>
@@ -278,6 +278,15 @@ function ProjectDetail() {
         document.body
       )}
     </div>
+  )
+}
+
+function renderHighlights(text) {
+  const parts = text.split(/(\*\*.*?\*\*)/g)
+  return parts.map((part, i) =>
+    part.startsWith('**') && part.endsWith('**')
+      ? <span key={i} className="highlight">{part.slice(2, -2)}</span>
+      : part
   )
 }
 

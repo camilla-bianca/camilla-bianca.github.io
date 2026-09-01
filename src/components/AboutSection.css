@@ -18,6 +18,8 @@
   line-height: 1.65;
   max-width: 580px;
   margin: 0 0 20px;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .stats {
@@ -28,7 +30,7 @@
 
 .stats > div {
   min-width: 0;
-  flex: 0 1 100px;
+  flex: 0 1 110px;
 }
 
 .stat-value {
@@ -100,4 +102,13 @@
   line-height: 1.6;
   margin-top: 6px;
   max-width: 540px;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.timeline-role-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
