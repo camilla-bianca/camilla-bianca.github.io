@@ -15,7 +15,6 @@
 .contact-list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
   max-width: 420px;
   margin-bottom: 26px;
 }
@@ -25,8 +24,17 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 12px;
-  padding-bottom: 12px;
+  padding: 16px 8px;
+  margin: 0 -8px;
   border-bottom: 0.5px solid var(--border-default);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.contact-row:hover {
+  border-bottom-color: var(--accent-primary);
+  background: rgba(46, 213, 115, 0.06);
 }
 
 .contact-label {
@@ -38,20 +46,31 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.contact-row:hover .contact-label {
+  color: var(--accent-primary);
 }
 
 .contact-label-icon {
-  width: 15px;
-  height: 15px;
+  width: 17px;
+  height: 17px;
   flex-shrink: 0;
 }
 
 .contact-value {
   font-size: 14px;
-  text-decoration: none;
+  color: var(--text-primary);
   min-width: 0;
   overflow-wrap: anywhere;
   text-align: right;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-row:hover .contact-value {
+  color: var(--accent-primary);
+  transform: translateX(-8px);
 }
 
 .btn-cv {
@@ -75,8 +94,8 @@
 }
 
 .btn-cv svg {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
   transition: transform 0.2s ease;
 }

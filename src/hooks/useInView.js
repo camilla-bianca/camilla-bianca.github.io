@@ -11,7 +11,7 @@ import { useEffect, useRef, useState } from 'react';
 export function useInView(options = {}) {
   const {
     threshold = 0,
-    rootMargin = '0px 0px -120px 0px',
+    rootMargin = '0px 0px -80px 0px',
     once = true,
   } = options;
   const ref = useRef(null);

@@ -58,27 +58,6 @@ function SkillsSection() {
 export default SkillsSection
 
 
-// import { SiUnity, SiUnrealengine, SiGit, SiGithub, SiRider } from 'react-icons/si'
-// import { DiVisualstudio } from "react-icons/di";
-// import { PiFileCSharp, PiFileCpp, PiKanbanDuotone } from "react-icons/pi";
-// import { FaProjectDiagram } from "react-icons/fa";
-// import { skillCategories } from '../data/skills'
-// import { useInView } from '../hooks/useInView'
-// import './SkillsSection.css'
-
-// const iconMap = {
-//   csharp: PiFileCSharp,
-//   cpp: PiFileCpp,
-//   unity: SiUnity,
-//   unreal: SiUnrealengine,
-//   git: SiGit,
-//   github: SiGithub,
-//   visualstudio: DiVisualstudio,
-//   rider: SiRider,
-//   kanban: PiKanbanDuotone,
-//   blueprint: FaProjectDiagram
-// }
-
 // function SkillGroup({ group, index }) {
 //   const [ref, isVisible] = useInView()
 

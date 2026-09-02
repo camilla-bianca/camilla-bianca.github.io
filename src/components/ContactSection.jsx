@@ -21,19 +21,20 @@ function ContactSection() {
           const Icon = item.icon
           const isExternal = !item.href.startsWith('mailto:')
           return (
-            <div className="contact-row" key={item.label}>
+            <a
+              href={item.href}
+              className="contact-row"
+              key={item.label}
+              {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+            >
               <span className="contact-label">
                 <Icon className="contact-label-icon" aria-hidden="true" />
                 {item.label}
               </span>
-              <a
-                href={item.href}
-                className="contact-value link-accent"
-                {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-              >
+              <span className="contact-value">
                 {item.value}
-              </a>
-            </div>
+              </span>
+            </a>
           )
         })}
       </div>

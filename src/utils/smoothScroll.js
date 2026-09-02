@@ -1,8 +1,8 @@
-const SCROLL_DURATION = 1500 // ms — same duration as the Bootstrap "Agency" theme reference
+const SCROLL_DURATION = 1500 // ms — desktop only
+const MOBILE_BREAKPOINT = 640 // px — matches Header.css
 
-// Same curve as jQuery's easeInOutExpo (jquery.easing plugin), the one used by the
-// Bootstrap "Agency" theme's page-scroll behaviour: near-flat for a while, then a fast
-// exponential climb through the middle, then an exponential settle at the end.
+// easeInOutExpo (same curve as jQuery's easing plugin / Bootstrap Agency theme).
+// Desktop only — the slow start feels off on a direct mobile tap.
 function easeInOutExpo(t) {
   if (t === 0) return 0
   if (t === 1) return 1
@@ -15,8 +15,12 @@ function prefersReducedMotion() {
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches
 }
 
-// Animates window.scrollTo toward targetY with easeInOutExpo easing (the Agency-theme curve).
-// onDone only fires when the animation actually completes, not on a guessed timeout.
+function isMobileViewport() {
+  return window.innerWidth <= MOBILE_BREAKPOINT
+}
+
+// Animates scroll to targetY with easing. onDone fires when the animation
+// actually finishes, not on a guessed timeout.
 export function animatedScrollTo(targetY, duration = SCROLL_DURATION, onDone) {
   const startY = window.scrollY
   const diff = targetY - startY
@@ -45,8 +49,8 @@ export function animatedScrollTo(targetY, duration = SCROLL_DURATION, onDone) {
   requestAnimationFrame(step)
 }
 
-// Convenience helper: scrolls to a section by id, accounting for the sticky header height.
-// Returns true if the target element was found and the scroll started.
+// Scrolls to a section by id, accounting for the sticky header height.
+// Mobile: instant jump, no animation. Desktop: animated with easeInOutExpo.
 export function scrollToSection(id, onDone) {
   const el = document.getElementById(id)
   if (!el) return false
@@ -54,6 +58,12 @@ export function scrollToSection(id, onDone) {
   const header = document.querySelector('.header')
   const headerHeight = header ? header.offsetHeight : 0
   const targetY = el.offsetTop - headerHeight
+
+  if (isMobileViewport()) {
+    window.scrollTo(0, targetY)
+    onDone?.()
+    return true
+  }
 
   animatedScrollTo(targetY, undefined, onDone)
   return true
