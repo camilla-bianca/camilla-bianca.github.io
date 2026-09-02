@@ -11,6 +11,50 @@ const NAV_ITEMS = [
   { id: 'contact', label: 'Contatti' },
 ]
 
+const SCROLL_DURATION = 700 // ms
+
+function easeInOutExpo(t) {
+  if (t === 0) return 0
+  if (t === 1) return 1
+  return t < 0.5
+    ? 0.5 * Math.pow(2, 20 * t - 10)
+    : 0.5 * (2 - Math.pow(2, -20 * t + 10))
+}
+
+function prefersReducedMotion() {
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches
+}
+
+// Animates window.scrollTo toward targetY with ease-out easing (fast start, slow finish).
+// onDone only fires when the animation actually completes, not on a guessed timeout.
+function animatedScrollTo(targetY, duration, onDone) {
+  const startY = window.scrollY
+  const diff = targetY - startY
+
+  if (diff === 0 || prefersReducedMotion()) {
+    window.scrollTo(0, targetY)
+    onDone?.()
+    return
+  }
+
+  const startTime = performance.now()
+
+  function step(now) {
+    const elapsed = now - startTime
+    const progress = Math.min(elapsed / duration, 1)
+    const eased = easeInOutExpo(progress)
+    window.scrollTo(0, startY + diff * eased)
+
+    if (progress < 1) {
+      requestAnimationFrame(step)
+    } else {
+      onDone?.()
+    }
+  }
+
+  requestAnimationFrame(step)
+}
+
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('hero')
@@ -18,7 +62,6 @@ function Header() {
   // True right after a nav click, while the page is jumping to a section.
   // We use this to ignore scroll events for a short moment.
   const isClickScrolling = useRef(false)
-  const clickTimeoutRef = useRef(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,25 +94,36 @@ function Header() {
 
     handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-      clearTimeout(clickTimeoutRef.current)
-    }
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const linkClass = (id) => (activeSection === id ? 'active' : '')
 
-  const handleNavClick = (id) => {
+  const handleNavClick = (id, e) => {
+    // Cmd/Ctrl/middle-click: let the browser handle it (open in new tab, etc.)
+    if (e.metaKey || e.ctrlKey || e.button === 1) return
+
+    e.preventDefault()
     setActiveSection(id)
     setMenuOpen(false)
+
+    const el = document.getElementById(id)
+    if (!el) return
+
+    // Update the URL right away (a normal <a> click would do this on its own,
+    // but preventDefault() blocks that, so it has to be done manually).
+    window.history.pushState(null, '', `#${id}`)
+
+    const header = document.querySelector('.header')
+    const headerHeight = header ? header.offsetHeight : 0
+    const targetY = el.offsetTop - headerHeight
 
     // Block scroll updates for a short time,
     // so the jump caused by clicking the link doesn't immediately change our choice.
     isClickScrolling.current = true
-    clearTimeout(clickTimeoutRef.current)
-    clickTimeoutRef.current = setTimeout(() => {
+    animatedScrollTo(targetY, SCROLL_DURATION, () => {
       isClickScrolling.current = false
-    }, 600)
+    })
   }
 
   return (
@@ -83,7 +137,7 @@ function Header() {
               key={id}
               href={`#${id}`}
               className={linkClass(id)}
-              onClick={() => handleNavClick(id)}
+              onClick={(e) => handleNavClick(id, e)}
             >
               {label}
             </a>
@@ -121,7 +175,7 @@ function Header() {
             key={id}
             href={`#${id}`}
             className={linkClass(id)}
-            onClick={() => handleNavClick(id)}
+            onClick={(e) => handleNavClick(id, e)}
           >
             {label}
           </a>
