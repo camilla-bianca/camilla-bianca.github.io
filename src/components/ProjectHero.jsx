@@ -137,18 +137,18 @@ function ProjectHero({ hero, title, project, isMobile }) {
   }
 
   if (hero.type === 'video') {
-    return <VideoClickToPlay hero={hero} title={title} project={project} />
+    return <VideoClickToPlay key={project.slug} hero={hero} title={title} project={project} />
   }
 
   if (hero.type === 'embed') {
-    return <EmbedClickToPlay hero={hero} title={title} project={project} />
+    return <EmbedClickToPlay key={project.slug} hero={hero} title={title} project={project} />
   }
 
   if (hero.type === 'youtube') {
-    return <YoutubeHero hero={hero} title={title} project={project} />
+    return <YoutubeHero key={project.slug} hero={hero} title={title} project={project} />
   }
 
-  return <img src={hero.src} alt={title} />
+  return <img key={project.slug} src={hero.src} alt={title} />
 }
 
 export default ProjectHero
