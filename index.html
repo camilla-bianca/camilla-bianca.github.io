@@ -12,6 +12,25 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <script type="text/javascript">
+      // Decode the path 404.html packed into the query string
+      // and restore it as a real URL BEFORE React Router mounts,
+      // so React Router sees the correct path right away
+      // (e.g. /progetti/nome-progetto instead of /?/progetti/nome-progetto)
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+          window.history.replaceState(
+            null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location));
+    </script>
+    
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
