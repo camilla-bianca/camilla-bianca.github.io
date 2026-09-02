@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { scrollToSection } from '../utils/smoothScroll'
 import './Hero.css'
 
 function Hero({ onWatchShowreel }) {
@@ -6,7 +7,7 @@ function Hero({ onWatchShowreel }) {
   const [autoplayFailed, setAutoplayFailed] = useState(false)
 
   const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
+    scrollToSection('projects')
   }
 
   useEffect(() => {
@@ -49,7 +50,7 @@ function Hero({ onWatchShowreel }) {
           <span className="hero-eyebrow">Game Programmer</span>
           <h1>Adoro i videogiochi,<br />perciò li costruisco.</h1>
           <p>Dal software gestionale al gameplay.
-            <br />Tre anni nell'IT, poi due nel Game Dev.
+            <br />Tre anni nell'IT, ora due nel Game Dev.
           </p>
           <div className="cta-row">
             <button className="btn-primary" onClick={scrollToProjects}>I miei progetti</button>
