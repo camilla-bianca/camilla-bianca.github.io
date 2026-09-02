@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { engineLabels } from '../data/projects'
+import { useInView } from '../hooks/useInView'
 import './ProjectCard.css'
 
 const originIcons = {
@@ -31,9 +32,10 @@ const originIcons = {
   ),
 }
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, staggerIndex = 0 }) {
   const videoRef = useRef(null)
   const [previewLoaded, setPreviewLoaded] = useState(false)
+  const [cardRef, isVisible] = useInView()
 
   function handleMouseEnter() {
     const video = videoRef.current
@@ -52,8 +54,10 @@ function ProjectCard({ project }) {
 
   return (
     <Link
+      ref={cardRef}
       to={`/progetti/${project.slug}`}
-      className="card"
+      className={`card fade-in-section ${isVisible ? 'is-visible' : ''}`}
+      style={{ '--stagger-index': staggerIndex }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

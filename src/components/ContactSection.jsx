@@ -1,9 +1,16 @@
 import { contactInfo, cvUrl } from '../data/contact'
+import { useInView } from '../hooks/useInView'
 import './ContactSection.css'
 
 function ContactSection() {
+  const [ref, isVisible] = useInView()
+
   return (
-    <section className="contact-section" id="contact">
+    <section
+      ref={ref}
+      className={`contact-section fade-in-section ${isVisible ? 'is-visible' : ''}`}
+      id="contact"
+    >
       <span className="section-title">Contatti</span>
       <p className="contact-intro">
         Aperta a ruoli da <span class="highlight">Game Programmer</span>, preferibilmente da remoto.
