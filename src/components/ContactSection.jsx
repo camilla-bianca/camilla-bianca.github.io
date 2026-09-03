@@ -1,14 +1,8 @@
 import { Trans, useTranslation } from 'react-i18next'
 import { contactInfo, cvUrl } from '../data/contact'
 import { useInView } from '../hooks/useInView'
+import { trackEvent } from '../utils/analytics'
 import './ContactSection.css'
-
-// Safe wrapper if Umami script is not loaded (local dev)
-function trackEvent(name, data) {
-  if (typeof window !== 'undefined' && window.umami) {
-    window.umami.track(name, data)
-  }
-}
 
 function ContactSection() {
   const { t } = useTranslation()

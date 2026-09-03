@@ -8,6 +8,7 @@ import { useInView } from '../hooks/useInView'
 import { LuLayoutGrid, LuMonitor, LuChevronLeft, LuChevronRight } from 'react-icons/lu'
 import { SiApple, SiAndroid } from 'react-icons/si'
 import { BsNintendoSwitch, BsPlaystation, BsXbox } from "react-icons/bs";
+import { trackEvent } from '../utils/analytics'
 import Header from '../components/Header'
 import ProjectHero from '../components/ProjectHero'
 import ProjectNav from '../components/ProjectNav'
@@ -21,12 +22,6 @@ const platformIconMap = {
   switch: { Icon: BsNintendoSwitch },
   ios: { Icon: SiApple, size: 18 },
   android: { Icon: SiAndroid, size: 18 },
-}
-
-function trackEvent(name, data) {
-  if (typeof window !== 'undefined' && window.umami) {
-    window.umami.track(name, data)
-  }
 }
 
 function GalleryItem({ image, index, title, alt, onClick }) {

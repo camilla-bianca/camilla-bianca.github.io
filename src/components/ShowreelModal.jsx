@@ -1,14 +1,9 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { trackEvent } from '../utils/analytics'
 import './ShowreelModal.css'
 
 const YOUTUBE_VIDEO_ID = 'CgECediqz7U'
-
-function trackEvent(name, data) {
-  if (typeof window !== 'undefined' && window.umami) {
-    window.umami.track(name, data)
-  }
-}
 
 function ShowreelModal({ onClose }) {
   const { t } = useTranslation()
