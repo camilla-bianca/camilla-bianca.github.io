@@ -36,7 +36,7 @@
       "golf-battle": {
         "role": "Game Programmer",
         "duration": "~2 years",
-        "description": "Golf Battle is a **real-time multiplayer minigolf** game, from 1v1 up to **6 players**. Over 120 holes, courses and levels, with dynamic obstacles (bunkers, ditches, moving barriers) and a progression system with customizable clubs and balls."
+        "description": "Golf Battle is a **real-time multiplayer minigolf** game, from 1v1 up to **6 players**. Over 120 holes, courses and levels, with **dynamic obstacles** (geysers, ditches, moving barriers) and a **progression system** with customizable clubs and balls."
       },
       "project-remind": {
         "role": "Game Programmer",
@@ -46,7 +46,7 @@
       "call-of-ilaria": {
         "role": "Solo Developer",
         "duration": "~1 year",
-        "description": "Set off on an adventure alongside **Maronna QuiDove**, a brave explorer determined to uncover the mystery behind the sudden disappearance of her dearest friend. Along the way you'll fight enemies, recover mysterious items (including a book that allegedly \"**smells of death**\") and interact with the eccentric inhabitants of a **very strange village**..."
+        "description": "Set off on an adventure alongside **Maronna HereWhere**, a brave explorer determined to uncover the mystery behind the sudden disappearance of her dearest friend. Along the way you'll fight enemies, recover mysterious items (including a book that allegedly \"**smells of death**\") and interact with the eccentric inhabitants of a **very strange village**..."
       },
       "time-to-rest": {
         "role": "Game Programmer",
@@ -61,7 +61,7 @@
       "astrofox": {
         "role": "Game Programmer",
         "duration": "1 week",
-        "description": "AstroFox - **a space journey**, is a third-person adventure platformer where you play as a toy fox brought to life after being launched into space, along with **tons of Earth's garbage**. Guided by the enigmatic yet friendly **Nebulini**, you'll journey across different planets, **recycling waste** along the way to overcome challenges and solve puzzles, in a desperate attempt to **find your way home**. The project was created during the **Unreal Engine Programming** course at ITS Academy Lazio Digital, taught by instructors from **Red Hog Studio**. With the theme \"**Running out of Space**\", built together with my classmates, this was our very **first project** ever on Unreal Engine!"
+        "description": "AstroFox - **a space journey**, is a third-person adventure platformer where you play as a toy fox brought to life after being launched into space, along with **tons of Earth's garbage**. Guided by the enigmatic yet friendly **Nebulinos**, you'll journey across different planets, **recycling waste** along the way to overcome challenges and solve puzzles, in a desperate attempt to **find your way home**. The project was created during the **Unreal Engine Programming** course at ITS Academy Lazio Digital, taught by instructors from **Red Hog Studio**. With the theme \"**Running out of Space**\", built together with my classmates, this was our very **first project** ever on Unreal Engine!"
       },
       "games-bond": {
         "role": "Game Programmer",
@@ -71,7 +71,7 @@
       "cubethon": {
         "role": "Solo Developer",
         "duration": "4 days",
-        "description": "Cubethon is an **endless runner** where you control a colored cube, dodging the grey blocks blocking your path. **Minimalist** design and simple gameplay, built to test your reflexes. The project was built in Unity following the Game Design and Development course by **Michigan State University** and Brackeys' tutorials on YouTube."
+        "description": "Cubethon is an **endless runner** where you control a colored cube, dodging the grey blocks blocking your path. **Minimalist** design and simple gameplay, built to test your reflexes. The project was built in Unity following the Game Design and Development course by **Michigan State University** and **Brackeys**' tutorials on YouTube."
       },
       "space-debris-3d": {
         "role": "Solo Developer",
@@ -81,12 +81,12 @@
       "space-debris-2": {
         "role": "Solo Developer",
         "duration": "3 weeks",
-        "description": "Space Debris 2: Defence! puts you in the shoes of an astronaut trapped in a **hostile space base**, facing relentless enemies, inverted gravity and toxic pools to avoid while finding a way out. Collect keys and power-ups scattered across the levels to prove your agility and complete your escape into space. The project was built in Unity and C# following the Game Design and Development course by **Michigan State University**. Starting from the base version required by the course assignment, I added an **inverted gravity** mode that lets you walk on walls and ceilings (with dedicated enemies and checkpoints), the ability to use enemies as indestructible platforms, text feedback when activating checkpoints, two new levels, and a key **inventory** in the GUI."
+        "description": "Space Debris 2: Defence! puts you in the shoes of an astronaut trapped in a **hostile space base**, facing relentless enemies, inverted gravity and toxic pools to avoid while finding a way out. Collect keys and power-ups scattered across the levels to prove your agility and complete your escape into space. The project was built in Unity and C# following the Game Design and Development course by **Michigan State University**. Starting from the base version required by the course assignment, I added an **inverted gravity** mode that lets you walk on ceilings (with dedicated enemies and checkpoints), the ability to use enemies as indestructible platforms, text feedback when activating checkpoints, two new levels, and a key **inventory** in the GUI."
       },
       "space-debris": {
         "role": "Solo Developer",
         "duration": "2 weeks",
-        "description": "Pilot a spaceship through waves of space enemies, putting your reflexes to the test. Dodge projectiles with agile maneuvers and defeat enemies to advance through the levels. This project was built during the Game Design and Development course by **Michigan State University**. Simple and rough around the edges, but I'm attached to it because it was my first Unity and C# project, as well as my very **first video game** ever! Starting from the base version required by the assignment, I added a more complete GUI (remaining lives, enemies defeated and remaining, minimap), animated destructible asteroids, an enemy space station that spawns opponents, a bigger and tougher final boss, power-ups granting extra lives, and new levels with brand-new challenges."
+        "description": "Pilot a spaceship through waves of space enemies, putting your reflexes to the test. Dodge projectiles with agile moves and defeat enemies to advance through the levels. This project was built during the Game Design and Development course by **Michigan State University**. Simple and rough around the edges, but I'm attached to it because it was my first Unity and C# project, as well as my very **first video game ever**! Starting from the base version required by the assignment, I added a more complete GUI (remaining lives, enemies defeated and remaining, minimap), animated destructible asteroids, an enemy space station that **spawns opponents**, a bigger and tougher final boss, **power-ups** granting extra lives, and new levels with brand-new challenges."
       }
     }
   },

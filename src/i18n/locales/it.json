@@ -36,7 +36,7 @@
       "golf-battle": {
         "role": "Game Programmer",
         "duration": "~2 anni",
-        "description": "Golf Battle è un gioco di **minigolf multiplayer in tempo reale**, da 1 vs 1 fino a **6 giocatori**. Oltre 120 tra buche, campi e livelli, con ostacoli dinamici (bunker, fossati, barriere mobili) e un sistema di progressione con mazze e palline personalizzabili."
+        "description": "Golf Battle è un gioco di **minigolf multiplayer in tempo reale**, da 1 vs 1 fino a **6 giocatori**. Oltre 120 tra buche, campi e livelli, con **ostacoli dinamici** (geyser, fossati, barriere mobili) e un **sistema di progressione** con mazze e palline personalizzabili."
       },
       "project-remind": {
         "role": "Game Programmer",
@@ -51,7 +51,7 @@
       "time-to-rest": {
         "role": "Game Programmer",
         "duration": "1 settimana",
-        "description": "Vesti i panni di un simpatico **minion-scheletro** che, stanco dell'ennesima battaglia in cui è rimasto sconfitto, decide di prendersi una meritata **vacanza dal videogioco** in cui si trova. Dovrai risolvere prove tra piattaforme, oggetti da combinare e puzzle ambientali per guadagnarti finalmente l'**agognato riposo**."
+        "description": "Vesti i panni di un simpatico **minion scheletro** che, stanco dell'ennesima battaglia in cui è rimasto sconfitto, decide di prendersi una meritata **vacanza dal videogioco** in cui si trova. Dovrai risolvere prove tra piattaforme, oggetti da combinare e puzzle ambientali per guadagnarti finalmente l'**agognato riposo**."
       },
       "bosque": {
         "role": "Game Programmer",
@@ -81,12 +81,12 @@
       "space-debris-2": {
         "role": "Solo Developer",
         "duration": "3 settimane",
-        "description": "Space Debris 2: Defence! ti mette nei panni di un astronauta intrappolato in una **base spaziale ostile**, tra nemici implacabili, gravità invertita e pozze tossiche da evitare per trovare una via di fuga. Raccogli chiavi e power-up sparsi nei livelli per dimostrare la tua agilità e completare la fuga nello spazio. Il progetto è nato su Unity e C# seguendo il corso Game Design and Development della **Michigan State University**. Partendo dalla versione base richiesta dall'assignment del corso, ho aggiunto una modalità a **gravità invertita** che permette di camminare su pareti e soffitti (con nemici e checkpoint dedicati), la possibilità di usare i nemici come piattaforme indistruttibili, un feedback testuale all'attivazione dei checkpoint, due nuovi livelli e un **inventario** delle chiavi nella GUI."
+        "description": "Space Debris 2: Defence! ti mette nei panni di un astronauta intrappolato in una **base spaziale ostile**, tra nemici implacabili, gravità invertita e pozze tossiche da evitare per trovare una via di fuga. Raccogli chiavi e power-up sparsi nei livelli per dimostrare la tua agilità e completare la fuga nello spazio. Il progetto è nato su Unity e C# seguendo il corso Game Design and Development della **Michigan State University**. Partendo dalla versione base richiesta dall'assignment del corso, ho aggiunto una modalità a **gravità invertita** che permette di camminare sui soffitti (con nemici e checkpoint dedicati), la possibilità di usare i nemici come piattaforme indistruttibili, un feedback testuale all'attivazione dei checkpoint, due nuovi livelli e un **inventario** delle chiavi nella GUI."
       },
       "space-debris": {
         "role": "Solo Developer",
         "duration": "2 settimane",
-        "description": "Pilota un'astronave attraverso ondate di nemici spaziali, mettendo alla prova i tuoi riflessi. Schiva i proiettili con manovre agili e sconfiggi i nemici per avanzare tra i livelli. Questo progetto è nato durante il corso Game Design and Development della **Michigan State University**. Semplice e migliorabile, ma ci sono affezionata perché è stato il mio primo progetto su Unity e C#, nonché il mio **primo videogioco** in assoluto! Partendo dalla versione base richiesta dall'assignment, ho aggiunto una GUI più completa (vite rimaste, nemici sconfitti e da sconfiggere, minimappa), asteroidi distruttibili animati, una stazione spaziale nemica che genera avversari, un boss finale più grande e resistente, power-up che danno vite extra e nuovi livelli con sfide inedite."
+        "description": "Pilota un'astronave attraverso ondate di nemici spaziali, mettendo alla prova i tuoi riflessi. Schiva i proiettili con manovre agili e sconfiggi i nemici per avanzare tra i livelli. Questo progetto è nato durante il corso Game Design and Development della **Michigan State University**. Semplice e migliorabile, ma ci sono affezionata perché è stato il mio primo progetto su Unity e C#, nonché il mio **primo videogioco in assoluto**! Partendo dalla versione base richiesta dall'assignment, ho aggiunto una GUI più completa (vite rimaste, nemici sconfitti e da sconfiggere, minimappa), asteroidi distruttibili animati, una stazione spaziale nemica che **genera avversari**, un boss finale più grande e resistente, **power-up** che danno vite extra e nuovi livelli con sfide inedite."
       }
     }
   },
