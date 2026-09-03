@@ -4,8 +4,18 @@ import './ShowreelModal.css'
 
 const YOUTUBE_VIDEO_ID = 'CgECediqz7U'
 
+function trackEvent(name, data) {
+  if (typeof window !== 'undefined' && window.umami) {
+    window.umami.track(name, data)
+  }
+}
+
 function ShowreelModal({ onClose }) {
   const { t } = useTranslation()
+
+  useEffect(() => {
+    trackEvent('apertura-showreel')
+  }, [])
 
   useEffect(() => {
     function handleEscape(e) {
