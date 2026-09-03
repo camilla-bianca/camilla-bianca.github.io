@@ -3,6 +3,13 @@ import { contactInfo, cvUrl } from '../data/contact'
 import { useInView } from '../hooks/useInView'
 import './ContactSection.css'
 
+// Safe wrapper if Umami script is not loaded (local dev)
+function trackEvent(name, data) {
+  if (typeof window !== 'undefined' && window.umami) {
+    window.umami.track(name, data)
+  }
+}
+
 function ContactSection() {
   const { t } = useTranslation()
   const [ref, isVisible] = useInView()
@@ -30,6 +37,7 @@ function ContactSection() {
               href={item.href}
               className="contact-row"
               key={item.label}
+              onClick={() => trackEvent('click-contatto', { tipo: item.label })}
               {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
             >
               <span className="contact-label">
@@ -44,7 +52,12 @@ function ContactSection() {
         })}
       </div>
 
-      <a href={cvUrl} className="btn-cv" download>
+      <a
+        href={cvUrl}
+        className="btn-cv"
+        download
+        onClick={() => trackEvent('download-cv')}
+      >
         <span className="btn-text">{t('contact.downloadCv')}</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 3v12m0 0-4-4m4 4 4-4" />
