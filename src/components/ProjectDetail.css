@@ -15,6 +15,12 @@
   align-items: center;
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .back-link {
   font-size: 14px;
   display: flex;

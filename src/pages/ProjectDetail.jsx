@@ -10,6 +10,7 @@ import { BsNintendoSwitch, BsPlaystation, BsXbox } from "react-icons/bs";
 import Header from '../components/Header'
 import ProjectHero from '../components/ProjectHero'
 import ProjectNav from '../components/ProjectNav'
+import LangSwitch from '../components/LangSwitch'
 import '../components/ProjectDetail.css'
 
 const platformIconMap = {
@@ -150,7 +151,10 @@ function ProjectDetail() {
             <LuLayoutGrid />
             <span>{t('projectDetail.backToProjects')}</span>
           </Link>
-          <Link to="/" className="project-detail-logo">Camilla Bianca</Link>
+          <div className="header-right">
+            <LangSwitch />
+            <Link to="/" className="project-detail-logo">Camilla Bianca</Link>
+          </div>
         </div>
       </header>
 

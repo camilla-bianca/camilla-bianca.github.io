@@ -2,9 +2,11 @@ import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { scrollToSection } from '../utils/smoothScroll'
+import LangSwitch from './LangSwitch'
 import './Header.css'
 
 const SECTIONS = ['hero', 'projects', 'about', 'contact']
+
 const NAV_ITEMS = [
   { id: 'hero', labelKey: 'home' },
   { id: 'projects', labelKey: 'projects' },
@@ -13,7 +15,7 @@ const NAV_ITEMS = [
 ]
 
 function Header() {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('hero')
 
@@ -65,20 +67,6 @@ function Header() {
       isClickScrolling.current = false
     })
   }
-
-  const changeLanguage = (lng) => {
-    if (i18n.language !== lng) {
-      i18n.changeLanguage(lng)
-    }
-  }
-
-  const LangSwitch = () => (
-    <button className="lang-switch" onClick={() => changeLanguage(i18n.language === 'it' ? 'en' : 'it')}>
-      <span className={i18n.language === 'it' ? '' : 'inactive'}>IT</span>
-      <span style={{ color: 'var(--text-muted)' }}>/</span>
-      <span className={i18n.language === 'en' ? '' : 'inactive'}>EN</span>
-    </button>
-  )
 
   return (
     <header className="header">
