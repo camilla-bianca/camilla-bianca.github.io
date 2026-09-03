@@ -1,18 +1,19 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { scrollToSection } from '../utils/smoothScroll'
 import './Header.css'
 
 const SECTIONS = ['hero', 'projects', 'about', 'contact']
-
 const NAV_ITEMS = [
-  { id: 'hero', label: 'Home' },
-  { id: 'projects', label: 'Progetti' },
-  { id: 'about', label: 'Chi sono' },
-  { id: 'contact', label: 'Contatti' },
+  { id: 'hero', labelKey: 'home' },
+  { id: 'projects', labelKey: 'projects' },
+  { id: 'about', labelKey: 'about' },
+  { id: 'contact', labelKey: 'contact' },
 ]
 
 function Header() {
+  const { t, i18n } = useTranslation()
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('hero')
 
@@ -65,33 +66,43 @@ function Header() {
     })
   }
 
+  const changeLanguage = (lng) => {
+    if (i18n.language !== lng) {
+      i18n.changeLanguage(lng)
+    }
+  }
+
+  const LangSwitch = () => (
+    <button className="lang-switch" onClick={() => changeLanguage(i18n.language === 'it' ? 'en' : 'it')}>
+      <span className={i18n.language === 'it' ? '' : 'inactive'}>IT</span>
+      <span style={{ color: 'var(--text-muted)' }}>/</span>
+      <span className={i18n.language === 'en' ? '' : 'inactive'}>EN</span>
+    </button>
+  )
+
   return (
     <header className="header">
       <div className="header-inner">
         <Link to="/" className="logo">Camilla Bianca</Link>
 
         <nav className="nav">
-          {NAV_ITEMS.map(({ id, label }) => (
+          {NAV_ITEMS.map(({ id, labelKey }) => (
             <a
               key={id}
               href={`#${id}`}
               className={linkClass(id)}
               onClick={(e) => handleNavClick(id, e)}
             >
-              {label}
+              {t(`header.nav.${labelKey}`)}
             </a>
           ))}
-          <button className="lang-switch">
-            <span>IT</span>
-            <span style={{ color: 'var(--text-muted)' }}>/</span>
-            <span className="inactive">EN</span>
-          </button>
+          <LangSwitch />
         </nav>
 
         <button
           className="mobile-toggle"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Apri menu"
+          aria-label={t('header.openMenu')}
         >
           {menuOpen ? (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -109,21 +120,17 @@ function Header() {
       </div>
 
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
-        {NAV_ITEMS.map(({ id, label }) => (
+        {NAV_ITEMS.map(({ id, labelKey }) => (
           <a
             key={id}
             href={`#${id}`}
             className={linkClass(id)}
             onClick={(e) => handleNavClick(id, e)}
           >
-            {label}
+            {t(`header.nav.${labelKey}`)}
           </a>
         ))}
-        <button className="lang-switch">
-          <span>IT</span>
-          <span style={{ color: 'var(--text-muted)' }}>/</span>
-          <span className="inactive">EN</span>
-        </button>
+        <LangSwitch />
       </div>
     </header>
   )

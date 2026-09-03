@@ -1,6 +1,8 @@
+import { useTranslation } from 'react-i18next'
 import './Footer.css'
 
 function Footer() {
+  const { t } = useTranslation()
   const year = new Date().getFullYear()
 
   return (
@@ -13,7 +15,7 @@ function Footer() {
           className="footer-logo"
         />
         <span className="footer-text-right">
-          in origine{' '}
+          {t('footer.origin')}{' '}
           <a
             href="https://camilla-bianca.itch.io/"
             target="_blank"

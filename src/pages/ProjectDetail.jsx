@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { useParams, Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { getProjectBySlug, getAdjacentProjects, getFourthField, engineLabels } from '../data/projects'
 import { useMediaQuery } from '../hooks/useMediaQuery'
 import { LuLayoutGrid, LuMonitor, LuChevronLeft, LuChevronRight } from 'react-icons/lu'
 import { SiApple, SiAndroid } from 'react-icons/si'
-import { IoLogoAndroid } from "react-icons/io";
 import { BsNintendoSwitch, BsPlaystation, BsXbox } from "react-icons/bs";
 import Header from '../components/Header'
 import ProjectHero from '../components/ProjectHero'
@@ -16,12 +16,13 @@ const platformIconMap = {
   pc: { Icon: LuMonitor, size: 18 },
   ps5: { Icon: BsPlaystation, size: 18 },
   xbox: { Icon: BsXbox },
-  switch: { Icon: BsNintendoSwitch},
+  switch: { Icon: BsNintendoSwitch },
   ios: { Icon: SiApple, size: 18 },
   android: { Icon: SiAndroid, size: 18 },
 }
 
 function ProjectDetail() {
+  const { t } = useTranslation()
   const { slug } = useParams()
   const project = getProjectBySlug(slug)
   const [lightboxIndex, setLightboxIndex] = useState(null)
@@ -72,8 +73,8 @@ function ProjectDetail() {
       <div>
         <Header />
         <div style={{ padding: '40px' }}>
-          <p>Progetto non trovato.</p>
-          <Link to="/" style={{ color: 'var(--accent-primary)' }}>Torna alla home</Link>
+          <p>{t('projectDetail.notFound')}</p>
+          <Link to="/" style={{ color: 'var(--accent-primary)' }}>{t('projectDetail.backToHome')}</Link>
         </div>
       </div>
     )
@@ -81,6 +82,7 @@ function ProjectDetail() {
 
   const { previous, next } = getAdjacentProjects(slug)
   const fourthField = getFourthField(project)
+  const fourthValue = fourthField.value || t('projectDetail.labels.personalValue')
 
   const goToPrevImage = (e) => {
     e.stopPropagation()
@@ -146,7 +148,7 @@ function ProjectDetail() {
         <div className="project-detail-header-inner">
           <Link to="/#projects" className="back-link link-accent">
             <LuLayoutGrid />
-            <span>Torna ai progetti</span>
+            <span>{t('projectDetail.backToProjects')}</span>
           </Link>
           <Link to="/" className="project-detail-logo">Camilla Bianca</Link>
         </div>
@@ -171,7 +173,7 @@ function ProjectDetail() {
           </div>
 
           <div className="project-origin">
-            <span className="role-company">{project.role}</span>
+            <span className="role-company">{t(`projects.items.${project.slug}.role`)}</span>
             {project.company && (
               <>
                 <span className="separator"> · </span>
@@ -180,15 +182,17 @@ function ProjectDetail() {
             )}
           </div>
 
-          <p className="project-description">{renderHighlights(project.description)}</p>
+          <p className="project-description">
+            {renderHighlights(t(`projects.items.${project.slug}.description`))}
+          </p>
 
           <div className="metadata-row">
             <div>
-              <div className="metadata-label">TECNOLOGIE</div>
+              <div className="metadata-label">{t('projectDetail.labels.stack')}</div>
               <div className="metadata-value">{project.stack}</div>
             </div>
             <div>
-              <div className="metadata-label">PIATTAFORME</div>
+              <div className="metadata-label">{t('projectDetail.labels.platforms')}</div>
               {project.platforms?.length > 0 && (
                 <div className="platform-icons">
                   {project.platforms.map((key) => {
@@ -207,18 +211,18 @@ function ProjectDetail() {
               )}
             </div>
             <div>
-              <div className="metadata-label">PERIODO</div>
-              <div className="metadata-value">{project.duration}</div>
+              <div className="metadata-label">{t('projectDetail.labels.period')}</div>
+              <div className="metadata-value">{t(`projects.items.${project.slug}.duration`)}</div>
             </div>
             <div>
-              <div className="metadata-label">{fourthField.label}</div>
+              <div className="metadata-label">{t(`projectDetail.labels.${fourthField.labelKey}`)}</div>
               <div className="metadata-value">
                 {fourthField.url ? (
                   <a href={fourthField.url} target="_blank" rel="noopener noreferrer" className="link-accent">
-                    {fourthField.value} ↗
+                    {fourthValue} ↗
                   </a>
                 ) : (
-                  fourthField.value
+                  fourthValue
                 )}
               </div>
             </div>
@@ -227,14 +231,14 @@ function ProjectDetail() {
           <div className="gallery">
             {project.gallery.map((image, i) => (
               <div className="gallery-item" key={i} onClick={() => setLightboxIndex(i)}>
-                <img src={image} alt={`${project.title} - immagine ${i + 1}`} />
+                <img src={image} alt={`${project.title} - ${t('projectDetail.galleryAlt')} ${i + 1}`} />
                 <div className="gallery-item-scrim" />
               </div>
             ))}
           </div>
 
           <a href={project.externalLink.url} className="btn-secondary external-cta" target="_blank" rel="noopener noreferrer">
-            <span className="btn-text">{project.externalLink.label} ↗</span>
+            <span className="btn-text">{t(`projects.externalLinkLabels.${project.externalLink.type}`)} ↗</span>
           </a>
         </div>
       </div>
@@ -244,7 +248,7 @@ function ProjectDetail() {
       {lightboxIndex !== null && createPortal(
         <div className="lightbox" onClick={() => { if (!isSwiping) setLightboxIndex(null) }}>
           {lightboxIndex > 0 && (
-            <button className="lightbox-nav prev" onClick={goToPrevImage} aria-label="Immagine precedente">
+            <button className="lightbox-nav prev" onClick={goToPrevImage} aria-label={t('projectDetail.prevImage')}>
               <LuChevronLeft />
             </button>
           )}
@@ -260,7 +264,7 @@ function ProjectDetail() {
                 <div className="lightbox-slide" key={i}>
                   <img
                     src={image}
-                    alt={`${project.title} - immagine ${i + 1} ingrandita`}
+                    alt={`${project.title} - ${t('projectDetail.galleryAlt')} ${i + 1}`}
                     className="lightbox-content"
                   />
                 </div>
@@ -269,11 +273,11 @@ function ProjectDetail() {
           </div>
 
           {lightboxIndex < project.gallery.length - 1 && (
-            <button className="lightbox-nav next" onClick={goToNextImage} aria-label="Immagine successiva">
+            <button className="lightbox-nav next" onClick={goToNextImage} aria-label={t('projectDetail.nextImage')}>
               <LuChevronRight />
             </button>
           )}
-          <span className="lightbox-close">Chiudi ✕</span>
+          <span className="lightbox-close">{t('common.close')}</span>
         </div>,
         document.body
       )}

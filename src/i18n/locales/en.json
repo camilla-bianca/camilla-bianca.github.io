@@ -1,0 +1,192 @@
+{
+  "common": {
+    "close": "Close ✕"
+  },
+  "header": {
+    "nav": {
+      "home": "Home",
+      "projects": "Projects",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "openMenu": "Open menu"
+  },
+  "hero": {
+    "eyebrow": "Game Programmer",
+    "title": "I love video games,<br></br>so I build them.",
+    "subtitle": "From business software to gameplay.<br></br>Three years in IT, then two in Game Dev.",
+    "ctaProjects": "My projects",
+    "ctaShowreel": "2024 Showreel"
+  },
+  "projects": {
+    "sectionTitle": "Projects",
+    "showAll": "Show all",
+    "showLess": "Show less",
+    "externalLinkLabels": {
+      "steam": "View on Steam",
+      "itch": "View on itch.io",
+      "website": "View on website"
+    },
+    "items": {
+      "curse-of-the-crimson-stag": {
+        "role": "Game Programmer",
+        "duration": "4 months",
+        "description": "Curse of the Crimson Stag is a **story-driven thriller** where you explore the thin line between supernatural events and past tragedies. Discover why the luxurious **Whiteroot Hotel** was abandoned. Local myths speak of a wrathful spirit known as the **Crimson Stag**..."
+      },
+      "golf-battle": {
+        "role": "Game Programmer",
+        "duration": "~2 years",
+        "description": "Golf Battle is a **real-time multiplayer minigolf** game, from 1v1 up to **6 players**. Over 120 holes, courses and levels, with dynamic obstacles (bunkers, ditches, moving barriers) and a progression system with customizable clubs and balls."
+      },
+      "project-remind": {
+        "role": "Game Programmer",
+        "duration": "4 months",
+        "description": "\"**This is the end. My end**\". Operate machinery, uncover secret passages and hack computers to **piece your fragmented life back together**, from your very first memory to your last breath. Investigate the presence of a **mysterious figure** as you search for the answer to your greatest mystery."
+      },
+      "call-of-ilaria": {
+        "role": "Solo Developer",
+        "duration": "~1 year",
+        "description": "Set off on an adventure alongside **Maronna QuiDove**, a brave explorer determined to uncover the mystery behind the sudden disappearance of her dearest friend. Along the way you'll fight enemies, recover mysterious items (including a book that allegedly \"**smells of death**\") and interact with the eccentric inhabitants of a **very strange village**..."
+      },
+      "time-to-rest": {
+        "role": "Game Programmer",
+        "duration": "1 week",
+        "description": "Play as a cheerful **skeleton minion** who, tired of losing yet another battle, decides to take a well-deserved **vacation from the game** he lives in. You'll solve platforming challenges, combine items and environmental puzzles to finally earn the **rest you've been longing for**."
+      },
+      "bosque": {
+        "role": "Game Programmer",
+        "duration": "5 days",
+        "description": "Bosque - **where the wind rises**, is a playtest map set in a fantasy forest, built with Unreal Engine during the **Shader Development** course at ITS Academy Lazio Digital, taught by the former Lead Technical Artist of **One-O-One Games**. Together with my classmates, we developed shaders for **altitude-based texture transitions**, a **dynamic wind** system for vegetation, seasonal foliage change with falling leaves shifting color, fireflies via **particle systems**, a character trail, **cell shading** for its visual style, and a realistic river water material."
+      },
+      "astrofox": {
+        "role": "Game Programmer",
+        "duration": "1 week",
+        "description": "AstroFox - **a space journey**, is a third-person adventure platformer where you play as a toy fox brought to life after being launched into space, along with **tons of Earth's garbage**. Guided by the enigmatic yet friendly **Nebulini**, you'll journey across different planets, **recycling waste** along the way to overcome challenges and solve puzzles, in a desperate attempt to **find your way home**. The project was created during the **Unreal Engine Programming** course at ITS Academy Lazio Digital, taught by instructors from **Red Hog Studio**. With the theme \"**Running out of Space**\", built together with my classmates, this was our very **first project** ever on Unreal Engine!"
+      },
+      "games-bond": {
+        "role": "Game Programmer",
+        "duration": "2 weeks",
+        "description": "Games Bond is a **serious game** designed to educate through play, built with Unity and C#. The goal was to raise awareness among young people entering the workforce about **cybersecurity** and the risks of cyberattacks, helping them navigate the digital world more safely and consciously. The game confronts players with the most common security vulnerabilities: avoiding cyber threats, spotting phishing emails, and protecting passwords and sensitive data. The project was developed with the support of **Vigamus Academy**, **Exprivia** and ITS Academy Lazio Digital, and placed **second** out of nineteen projects in the \"Digital Services\" category at **ITS Day 4.0** 2023, organized by the Italian Ministry of Education and Ca' Foscari University of Venice."
+      },
+      "cubethon": {
+        "role": "Solo Developer",
+        "duration": "4 days",
+        "description": "Cubethon is an **endless runner** where you control a colored cube, dodging the grey blocks blocking your path. **Minimalist** design and simple gameplay, built to test your reflexes. The project was built in Unity following the Game Design and Development course by **Michigan State University** and Brackeys' tutorials on YouTube."
+      },
+      "space-debris-3d": {
+        "role": "Solo Developer",
+        "duration": "2 weeks",
+        "description": "Space Debris 3D is a 3D platformer where you play as our **trusty astronaut**, exploring a three-dimensional world. Face hostile enemies, cross deadly rivers of lava and collect keys to advance between rooms, discovering what the **friendly NPCs** have to say along the way. The project was built in Unity and C# following the Game Design and Development course by **Michigan State University**. Starting from the base version required by the course assignment, I added a **dialogue system** with NPCs, keys and doors color-coded by type, two new levels with brand-new challenges (including deadly lava), and a key **inventory** visible in the GUI."
+      },
+      "space-debris-2": {
+        "role": "Solo Developer",
+        "duration": "3 weeks",
+        "description": "Space Debris 2: Defence! puts you in the shoes of an astronaut trapped in a **hostile space base**, facing relentless enemies, inverted gravity and toxic pools to avoid while finding a way out. Collect keys and power-ups scattered across the levels to prove your agility and complete your escape into space. The project was built in Unity and C# following the Game Design and Development course by **Michigan State University**. Starting from the base version required by the course assignment, I added an **inverted gravity** mode that lets you walk on walls and ceilings (with dedicated enemies and checkpoints), the ability to use enemies as indestructible platforms, text feedback when activating checkpoints, two new levels, and a key **inventory** in the GUI."
+      },
+      "space-debris": {
+        "role": "Solo Developer",
+        "duration": "2 weeks",
+        "description": "Pilot a spaceship through waves of space enemies, putting your reflexes to the test. Dodge projectiles with agile maneuvers and defeat enemies to advance through the levels. This project was built during the Game Design and Development course by **Michigan State University**. Simple and rough around the edges, but I'm attached to it because it was my first Unity and C# project, as well as my very **first video game** ever! Starting from the base version required by the assignment, I added a more complete GUI (remaining lives, enemies defeated and remaining, minimap), animated destructible asteroids, an enemy space station that spawns opponents, a bigger and tougher final boss, power-ups granting extra lives, and new levels with brand-new challenges."
+      }
+    }
+  },
+  "projectDetail": {
+    "labels": {
+      "stack": "TECH STACK",
+      "platforms": "PLATFORMS",
+      "period": "DURATION",
+      "company": "STUDIO",
+      "course": "COURSE",
+      "gameJam": "GAME JAM",
+      "personal": "TYPE",
+      "personalValue": "Personal Project"
+    },
+    "backToProjects": "Back to projects",
+    "notFound": "Project not found.",
+    "backToHome": "Back to home",
+    "prevImage": "Previous image",
+    "nextImage": "Next image",
+    "galleryAlt": "image"
+  },
+  "projectNav": {
+    "previous": "← Previous",
+    "next": "Next →"
+  },
+  "about": {
+    "title": "About me",
+    "introText": "I develop games in <hl>Unreal Engine</hl> and <hl>Unity</hl>, across C++, Blueprint and C#.<br></br>I hold a <hl>Master's Degree</hl> in <hl>Computer Engineering</hl>, earned just in time to study generative AI before using it.<br></br>My path started in general software development, continued through indie prototypes built both solo and in teams, and moved on to <hl>published titles</hl> in studio.",
+    "experienceTitle": "Experience",
+    "educationTitle": "Education",
+    "stats": {
+      "gamedevYears": "years in Game Dev",
+      "itYears": "years in IT",
+      "projects": "projects"
+    }
+  },
+  "experience": {
+    "items": {
+      "one-o-one-games": {
+        "role": "Game Programmer",
+        "period": "May 2026 → present",
+        "description": "Developing gameplay systems, UI and tech animation from scratch. Reverse-engineering existing systems to support new feature development."
+      },
+      "miniclip": {
+        "role": "Game Programmer",
+        "period": "Sep 2024 → May 2026",
+        "description": "Implementing gameplay mechanics and UI with player experience as the guiding metric. Developing live features and automated tests, with performance optimization for mobile."
+      },
+      "red-hog-studio": {
+        "role": "Game Programmer",
+        "period": "Dec 2023 → May 2024",
+        "description": "Developing gameplay systems, features and UI, with cinematics built in Sequencer. Producing technical documentation to support the team."
+      },
+      "leonardo": {
+        "role": "Functional Analyst",
+        "period": "Oct 2021 → Nov 2022",
+        "description": "Functional requirements analysis and coordination between development and client, with testing and documentation to support quality."
+      },
+      "cluster-reply": {
+        "role": "Microsoft CRM Consultant",
+        "period": "May 2020 → Sep 2021",
+        "description": "Developing custom front-end/back-end logic (C# and JavaScript) on CRM platforms (Microsoft Dynamics 365 and Power Platform)."
+      },
+      "bytewise": {
+        "role": "Network Systems Administrator",
+        "period": "Oct 2016 → Feb 2017",
+        "description": "Analysis and setup of telecommunications networks, using Linux systems for servers and services."
+      },
+      "its-game-dev": {
+        "role": "Game Development (Higher Technical Diploma)",
+        "period": "Nov 2022 → Jul 2024",
+        "description": ""
+      },
+      "roma-tre-magistrale": {
+        "role": "Computer Engineering (Master's Degree)",
+        "period": "Sep 2017 → Mar 2020",
+        "description": ""
+      },
+      "roma-tre-triennale": {
+        "role": "Computer Engineering (Bachelor's Degree)",
+        "period": "Sep 2012 → Jul 2017",
+        "description": ""
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "introText": "Open to <hl>Game Programmer</hl> roles, preferably remote.",
+    "downloadCv": "Download CV"
+  },
+  "footer": {
+    "origin": "formerly"
+  },
+  "showreel": {
+    "close": "Close",
+    "title": "Showreel"
+  },
+  "projectHero": {
+    "desktopOnly": "Play on desktop",
+    "goToItch": "Go to itch.io ↗",
+    "play": "Play"
+  }
+}

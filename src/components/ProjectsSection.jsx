@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import ProjectCard from './ProjectCard'
 import { projects } from '../data/projects'
 import { useMediaQuery } from '../hooks/useMediaQuery'
@@ -6,6 +7,7 @@ import { useInView } from '../hooks/useInView'
 import './ProjectsSection.css'
 
 function ProjectsSection() {
+  const { t } = useTranslation()
   const [showAll, setShowAll] = useState(() => sessionStorage.getItem('projects-show-all') === 'true')
   const [titleRef, isTitleVisible] = useInView()
 
@@ -26,10 +28,10 @@ function ProjectsSection() {
           ref={titleRef}
           className={`section-title-row fade-in-section ${isTitleVisible ? 'is-visible' : ''}`}
         >
-          <span className="section-title">Progetti</span>
+          <span className="section-title">{t('projects.sectionTitle')}</span>
           {hasMore && (
             <button className="btn-secondary toggle-btn" onClick={() => setShowAll(!showAll)}>
-              {showAll ? 'Mostra meno' : 'Mostra tutti '}
+              {showAll ? t('projects.showLess') : t('projects.showAll')}
               <svg
                 className={`toggle-icon ${showAll ? 'open' : ''}`}
                 viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"

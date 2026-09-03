@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
+import { Trans, useTranslation } from 'react-i18next'
 import { scrollToSection } from '../utils/smoothScroll'
 import './Hero.css'
 
 function Hero({ onWatchShowreel }) {
+  const { t } = useTranslation()
   const videoRef = useRef(null)
   const [autoplayFailed, setAutoplayFailed] = useState(false)
 
@@ -47,14 +49,12 @@ function Hero({ onWatchShowreel }) {
 
       <div className="hero-content-wrap">
         <div className="hero-content">
-          <span className="hero-eyebrow">Game Programmer</span>
-          <h1>Adoro i videogiochi,<br />perciò li costruisco.</h1>
-          <p>Dal software gestionale al gameplay.
-            <br />Tre anni nell'IT, ora due nel Game Dev.
-          </p>
+          <span className="hero-eyebrow">{t('hero.eyebrow')}</span>
+          <h1><Trans i18nKey="hero.title" components={{ br: <br /> }} /></h1>
+          <p><Trans i18nKey="hero.subtitle" components={{ br: <br /> }} /></p>
           <div className="cta-row">
-            <button className="btn-primary" onClick={scrollToProjects}>I miei progetti</button>
-            <button className="btn-secondary" onClick={onWatchShowreel}>Showreel 2024</button>
+            <button className="btn-primary" onClick={scrollToProjects}>{t('hero.ctaProjects')}</button>
+            <button className="btn-secondary" onClick={onWatchShowreel}>{t('hero.ctaShowreel')}</button>
           </div>
         </div>
       </div>

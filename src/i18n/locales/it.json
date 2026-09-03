@@ -1,0 +1,192 @@
+{
+  "common": {
+    "close": "Chiudi ✕"
+  },
+  "header": {
+    "nav": {
+      "home": "Home",
+      "projects": "Progetti",
+      "about": "Chi sono",
+      "contact": "Contatti"
+    },
+    "openMenu": "Apri menu"
+  },
+  "hero": {
+    "eyebrow": "Game Programmer",
+    "title": "Adoro i videogiochi,<br></br>perciò li costruisco.",
+    "subtitle": "Dal software gestionale al gameplay.<br></br>Tre anni nell'IT, poi due nel Game Dev.",
+    "ctaProjects": "I miei progetti",
+    "ctaShowreel": "Showreel 2024"
+  },
+  "projects": {
+    "sectionTitle": "Progetti",
+    "showAll": "Mostra tutti",
+    "showLess": "Mostra meno",
+    "externalLinkLabels": {
+      "steam": "Guarda su Steam",
+      "itch": "Guarda su itch.io",
+      "website": "Guarda sul sito"
+    },
+    "items": {
+      "curse-of-the-crimson-stag": {
+        "role": "Game Programmer",
+        "duration": "4 mesi",
+        "description": "Curse of the Crimson Stag è un **thriller** incentrato sulla trama in cui esplori il labile confine tra eventi soprannaturali e tragedie del passato. Scopri il motivo per cui il lussuoso **Whiteroot Hotel** è stato abbandonato. I miti locali parlano di uno spirito collerico chiamato il **Cervo Cremisi**..."
+      },
+      "golf-battle": {
+        "role": "Game Programmer",
+        "duration": "~2 anni",
+        "description": "Golf Battle è un gioco di **minigolf multiplayer in tempo reale**, da 1 vs 1 fino a **6 giocatori**. Oltre 120 tra buche, campi e livelli, con ostacoli dinamici (bunker, fossati, barriere mobili) e un sistema di progressione con mazze e palline personalizzabili."
+      },
+      "project-remind": {
+        "role": "Game Programmer",
+        "duration": "4 mesi",
+        "description": "\"**Questa è la fine. La mia fine**\". Aziona macchinari, scopri passaggi segreti e hackera computer per **ricomporre la tua vita frammentata**, dalla tua prima scoperta fino al tuo ultimo respiro. Investiga la presenza di una **figura misteriosa** mentre cerchi la risposta al tuo grande mistero."
+      },
+      "call-of-ilaria": {
+        "role": "Solo Developer",
+        "duration": "~1 anno",
+        "description": "Parti per un'avventura al fianco di **Maronna QuiDove**, una coraggiosa esploratrice determinata a svelare il mistero dietro la scomparsa improvvisa del suo più caro amico. Lungo il percorso combatterai nemici, recupererai oggetti misteriosi (incluso un libro che \"**sa di morte**\", secondo le voci) e interagirai con gli eccentrici abitanti di un **villaggio molto strano**..."
+      },
+      "time-to-rest": {
+        "role": "Game Programmer",
+        "duration": "1 settimana",
+        "description": "Vesti i panni di un simpatico **minion-scheletro** che, stanco dell'ennesima battaglia in cui è rimasto sconfitto, decide di prendersi una meritata **vacanza dal videogioco** in cui si trova. Dovrai risolvere prove tra piattaforme, oggetti da combinare e puzzle ambientali per guadagnarti finalmente l'**agognato riposo**."
+      },
+      "bosque": {
+        "role": "Game Programmer",
+        "duration": "5 giorni",
+        "description": "Bosque - **where the wind rises**, è una mappa di playtest ambientata in una foresta fantasy, realizzata con Unreal Engine durante il corso **Shader Development** dell'ITS Academy Lazio Digital, tenuto dall'ex Lead Technical Artist di **One-O-One Games**. Insieme ai miei compagni di corso, abbiamo sviluppato shader per la **transizione di texture** in base all'altitudine, un sistema di **vento dinamico** per la vegetazione, il cambio stagionale del fogliame con foglie che cadono al variare del colore, lucciole tramite **sistemi particellari**, una scia per il personaggio, **cell shading** per il suo stile visivo e un materiale realistico per l'acqua del fiume."
+      },
+      "astrofox": {
+        "role": "Game Programmer",
+        "duration": "1 settimana",
+        "description": "AstroFox - **a space journey**, è un adventure platform in terza persona in cui vesti i panni di una volpe giocattolo che ha preso vita dopo essere stata scagliata nello spazio, insieme a **tonnellate di spazzatura terrestre**. Guidato dagli enigmatici ma amichevoli **Nebulini**, affronterai un viaggio attraverso diversi pianeti, **riciclando i rifiuti** lungo il cammino per superare sfide e risolvere puzzle, nel disperato tentativo di **tornare a casa**. Il progetto è nato durante il corso di **Programmazione in Unreal Engine** dell'ITS Academy Lazio Digital, con gli insegnanti di **Red Hog Studio**. Con il tema \"**Running out of Space**\", realizzato insieme ai miei compagni di corso, questo è stato il nostro **primo progetto** in assoluto su Unreal Engine!"
+      },
+      "games-bond": {
+        "role": "Game Programmer",
+        "duration": "2 settimane",
+        "description": "Games Bond è un **serious game** pensato per educare divertendo, sviluppato con Unity e C#. L'obiettivo era sensibilizzare i giovani in età pre-lavorativa sulla **cybersecurity** e sui rischi legati agli attacchi informatici, aiutandoli a muoversi nel mondo digitale in modo più sicuro e consapevole. Il gioco mette i giocatori di fronte alle vulnerabilità di sicurezza più comuni: evitare minacce informatiche, eliminare email di phishing e proteggere password e dati sensibili. Il progetto è nato con il supporto di **Vigamus Academy**, **Exprivia** e ITS Academy Lazio Digital, ed è arrivato **secondo** su diciannove progetti nella categoria \"Digital Services\" all'**ITS Day 4.0** del 2023, organizzato da MIUR e Università Ca' Foscari di Venezia."
+      },
+      "cubethon": {
+        "role": "Solo Developer",
+        "duration": "4 giorni",
+        "description": "Cubethon è un **endless runner** in cui controlli un cubo colorato, schivando i blocchi grigi che ti sbarrano la strada. Design **minimalista** e gameplay semplice, pensato per mettere alla prova i tuoi riflessi. Il progetto è nato su Unity seguendo il corso Game Design and Development della **Michigan State University** e i tutorial di **Brackeys** su YouTube."
+      },
+      "space-debris-3d": {
+        "role": "Solo Developer",
+        "duration": "2 settimane",
+        "description": "Space Debris 3D è un platform 3D in cui vesti i panni del nostro **fidato astronauta**, esplorando un mondo tridimensionale. Affronta nemici ostili, attraversa fiumi di lava letali e raccogli chiavi per avanzare tra le stanze, scoprendo cosa hanno da dire i **simpatici NPC** lungo il percorso. Il progetto è nato su Unity e C# seguendo il corso Game Design and Development della **Michigan State University**. Partendo dalla versione base richiesta dall'assignment del corso, ho aggiunto un **sistema di dialogo** con gli NPC, chiavi e porte colorate in base al tipo, due nuovi livelli con sfide inedite (tra cui la lava mortale) e un **inventario** delle chiavi visibile nella GUI."
+      },
+      "space-debris-2": {
+        "role": "Solo Developer",
+        "duration": "3 settimane",
+        "description": "Space Debris 2: Defence! ti mette nei panni di un astronauta intrappolato in una **base spaziale ostile**, tra nemici implacabili, gravità invertita e pozze tossiche da evitare per trovare una via di fuga. Raccogli chiavi e power-up sparsi nei livelli per dimostrare la tua agilità e completare la fuga nello spazio. Il progetto è nato su Unity e C# seguendo il corso Game Design and Development della **Michigan State University**. Partendo dalla versione base richiesta dall'assignment del corso, ho aggiunto una modalità a **gravità invertita** che permette di camminare su pareti e soffitti (con nemici e checkpoint dedicati), la possibilità di usare i nemici come piattaforme indistruttibili, un feedback testuale all'attivazione dei checkpoint, due nuovi livelli e un **inventario** delle chiavi nella GUI."
+      },
+      "space-debris": {
+        "role": "Solo Developer",
+        "duration": "2 settimane",
+        "description": "Pilota un'astronave attraverso ondate di nemici spaziali, mettendo alla prova i tuoi riflessi. Schiva i proiettili con manovre agili e sconfiggi i nemici per avanzare tra i livelli. Questo progetto è nato durante il corso Game Design and Development della **Michigan State University**. Semplice e migliorabile, ma ci sono affezionata perché è stato il mio primo progetto su Unity e C#, nonché il mio **primo videogioco** in assoluto! Partendo dalla versione base richiesta dall'assignment, ho aggiunto una GUI più completa (vite rimaste, nemici sconfitti e da sconfiggere, minimappa), asteroidi distruttibili animati, una stazione spaziale nemica che genera avversari, un boss finale più grande e resistente, power-up che danno vite extra e nuovi livelli con sfide inedite."
+      }
+    }
+  },
+  "projectDetail": {
+    "labels": {
+      "stack": "TECNOLOGIE",
+      "platforms": "PIATTAFORME",
+      "period": "PERIODO",
+      "company": "AZIENDA",
+      "course": "CORSO",
+      "gameJam": "GAME JAM",
+      "personal": "TIPO",
+      "personalValue": "Progetto Personale"
+    },
+    "backToProjects": "Torna ai progetti",
+    "notFound": "Progetto non trovato.",
+    "backToHome": "Torna alla home",
+    "prevImage": "Immagine precedente",
+    "nextImage": "Immagine successiva",
+    "galleryAlt": "immagine"
+  },
+  "projectNav": {
+    "previous": "← Precedente",
+    "next": "Successivo →"
+  },
+  "about": {
+    "title": "Chi sono",
+    "introText": "Programmo videogiochi in <hl>Unreal Engine</hl> e <hl>Unity</hl>, tra C++, Blueprint e C#.<br></br>Ho una <hl>Laurea Magistrale</hl> in <hl>Ingegneria Informatica</hl>, presa appena in tempo per studiare l'IA generativa prima di usarla.<br></br>Il mio percorso è iniziato dallo sviluppo software generalista, proseguito poi su prototipi indie realizzati sia in autonomia che in gruppo, e continuato su <hl>titoli pubblicati</hl> in studio.",
+    "experienceTitle": "Esperienza",
+    "educationTitle": "Formazione",
+    "stats": {
+      "gamedevYears": "anni nel Game Dev",
+      "itYears": "anni nell'IT",
+      "projects": "progetti"
+    }
+  },
+  "experience": {
+    "items": {
+      "one-o-one-games": {
+        "role": "Game Programmer",
+        "period": "Mag 2026 → oggi",
+        "description": "Sviluppo di sistemi di gameplay, UI e tech animation da zero. Reverse engineering di sistemi esistenti a supporto dello sviluppo di nuove feature."
+      },
+      "miniclip": {
+        "role": "Game Programmer",
+        "period": "Set 2024 → Mag 2026",
+        "description": "Implementazione di meccaniche di gameplay e UI con l'esperienza del giocatore come metro di giudizio. Sviluppo di live feature e test automatizzati, con ottimizzazione delle performance per il mobile."
+      },
+      "red-hog-studio": {
+        "role": "Game Programmer",
+        "period": "Dic 2023 → Mag 2024",
+        "description": "Sviluppo di sistemi di gameplay, feature e UI, con cinematiche realizzate in Sequencer. Realizzazione di documentazione tecnica a supporto del team."
+      },
+      "leonardo": {
+        "role": "Analista funzionale",
+        "period": "Ott 2021 → Nov 2022",
+        "description": "Analisi dei requisiti funzionali e coordinamento tra sviluppo e cliente, con testing e documentazione a supporto della qualità."
+      },
+      "cluster-reply": {
+        "role": "Consulente Microsoft CRM",
+        "period": "Mag 2020 → Set 2021",
+        "description": "Sviluppo logica custom front-end/back-end (C# e JavaScript) su piattaforme CRM (Microsoft Dynamics 365 e Power Platform)."
+      },
+      "bytewise": {
+        "role": "Sistemista di rete",
+        "period": "Ott 2016 → Feb 2017",
+        "description": "Analisi e realizzazione di reti di telecomunicazione, con utilizzo di sistemi Linux per server e servizi."
+      },
+      "its-game-dev": {
+        "role": "Game Development (Diploma di Tecnico Superiore)",
+        "period": "Nov 2022 → Lug 2024",
+        "description": ""
+      },
+      "roma-tre-magistrale": {
+        "role": "Ingegneria Informatica (Laurea Magistrale)",
+        "period": "Set 2017 → Mar 2020",
+        "description": ""
+      },
+      "roma-tre-triennale": {
+        "role": "Ingegneria Informatica (Laurea Triennale)",
+        "period": "Set 2012 → Lug 2017",
+        "description": ""
+      }
+    }
+  },
+  "contact": {
+    "title": "Contatti",
+    "introText": "Aperta a ruoli da <hl>Game Programmer</hl>, preferibilmente da remoto.",
+    "downloadCv": "Scarica il CV"
+  },
+  "footer": {
+    "origin": "in origine"
+  },
+  "showreel": {
+    "close": "Chiudi",
+    "title": "Showreel"
+  },
+  "projectHero": {
+    "desktopOnly": "Gioca su desktop",
+    "goToItch": "Vai su itch.io ↗",
+    "play": "Avvia"
+  }
+}

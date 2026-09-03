@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import { IoGameControllerOutline } from 'react-icons/io5'
 import { TbMovie } from 'react-icons/tb'
 import './ProjectHero.css'
@@ -44,20 +45,22 @@ function EmbedHero({ hero, title }) {
 }
 
 function EmbedFallback({ project }) {
+  const { t } = useTranslation()
+
   return (
     <div
       className="embed-fallback"
       style={{ backgroundImage: `url(${project.cover})` }}
     >
       <div className="embed-fallback-overlay">
-        <p>Gioca su desktop</p>
+        <p>{t('projectHero.desktopOnly')}</p>
         <a
           href={project.externalLink.url}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-secondary external-cta"
         >
-          <span className="btn-text">Vai su itch.io ↗</span>
+          <span className="btn-text">{t('projectHero.goToItch')}</span>
         </a>
       </div>
     </div>
@@ -65,6 +68,7 @@ function EmbedFallback({ project }) {
 }
 
 function ClickToPlayOverlay({ cover, badgeIcon, children }) {
+  const { t } = useTranslation()
   const [activated, setActivated] = useState(false)
 
   if (activated) {
@@ -78,7 +82,7 @@ function ClickToPlayOverlay({ cover, badgeIcon, children }) {
         style={{ backgroundImage: `url(${cover})` }}
       />
       <div className="embed-click-scrim" />
-      <button className="play-button" aria-label="Avvia">
+      <button className="play-button" aria-label={t('projectHero.play')}>
         <svg viewBox="0 0 24 24">
           <polygon points="9,6 9,18 18,12" />
         </svg>
