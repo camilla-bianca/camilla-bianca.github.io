@@ -23,6 +23,12 @@ const platformIconMap = {
   android: { Icon: SiAndroid, size: 18 },
 }
 
+function trackEvent(name, data) {
+  if (typeof window !== 'undefined' && window.umami) {
+    window.umami.track(name, data)
+  }
+}
+
 function GalleryItem({ image, index, title, alt, onClick }) {
   const [ref, isVisible] = useInView()
 
@@ -104,6 +110,11 @@ function ProjectDetail() {
   const { previous, next } = getAdjacentProjects(slug)
   const fourthField = getFourthField(project)
   const fourthValue = fourthField.value || t('projectDetail.labels.personalValue')
+
+  const openLightbox = (i) => {
+    trackEvent('apertura-galleria', { progetto: project.slug })
+    setLightboxIndex(i)
+  }
 
   const goToPrevImage = (e) => {
     e.stopPropagation()
@@ -261,7 +272,7 @@ function ProjectDetail() {
                 image={image}
                 index={i}
                 alt={`${project.title} - ${t('projectDetail.galleryAlt')} ${i + 1}`}
-                onClick={() => setLightboxIndex(i)}
+                onClick={() => openLightbox(i)}
               />
             ))}
           </div>
