@@ -112,7 +112,11 @@ function ProjectDetail() {
   const fourthValue = fourthField.value || t('projectDetail.labels.personalValue')
 
   const openLightbox = (i) => {
-    trackEvent('apertura-galleria', { progetto: project.slug })
+    const key = `galleria-tracciata-${project.slug}`
+    if (!sessionStorage.getItem(key)) {
+      trackEvent('apertura-galleria', { progetto: project.slug })
+      sessionStorage.setItem(key, 'true')
+    }
     setLightboxIndex(i)
   }
 
