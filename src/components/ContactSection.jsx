@@ -5,8 +5,11 @@ import { trackEvent } from '../utils/analytics'
 import './ContactSection.css'
 
 function ContactSection() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [ref, isVisible] = useInView()
+
+  const lang = i18n.language.startsWith('it') ? 'it' : 'en'
+  const cvHref = cvUrl[lang]
 
   return (
     <section
@@ -45,12 +48,11 @@ function ContactSection() {
           )
         })}
       </div>
-
       <a
-        href={cvUrl}
+        href={cvHref}
         className="btn-cv"
         download
-        onClick={() => trackEvent('download-cv')}
+        onClick={() => trackEvent('download-cv', { lingua: lang })}
       >
         <span className="btn-text">{t('contact.downloadCv')}</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
