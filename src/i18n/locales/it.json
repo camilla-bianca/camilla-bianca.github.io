@@ -114,7 +114,7 @@
   },
   "about": {
     "title": "Chi sono",
-    "introText": "Sono una <hl>Game Programmer</hl> e lavoro principalmente su Unreal Engine e Unity, con C++, Blueprint e C#. Ho una laurea magistrale in <hl>Ingegneria Informatica</hl> e ho continuato a imparare anche fuori dall'università: prototipi indie in autonomia, progetti in team, fino ad arrivare allo sviluppo in studio su <hl>titoli pubblicati</hl>. Del Game Dev mi affascina una sfida che non smette mai di appassionarmi: partire da qualcosa che non esiste e farlo diventare <hl>reale</hl>.",
+    "introText": "Sono una <hl>Game Programmer</hl> e lavoro principalmente su Unreal Engine e Unity, con C++, Blueprint e C#. Dopo la laurea magistrale in <hl>Ingegneria Informatica</hl> non ho mai smesso di imparare: prototipi indie in autonomia, progetti in team, fino ad arrivare allo sviluppo in studio su <hl>titoli pubblicati</hl>. Del Game Dev mi affascina una sfida che non smette mai di appassionarmi: partire da qualcosa che non esiste e farlo diventare <hl>reale</hl>.",
     "experienceTitle": "Esperienza",
     "educationTitle": "Formazione",
     "stats": {

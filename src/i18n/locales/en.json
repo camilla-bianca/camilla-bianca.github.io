@@ -114,7 +114,7 @@
   },
   "about": {
     "title": "About me",
-    "introText": "I'm a <hl>Game Programmer</hl> and I work mainly on Unreal Engine and Unity, using C++, Blueprint, and C#. I have a Master's degree in <hl>Computer Engineering</hl> and I've kept learning beyond university too: solo indie prototypes, team projects, all the way to studio development on <hl>published titles</hl>. What fascinates me about Game Dev is a challenge that never stops exciting me: starting from something that doesn't exist and turning it into something <hl>real</hl>.",
+    "introText": "I'm a <hl>Game Programmer</hl> and I work mainly on Unreal Engine and Unity, using C++, Blueprint, and C#. After my Master's degree in <hl>Computer Engineering</hl> I've never stopped learning: solo indie prototypes, team projects, all the way to studio development on <hl>published titles</hl>. What fascinates me about Game Dev is a challenge that never stops exciting me: starting from something that doesn't exist and turning it into something <hl>real</hl>.",
     "experienceTitle": "Experience",
     "educationTitle": "Education",
     "stats": {

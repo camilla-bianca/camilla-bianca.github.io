@@ -19,7 +19,7 @@
   max-width: 580px;
   margin: 0 0 20px;
   text-align: justify;
-  hyphens: auto;
+  hyphens: none;
 }
 
 .stats {
@@ -104,7 +104,7 @@
   margin-top: 6px;
   max-width: 540px;
   text-align: justify;
-  hyphens: auto;
+  hyphens: none;
 }
 
 .timeline-role-row {

@@ -122,7 +122,7 @@
   line-height: 1.65;
   margin: 0 0 26px;
   text-align: justify;
-  hyphens: auto;
+  hyphens: none;
 }
 
 .metadata-row {
