@@ -14,7 +14,7 @@
   "hero": {
     "eyebrow": "Game Programmer",
     "title": "I love video games,<br></br>so I build them.",
-    "subtitle": "From business software to gameplay.<br></br>Three years in IT, then two in Game Dev.",
+    "subtitle": "From IT to Game Development: I turned<br></br>what I knew how to do into what I wanted to do.",
     "ctaProjects": "My projects",
     "ctaShowreel": "2024 Showreel"
   },
@@ -36,37 +36,37 @@
       "golf-battle": {
         "role": "Game Programmer",
         "duration": "~2 years",
-        "description": "Golf Battle is a **real-time multiplayer minigolf** game, from 1v1 up to **6 players**. Over 120 holes, courses and levels, with **dynamic obstacles** (geysers, ditches, moving barriers) and a **progression system** with customizable clubs and balls."
+        "description": "Golf Battle is a **real-time multiplayer** minigolf game, from 1v1 up to **6 players**. Over 120 holes, courses and levels, with **dynamic obstacles** (geysers, ditches, moving barriers) and a **progression system** with customizable clubs and balls."
       },
       "project-remind": {
         "role": "Game Programmer",
         "duration": "4 months",
-        "description": "\"**This is the end. My end**\". Operate machinery, uncover secret passages and hack computers to **piece your fragmented life back together**, from your very first memory to your last breath. Investigate the presence of a **mysterious figure** as you search for the answer to your greatest mystery."
+        "description": "_This is the end. My end_.\nOperate machinery, uncover secret passages and hack computers to piece your **fragmented life** back together, from your very first memory to your last breath. Investigate the presence of a **mysterious figure** as you search for the answer to your greatest mystery."
       },
       "call-of-ilaria": {
         "role": "Solo Developer",
         "duration": "~1 year",
-        "description": "Set off on an adventure alongside **Maronna HereWhere**, a brave explorer determined to uncover the mystery behind the sudden disappearance of her dearest friend. Along the way you'll fight enemies, recover mysterious items (including a book that allegedly \"**smells of death**\") and interact with the eccentric inhabitants of a **very strange village**..."
+        "description": "Set off on an adventure alongside **Maronna HereWhere**, a brave explorer determined to uncover the mystery behind the sudden disappearance of her dearest friend. Along the way you'll fight enemies, recover mysterious items (including a book that allegedly **_smells of death_**) and interact with the eccentric inhabitants of a **very strange village**..."
       },
       "time-to-rest": {
         "role": "Game Programmer",
         "duration": "1 week",
-        "description": "Play as a cheerful **skeleton minion** who, tired of losing yet another battle, decides to take a well-deserved **vacation from the game** he lives in. You'll solve platforming challenges, combine items and environmental puzzles to finally earn the **rest you've been longing for**."
+        "description": "Play as a cheerful **skeleton minion** who, tired of losing yet another battle, decides to take a well-deserved **vacation from the game** he lives in. You'll solve platforming challenges, combine items and environmental puzzles to finally earn the **rest** you've been longing for."
       },
       "bosque": {
         "role": "Game Programmer",
         "duration": "5 days",
-        "description": "Bosque - **where the wind rises**, is a playtest map set in a fantasy forest, built with Unreal Engine during the **Shader Development** course at ITS Academy Lazio Digital, taught by the former Lead Technical Artist of **One-O-One Games**. Together with my classmates, we developed shaders for **altitude-based texture transitions**, a **dynamic wind** system for vegetation, seasonal foliage change with falling leaves shifting color, fireflies via **particle systems**, a character trail, **cell shading** for its visual style, and a realistic river water material."
+        "description": "_Where the wind rises._\nBosque is a playtest map set in a fantasy forest, built with Unreal Engine during the **Shader Development** course at ITS Academy Lazio Digital, taught by the former Lead Technical Artist of **One-O-One Games**. Together with my classmates, we developed shaders for altitude-based **texture transitions**, a **dynamic wind** system for vegetation, seasonal foliage change with falling leaves shifting color, fireflies via **particle systems**, a character trail, **cell shading** for its visual style, and a realistic river water material."
       },
       "astrofox": {
         "role": "Game Programmer",
         "duration": "1 week",
-        "description": "AstroFox - **a space journey**, is a third-person adventure platformer where you play as a toy fox brought to life after being launched into space, along with **tons of Earth's garbage**. Guided by the enigmatic yet friendly **Nebulinos**, you'll journey across different planets, **recycling waste** along the way to overcome challenges and solve puzzles, in a desperate attempt to **find your way home**. The project was created during the **Unreal Engine Programming** course at ITS Academy Lazio Digital, taught by instructors from **Red Hog Studio**. With the theme \"**Running out of Space**\", built together with my classmates, this was our very **first project** ever on Unreal Engine!"
+        "description": "_A space journey._\nAstroFox is a third-person adventure platformer where you play as a toy fox brought to life after being launched into space, along with **tons of Earth's garbage**. Guided by the enigmatic yet friendly **Nebulinos**, you'll journey across different planets, **recycling waste** along the way to overcome challenges and solve puzzles, in a desperate attempt to **find your way home**. The project was created during the **Unreal Engine Programming** course at ITS Academy Lazio Digital, taught by instructors from **Red Hog Studio**. With the theme _Running out of Space_, built together with my classmates, this was our very **first project** ever on Unreal Engine!"
       },
       "games-bond": {
         "role": "Game Programmer",
         "duration": "2 weeks",
-        "description": "Games Bond is a **serious game** designed to educate through play, built with Unity and C#. The goal was to raise awareness among young people entering the workforce about **cybersecurity** and the risks of cyberattacks, helping them navigate the digital world more safely and consciously. The game confronts players with the most common security vulnerabilities: avoiding cyber threats, spotting phishing emails, and protecting passwords and sensitive data. The project was developed with the support of **Vigamus Academy**, **Exprivia** and ITS Academy Lazio Digital, and placed **second** out of nineteen projects in the \"Digital Services\" category at **ITS Day 4.0** 2023, organized by the Italian Ministry of Education and Ca' Foscari University of Venice."
+        "description": "Games Bond is a **serious game** designed to educate through play, built with Unity and C#. The goal was to raise awareness among young people entering the workforce about **cybersecurity** and the risks of cyberattacks, helping them navigate the digital world more safely and consciously. The game confronts players with the most common security vulnerabilities: avoiding cyber threats, spotting phishing emails, and protecting passwords and sensitive data. The project was developed with the support of **Vigamus Academy**, Exprivia and ITS Academy Lazio Digital, and placed **second** out of nineteen projects in the \"Digital Services\" category at **ITS Day 4.0** 2023, organized by the Italian Ministry of Education and Ca' Foscari University of Venice."
       },
       "cubethon": {
         "role": "Solo Developer",
@@ -81,12 +81,12 @@
       "space-debris-2": {
         "role": "Solo Developer",
         "duration": "3 weeks",
-        "description": "Space Debris 2: Defence! puts you in the shoes of an astronaut trapped in a **hostile space base**, facing relentless enemies, inverted gravity and toxic pools to avoid while finding a way out. Collect keys and power-ups scattered across the levels to prove your agility and complete your escape into space. The project was built in Unity and C# following the Game Design and Development course by **Michigan State University**. Starting from the base version required by the course assignment, I added an **inverted gravity** mode that lets you walk on ceilings (with dedicated enemies and checkpoints), the ability to use enemies as indestructible platforms, text feedback when activating checkpoints, two new levels, and a key **inventory** in the GUI."
+        "description": "Space Debris 2: Defence! puts you in the shoes of an **astronaut** trapped in a **hostile space base**, facing relentless enemies, inverted gravity and toxic pools to avoid while finding a way out, collecting keys and power-ups scattered across the levels. The project was built in Unity and C# following the Game Design and Development course by **Michigan State University**. Starting from the base version required by the course assignment, I added an **inverted gravity** mode that lets you walk on ceilings (with dedicated enemies and checkpoints), the ability to use enemies as indestructible platforms, text feedback when activating checkpoints, two new levels, and a key **inventory** in the GUI."
       },
       "space-debris": {
         "role": "Solo Developer",
         "duration": "2 weeks",
-        "description": "Pilot a spaceship through waves of space enemies, putting your reflexes to the test. Dodge projectiles with agile moves and defeat enemies to advance through the levels. This project was built during the Game Design and Development course by **Michigan State University**. Simple and rough around the edges, but I'm attached to it because it was my first Unity and C# project, as well as my very **first video game ever**! Starting from the base version required by the assignment, I added a more complete GUI (remaining lives, enemies defeated and remaining, minimap), animated destructible asteroids, an enemy space station that **spawns opponents**, a bigger and tougher final boss, **power-ups** granting extra lives, and new levels with brand-new challenges."
+        "description": "Pilot a **spaceship** through waves of space enemies, putting your reflexes to the test. Dodge projectiles with agile moves and defeat enemies to advance through the levels. This project was built during the Game Design and Development course by **Michigan State University**. Simple and rough around the edges, but I'm attached to it because it was my first Unity and C# project, as well as my very **first video game ever**! Starting from the base version required by the assignment, I added a more complete GUI (remaining lives, enemies defeated and remaining, minimap), animated destructible asteroids, an enemy space station that **spawns opponents**, a bigger and tougher final boss, **power-ups** granting extra lives, and new levels with brand-new challenges."
       }
     }
   },
@@ -114,7 +114,7 @@
   },
   "about": {
     "title": "About me",
-    "introText": "I develop games in <hl>Unreal Engine</hl> and <hl>Unity</hl>, across C++, Blueprint and C#.<br></br>I hold a <hl>Master's Degree</hl> in <hl>Computer Engineering</hl>, earned just in time to study generative AI before using it.<br></br>My path started in general software development, continued through indie prototypes built both solo and in teams, and moved on to <hl>published titles</hl> in studio.",
+    "introText": "I'm a <hl>Game Programmer</hl> and I work mainly on Unreal Engine and Unity, using C++, Blueprint, and C#. I have a Master's degree in <hl>Computer Engineering</hl> and I've kept learning beyond university too: solo indie prototypes, team projects, all the way to studio development on <hl>published titles</hl>. What fascinates me about Game Dev is a challenge that never stops exciting me: starting from something that doesn't exist and turning it into something <hl>real</hl>.",
     "experienceTitle": "Experience",
     "educationTitle": "Education",
     "stats": {
@@ -149,11 +149,6 @@
         "role": "Microsoft CRM Consultant",
         "period": "May 2020 → Sep 2021",
         "description": "Developing custom front-end/back-end logic (C# and JavaScript) on CRM platforms (Microsoft Dynamics 365 and Power Automate)."
-      },
-      "bytewise": {
-        "role": "Network Systems Administrator",
-        "period": "Oct 2016 → Feb 2017",
-        "description": "Analysis and setup of telecommunications networks, using Linux systems for servers and services."
       },
       "its-game-dev": {
         "role": "Game Development (Higher Technical Diploma)",

@@ -10,7 +10,6 @@ export const workExperience = [
   { id: 'red-hog-studio', engine: 'unreal', company: 'Red Hog Studio' },
   { id: 'leonardo', company: 'Leonardo (Cybersecurity)' },
   { id: 'cluster-reply', company: 'Cluster Reply' },
-  { id: 'bytewise', company: 'Bytewise' },
 ]
 
 export const education = [
