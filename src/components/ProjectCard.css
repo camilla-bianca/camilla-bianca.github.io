@@ -12,15 +12,6 @@
 
 .card:hover {
   transform: translateY(-4px);
-  /*
-  border-color: var(--accent-primary);
-  */
-  /*
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.35));
-  */
-  /*
-  filter: drop-shadow(0 6px 20px rgba(46, 213, 115, 0.25));
-  */
 }
 
 .card-media {
