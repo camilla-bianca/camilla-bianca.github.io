@@ -183,7 +183,7 @@ function ProjectDetail() {
           </Link>
           <div className="header-right">
             <LangSwitch />
-            <Link to="/" className="project-detail-logo">Camilla Bianca</Link>
+            <Link to="/" className="project-detail-logo underline-hover">Camilla Bianca</Link>
           </div>
         </div>
       </header>
@@ -275,16 +275,19 @@ function ProjectDetail() {
               />
             ))}
           </div>
-
-          <a
+          <div
             ref={ctaRef}
-            href={project.externalLink.url}
-            className={`btn-secondary external-cta fade-in-section ${isCtaVisible ? 'is-visible' : ''}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            className={`fade-in-section ${isCtaVisible ? 'is-visible' : ''}`}
           >
-            <span className="btn-text">{t(`projects.externalLinkLabels.${project.externalLink.type}`)} ↗</span>
-          </a>
+            <a
+              href={project.externalLink.url}
+              className="btn-secondary external-cta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="btn-text">{t(`projects.externalLinkLabels.${project.externalLink.type}`)} ↗</span>
+            </a>
+          </div>
         </div>
       </div>
 

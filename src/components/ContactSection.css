@@ -34,7 +34,7 @@
 
 .contact-row:hover {
   border-bottom-color: var(--accent-primary);
-  background: rgba(46, 213, 115, 0.06);
+  background: var(--btn-contact-background);
 }
 
 .contact-label {
@@ -90,7 +90,7 @@
 }
 
 .btn-cv:hover {
-  background: rgba(46, 213, 115, 0.12);
+  background: var(--btn-contact-background);
 }
 
 .btn-cv svg {

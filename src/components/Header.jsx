@@ -71,7 +71,7 @@ function Header() {
   return (
     <header className="header">
       <div className="header-inner">
-        <Link to="/" className="logo">Camilla Bianca</Link>
+        <Link to="/" className="logo underline-hover">Camilla Bianca</Link>
 
         <nav className="nav">
           {NAV_ITEMS.map(({ id, labelKey }) => (

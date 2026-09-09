@@ -15,22 +15,16 @@
   padding: 20px 28px;
 }
 
-/* --- Logo: identità del sito, non una voce di menu.
-   Animazione diversa apposta: nessun underline, solo un piccolo
-   "respiro" di colore e spaziatura, per non confonderlo con i link di nav. */
 .logo {
   font-size: 16px;
   font-weight: 500;
   color: var(--text-primary);
-  text-decoration: none;
-  letter-spacing: 0;
-  transition: color 0.25s ease, letter-spacing 0.25s ease;
+  transition: color 0.2s ease;
 }
 
 .logo:hover,
 .logo:focus-visible {
   color: var(--accent-primary);
-  letter-spacing: 0.015em;
 }
 
 .nav {
