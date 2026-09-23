@@ -18,8 +18,6 @@ Personal portfolio website for a Game Programmer (me!), built to showcase profes
 - Dedicated page for each project
 - Bilingual content (IT/EN)
 
-The site will be available at `http://localhost:5173`.
-
 ## License
 
 This repository contains the source code for a personal portfolio and is not licensed for reuse. Feel free to look around, but please don't copy the content or design as your own.
