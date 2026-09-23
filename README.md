@@ -9,7 +9,7 @@ Personal portfolio website for a Game Programmer (me!), built to showcase profes
 - [React](https://react.dev/)
 - [Vite](https://vite.dev/)
 - [React Router](https://reactrouter.com/)
-- [react-i18next](https://react.i18next.com/) — Italian / English support
+- [react-i18next](https://react.i18next.com/) (Italian / English support)
 
 ## Features
 
