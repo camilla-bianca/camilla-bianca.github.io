@@ -9,6 +9,12 @@
   cursor: pointer;
   background: none;
   color: var(--text-primary);
+  /* Smooth border color change on hover */
+  transition: border-color 0.2s ease;
+}
+
+.lang-switch:hover {
+  border-color: var(--accent-primary);
 }
 
 .lang-switch .inactive {
