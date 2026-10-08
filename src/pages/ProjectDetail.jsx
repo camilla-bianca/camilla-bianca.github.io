@@ -96,7 +96,7 @@ function ProjectDetail() {
         <Header />
         <div style={{ padding: '40px' }}>
           <p>{t('projectDetail.notFound')}</p>
-          <Link to="/" style={{ color: 'var(--accent-primary)' }}>{t('projectDetail.backToHome')}</Link>
+          <Link to="/" className="link-accent">{t('projectDetail.backToHome')}</Link>
         </div>
       </div>
     )

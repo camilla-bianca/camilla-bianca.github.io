@@ -18,13 +18,13 @@
 .logo {
   font-size: 16px;
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--accent-primary);
   transition: color 0.2s ease;
 }
 
 .logo:hover,
 .logo:focus-visible {
-  color: var(--accent-primary);
+  color: var(--text-primary);
 }
 
 .nav {
@@ -35,11 +35,9 @@
   color: var(--text-secondary);
 }
 
-/* --- Link di nav: underline che si apre da sinistra su hover,
-   stessa meccanica dello stato attivo ma innescata dal cursore. */
 .nav a {
   position: relative;
-  color: inherit;
+  color: var(--accent-primary);
   text-decoration: none;
   padding-bottom: 2px;
   transition: color 0.2s ease;
@@ -58,17 +56,16 @@
   transition: transform 0.25s ease;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a:focus-visible,
+.nav a.active {
   color: var(--text-primary);
 }
 
 .nav a:hover::after,
+.nav a:focus-visible::after,
 .nav a.active::after {
   transform: scaleX(1);
-}
-
-.nav a.active {
-  color: var(--accent-primary);
 }
 
 .mobile-toggle {

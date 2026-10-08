@@ -2,21 +2,25 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  border: 0.5px solid var(--border-strong);
+  border: 1px solid var(--accent-primary);
   border-radius: 6px;
   padding: 5px 10px;
   font-size: 11px;
   cursor: pointer;
   background: none;
   color: var(--text-primary);
-  /* Smooth border color change on hover */
-  transition: border-color 0.2s ease;
+  transition: background 0.2s ease;
 }
 
 .lang-switch:hover {
-  border-color: var(--accent-primary);
+  background: var(--btn-contact-background);
+}
+
+.lang-switch:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
 }
 
 .lang-switch .inactive {
-  opacity: 0.4;
+  color: var(--text-muted);
 }

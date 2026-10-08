@@ -35,7 +35,7 @@
 }
 
 .project-detail-logo {
-  color: var(--text-primary);
+  color: var(--accent-primary);
   font-size: 16px;
   font-weight: 500;
   transition: color 0.2s ease;
@@ -43,7 +43,7 @@
 
 .project-detail-logo:hover,
 .project-detail-logo:focus-visible {
-  color: var(--accent-primary);
+  color: var(--text-primary);
 }
 
 .project-detail-wrap {
