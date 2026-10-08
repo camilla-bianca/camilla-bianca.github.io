@@ -50,7 +50,7 @@ function ContactSection() {
       </div>
       <a
         href={cvHref}
-        className="btn-cv"
+        className="btn-secondary btn-cv"
         download
         onClick={() => trackEvent('download-cv', { lingua: lang })}
       >

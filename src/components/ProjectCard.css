@@ -53,14 +53,14 @@
 .card-title {
   font-size: 14px;
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--accent-primary);
   display: inline-block;
   transition: transform 0.25s ease, color 0.25s ease;
 }
 
 .card:hover .card-title {
   transform: translateY(-2px);
-  color: var(--accent-primary);
+  color: var(--text-primary);
 }
 
 .card-origin {

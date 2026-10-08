@@ -30,48 +30,93 @@
   --btn-contact-background: rgba(46, 213, 115, 0.12);
 }
 
-.btn-primary {
-  background: var(--accent-primary);
-  color: var(--accent-primary-on);
-  font-size: 14px;
-  font-weight: 500;
-  padding: 12px 22px;
-  border-radius: 6px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  font-family: inherit;
-}
-
-.btn-secondary {
-  border: 1px solid var(--accent-primary);
-  color: var(--accent-primary);
-  font-size: 14px;
-  padding: 12px 22px;
-  border-radius: 6px;
-  background: none;
-  cursor: pointer;
-  font-family: inherit;
-}
-
 .btn-primary,
 .btn-secondary {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: 160px;
-  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-}
-
-.btn-primary:hover {
-  background: var(--btn-contact-background);
-  color: var(--accent-primary);
+  font-size: 14px;
+  padding: 12px 22px;
+  border-radius: 6px;
   border: 1px solid var(--accent-primary);
-  transform: translateY(-2px);
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.25s ease, border-color 0.25s ease, transform 0.1s ease;
 }
 
-.btn-secondary:hover {
-  background: var(--btn-contact-background);
-  transform: translateY(-2px);
+.btn-primary {
+  font-weight: 500;
+  background: var(--accent-primary);
+  color: var(--accent-primary-on);
+}
+
+.btn-secondary {
+  background: none;
+  color: var(--accent-primary);
+}
+
+/* Wipe fill, shared by both buttons: grows from the left, same motion
+   as .underline-hover. Primary wipes to white, secondary wipes to green. */
+.btn-primary::before,
+.btn-secondary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.btn-primary::before {
+  background: var(--text-primary);
+}
+
+.btn-secondary::before {
+  background: var(--accent-primary);
+}
+
+@media (hover: hover) {
+  .btn-primary:hover {
+    border-color: var(--text-primary);
+  }
+
+  .btn-primary:hover::before {
+    transform: scaleX(1);
+  }
+
+  .btn-secondary:hover {
+    color: var(--accent-primary-on);
+  }
+
+  .btn-secondary:hover::before {
+    transform: scaleX(1);
+  }
+}
+
+.btn-primary:focus-visible {
+  border-color: var(--text-primary);
+}
+
+.btn-primary:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.btn-secondary:focus-visible {
+  color: var(--accent-primary-on);
+}
+
+.btn-secondary:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+  transform: scale(0.98);
 }
 
 .link-accent {

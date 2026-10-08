@@ -16,7 +16,7 @@ function LangSwitch() {
       onClick={() => changeLanguage(i18n.language === 'it' ? 'en' : 'it')}
     >
       <span className={i18n.language === 'it' ? '' : 'inactive'}>IT</span>
-      <span style={{ color: 'var(--text-muted)' }}>/</span>
+      <span className="lang-sep">/</span>
       <span className={i18n.language === 'en' ? '' : 'inactive'}>EN</span>
     </button>
   )

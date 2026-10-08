@@ -1,4 +1,7 @@
 .lang-switch {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -9,18 +12,55 @@
   cursor: pointer;
   background: none;
   color: var(--text-primary);
-  transition: background 0.2s ease;
+  transition: color 0.25s ease;
 }
 
-.lang-switch:hover {
-  background: var(--btn-contact-background);
+/* Wipe fill from the left, same motion as .btn-secondary */
+.lang-switch::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--accent-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.lang-switch .inactive,
+.lang-switch .lang-sep {
+  color: var(--text-muted);
+  transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+@media (hover: hover) {
+  .lang-switch:hover {
+    color: var(--accent-primary-on);
+  }
+
+  .lang-switch:hover::before {
+    transform: scaleX(1);
+  }
+
+  .lang-switch:hover .inactive,
+  .lang-switch:hover .lang-sep {
+    color: var(--accent-primary-on);
+    opacity: 0.6;
+  }
 }
 
 .lang-switch:focus-visible {
   outline: 2px solid var(--accent-primary);
   outline-offset: 3px;
+  color: var(--accent-primary-on);
 }
 
-.lang-switch .inactive {
-  color: var(--text-muted);
+.lang-switch:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.lang-switch:focus-visible .inactive,
+.lang-switch:focus-visible .lang-sep {
+  color: var(--accent-primary-on);
+  opacity: 0.6;
 }

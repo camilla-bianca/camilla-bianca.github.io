@@ -73,24 +73,10 @@
   transform: translateX(-8px);
 }
 
+/* Visual style comes from .btn-secondary; only icon and anchor tweaks live here */
 .btn-cv {
-  display: inline-flex;
-  align-items: center;
   gap: 6px;
-  border: 1px solid var(--accent-primary);
-  color: var(--accent-primary);
-  font-size: 14px;
-  padding: 11px 20px;
-  border-radius: 6px;
   text-decoration: none;
-  cursor: pointer;
-  background: none;
-  font-family: inherit;
-  transition: background 0.2s ease;
-}
-
-.btn-cv:hover {
-  background: var(--btn-contact-background);
 }
 
 .btn-cv svg {
