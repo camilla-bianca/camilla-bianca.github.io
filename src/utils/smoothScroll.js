@@ -19,9 +19,12 @@ function isMobileViewport() {
   return window.innerWidth <= MOBILE_BREAKPOINT
 }
 
+let currentAnimation = 0
+
 // Animates scroll to targetY with easing. onDone fires when the animation
-// actually finishes, not on a guessed timeout.
+// actually finishes (never if it was replaced by a newer animation).
 export function animatedScrollTo(targetY, duration = SCROLL_DURATION, onDone) {
+  const id = ++currentAnimation
   const startY = window.scrollY
   const diff = targetY - startY
 
@@ -34,6 +37,8 @@ export function animatedScrollTo(targetY, duration = SCROLL_DURATION, onDone) {
   const startTime = performance.now()
 
   function step(now) {
+    if (id !== currentAnimation) return
+
     const elapsed = now - startTime
     const progress = Math.min(elapsed / duration, 1)
     const eased = easeInOutExpo(progress)
