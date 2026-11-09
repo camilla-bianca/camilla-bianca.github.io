@@ -8,7 +8,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-inner">
-        <span className="footer-text-left">{year} Camilla Bianca </span>
+        <span className="footer-text-left">{year} · Camilla Bianca </span>
         <img
           src="/images/cgs/cgs_logo.png"
           alt="Cama's Game Slice"
