@@ -33,8 +33,6 @@
 .btn-primary,
 .btn-secondary {
   position: relative;
-  overflow: hidden;
-  isolation: isolate;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -46,7 +44,7 @@
   cursor: pointer;
   font-family: inherit;
   text-decoration: none;
-  transition: color 0.25s ease, border-color 0.25s ease, transform 0.1s ease;
+  transition: transform 0.1s ease;
 }
 
 .btn-primary {
@@ -60,64 +58,59 @@
   color: var(--accent-primary);
 }
 
-/* Wipe fill, shared by both buttons: grows from the left, same motion
-   as .underline-hover. Primary wipes to white, secondary wipes to green. */
-.btn-primary::before,
-.btn-secondary::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
-}
-
-.btn-primary::before {
-  background: var(--text-primary);
-}
-
-.btn-secondary::before {
-  background: var(--accent-primary);
-}
-
-@media (hover: hover) {
-  .btn-primary:hover {
-    border-color: var(--text-primary);
-  }
-
-  .btn-primary:hover::before {
-    transform: scaleX(1);
-  }
-
-  .btn-secondary:hover {
-    color: var(--accent-primary-on);
-  }
-
-  .btn-secondary:hover::before {
-    transform: scaleX(1);
-  }
-}
-
-.btn-primary:focus-visible {
-  border-color: var(--text-primary);
-}
-
-.btn-primary:focus-visible::before {
-  transform: scaleX(1);
-}
-
-.btn-secondary:focus-visible {
-  color: var(--accent-primary-on);
-}
-
-.btn-secondary:focus-visible::before {
-  transform: scaleX(1);
-}
-
 .btn-primary:active,
 .btn-secondary:active {
   transform: scale(0.98);
+}
+
+/* Roll text (all buttons): on hover the text exits upwards and its copy rises
+   from below; when the hover ends it goes back down to its original state. */
+.roll-text {
+  display: inline-flex;
+  align-items: flex-start; /* otherwise the column stretches to 1.4em and the roll stops halfway */
+  overflow: hidden;
+  height: 1.4em;
+  line-height: 1.4em;
+}
+
+.roll-col {
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  /* Duration and easing, the same in both directions */
+  transition: transform 400ms cubic-bezier(0.45, 0.05, 0.2, 1);
+}
+
+.roll-col > span {
+  display: block;
+  height: 1.4em;
+  white-space: pre;
+}
+
+/* :hover only where it actually exists (no sticky hover on touch devices):
+   there the effect is tied to :active, i.e. to the touch. */
+@media (hover: hover) {
+  .btn-primary:hover .roll-col,
+  .btn-secondary:hover .roll-col {
+    transform: translateY(-50%);
+    transition-delay: var(--roll-delay, 0ms); /* per-letter stagger, on hover-in only */
+  }
+}
+
+.btn-primary:focus-visible .roll-col,
+.btn-secondary:focus-visible .roll-col,
+.btn-primary:active .roll-col,
+.btn-secondary:active .roll-col {
+  transform: translateY(-50%);
+  transition-delay: var(--roll-delay, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary .roll-col,
+  .btn-secondary .roll-col {
+    transition: none;
+    transform: none !important;
+  }
 }
 
 .link-accent {

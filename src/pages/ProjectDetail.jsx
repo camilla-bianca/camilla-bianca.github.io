@@ -10,6 +10,7 @@ import { SiApple, SiAndroid } from 'react-icons/si'
 import { BsNintendoSwitch, BsPlaystation, BsXbox } from "react-icons/bs";
 import { trackEvent } from '../utils/analytics'
 import Header from '../components/Header'
+import RollButton from '../components/RollButton'
 import ProjectHero from '../components/ProjectHero'
 import ProjectNav from '../components/ProjectNav'
 import LangSwitch from '../components/LangSwitch'
@@ -279,14 +280,14 @@ function ProjectDetail() {
             ref={ctaRef}
             className={`fade-in-section ${isCtaVisible ? 'is-visible' : ''}`}
           >
-            <a
+            <RollButton
+              as="a"
+              className="external-cta"
+              label={`${t(`projects.externalLinkLabels.${project.externalLink.type}`)} ↗`}
               href={project.externalLink.url}
-              className="btn-secondary external-cta"
               target="_blank"
               rel="noopener noreferrer"
-            >
-              <span className="btn-text">{t(`projects.externalLinkLabels.${project.externalLink.type}`)} ↗</span>
-            </a>
+            />
           </div>
         </div>
       </div>

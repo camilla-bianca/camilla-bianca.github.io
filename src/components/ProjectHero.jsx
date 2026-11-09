@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { IoGameControllerOutline } from 'react-icons/io5'
 import { TbMovie } from 'react-icons/tb'
+import RollButton from './RollButton'
 import './ProjectHero.css'
 
 const gameBadgeIcon = <IoGameControllerOutline />
@@ -54,14 +55,14 @@ function EmbedFallback({ project }) {
     >
       <div className="embed-fallback-overlay">
         <p>{t('projectHero.desktopOnly')}</p>
-        <a
+        <RollButton
+          as="a"
+          className="external-cta"
+          label={t('projectHero.goToItch')}
           href={project.externalLink.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-secondary external-cta"
-        >
-          <span className="btn-text">{t('projectHero.goToItch')}</span>
-        </a>
+        />
       </div>
     </div>
   )

@@ -4,6 +4,7 @@ import { Trans, useTranslation } from 'react-i18next'
 import { scrollToSection } from '../utils/smoothScroll'
 import { trackEvent } from '../utils/analytics'
 import { projects } from '../data/projects'
+import RollButton from './RollButton'
 import './Hero.css'
 
 function Hero() {
@@ -59,16 +60,17 @@ function Hero() {
           <h1><Trans i18nKey="hero.title" components={{ br: <br /> }} /></h1>
           <p><Trans i18nKey="hero.subtitle" components={{ br: <br /> }} /></p>
           <div className="cta-row">
-            <button className="btn-primary" onClick={scrollToContact}>
-              {t('hero.ctaContact')}
-            </button>
-            <Link
-              className="btn-secondary"
+            <RollButton
+              variant="primary"
+              label={t('hero.ctaContact')}
+              onClick={scrollToContact}
+            />
+            <RollButton
+              as={Link}
               to={`/progetti/${latestProject.slug}`}
+              label={t('hero.ctaLatest')}
               onClick={() => trackEvent('click-ultimo-progetto', { slug: latestProject.slug })}
-            >
-              {t('hero.ctaLatest')}
-            </Link>
+            />
           </div>
         </div>
       </div>

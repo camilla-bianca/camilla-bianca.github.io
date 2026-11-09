@@ -4,6 +4,7 @@ import ProjectCard from './ProjectCard'
 import { projects } from '../data/projects'
 import { useMediaQuery } from '../hooks/useMediaQuery'
 import { useInView } from '../hooks/useInView'
+import RollButton from './RollButton'
 import './ProjectsSection.css'
 
 function ProjectsSection() {
@@ -30,8 +31,11 @@ function ProjectsSection() {
         >
           <span className="section-title">{t('projects.sectionTitle')}</span>
           {hasMore && (
-            <button className="btn-secondary toggle-btn" onClick={() => setShowAll(!showAll)}>
-              {showAll ? t('projects.showLess') : t('projects.showAll')}
+            <RollButton
+              className="toggle-btn"
+              label={showAll ? t('projects.showLess') : t('projects.showAll')}
+              onClick={() => setShowAll(!showAll)}
+            >
               <svg
                 className={`toggle-icon ${showAll ? 'open' : ''}`}
                 viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
@@ -39,7 +43,7 @@ function ProjectsSection() {
               >
                 <polyline points="6 9 12 15 18 9" />
               </svg>
-            </button>
+            </RollButton>
           )}
         </div>
 

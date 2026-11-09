@@ -1,4 +1,4 @@
-// Projects ordered from the oldest to the newest
+// Projects ordered from the newest to the oldest (projects[0] is the one linked by the hero button)
 
 // engine: 'unity' | 'unreal'
 // origin: 'company' | 'personal' | 'course' | 'game-jam'
@@ -359,8 +359,8 @@ export const engineLabels = {
     // hero: { type: 'embed', src: 'https://itch.io/embed-upload/5475631?color=232323', width: 960, height: 640, visibleHeight: 590  },
     // hero: { type: 'image', src: '/images/projects/curse-of-the-crimson-stag/img-1.jpg' },
     // hero: { type: 'video', src: '/videos/video-hero.mp4' },
-    cover: '/images/projects/curse-of-the-crimson-stag/img-1.jpg', // cover della home
-    preview: '/videos/video-hero.mp4', // video nella home all'hover
+    cover: '/images/projects/curse-of-the-crimson-stag/img-1.jpg', // home cover
+    preview: '/videos/video-hero.mp4', // video shown in the home on hover
     gallery: [
       '/images/projects/curse-of-the-crimson-stag/img-1.jpg',
       '/images/projects/curse-of-the-crimson-stag/img-2.jpg',
