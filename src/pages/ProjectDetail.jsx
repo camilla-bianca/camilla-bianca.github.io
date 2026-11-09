@@ -25,7 +25,7 @@ const platformIconMap = {
   android: { Icon: SiAndroid, size: 18 },
 }
 
-function GalleryItem({ image, index, title, alt, onClick }) {
+function GalleryItem({ image, index, alt, onClick }) {
   const [ref, isVisible] = useInView()
 
   return (
