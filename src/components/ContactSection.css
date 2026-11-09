@@ -16,7 +16,6 @@
   display: flex;
   flex-direction: column;
   max-width: 420px;
-  margin-bottom: 26px;
 }
 
 .contact-row {
@@ -71,21 +70,4 @@
 .contact-row:hover .contact-value {
   color: var(--accent-primary);
   transform: translateX(-8px);
-}
-
-/* Visual style comes from .btn-secondary; only icon and anchor tweaks live here */
-.btn-cv {
-  gap: 6px;
-  text-decoration: none;
-}
-
-.btn-cv svg {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-  transition: transform 0.2s ease;
-}
-
-.btn-cv:hover svg {
-  transform: translateY(2px);
 }

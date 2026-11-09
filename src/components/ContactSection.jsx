@@ -1,15 +1,12 @@
 import { Trans, useTranslation } from 'react-i18next'
-import { contactInfo, cvUrl } from '../data/contact'
+import { contactInfo } from '../data/contact'
 import { useInView } from '../hooks/useInView'
 import { trackEvent } from '../utils/analytics'
 import './ContactSection.css'
 
 function ContactSection() {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const [ref, isVisible] = useInView()
-
-  const lang = i18n.language.startsWith('it') ? 'it' : 'en'
-  const cvHref = cvUrl[lang]
 
   return (
     <section
@@ -48,18 +45,6 @@ function ContactSection() {
           )
         })}
       </div>
-      <a
-        href={cvHref}
-        className="btn-secondary btn-cv"
-        download
-        onClick={() => trackEvent('download-cv', { lingua: lang })}
-      >
-        <span className="btn-text">{t('contact.downloadCv')}</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 3v12m0 0-4-4m4 4 4-4" />
-          <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
-        </svg>
-      </a>
     </section>
   )
 }

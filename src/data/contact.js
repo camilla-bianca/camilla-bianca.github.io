@@ -35,8 +35,3 @@ export const contactInfo = [
     icon: ImBehance2,
   },
 ]
-
-export const cvUrl = {
-  it: '/cv/Camilla_Bianca_CV_IT.pdf',
-  en: '/cv/Camilla_Bianca_CV_EN.pdf',
-}
