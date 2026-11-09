@@ -1,66 +1,76 @@
+/* Segmented IT | EN toggle. The thumb sits behind the current language; on hover
+   it slides to the other one (see LangSwitch.jsx for the click lock). */
 .lang-switch {
+  --ls-thumb: var(--accent-primary);
+  --ls-thumb-on: var(--accent-primary-on);
+  --ls-rest: var(--accent-primary);
+  --ls-pos: 0; /* 0 = IT, 1 = EN */
+
   position: relative;
-  overflow: hidden;
-  isolation: isolate;
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 64px;
+  height: 28px;
+  padding: 2px;
   border: 1px solid var(--accent-primary);
   border-radius: 6px;
-  padding: 5px 10px;
-  font-size: 11px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   cursor: pointer;
   background: none;
-  color: var(--text-primary);
-  transition: color 0.25s ease;
-}
-
-/* Wipe fill from the left, same motion as .btn-secondary */
-.lang-switch::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: var(--accent-primary);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
-}
-
-.lang-switch .inactive,
-.lang-switch .lang-sep {
-  color: var(--text-muted);
-  transition: color 0.25s ease, opacity 0.25s ease;
-}
-
-@media (hover: hover) {
-  .lang-switch:hover {
-    color: var(--accent-primary-on);
-  }
-
-  .lang-switch:hover::before {
-    transform: scaleX(1);
-  }
-
-  .lang-switch:hover .inactive,
-  .lang-switch:hover .lang-sep {
-    color: var(--accent-primary-on);
-    opacity: 0.6;
-  }
+  color: var(--ls-rest);
 }
 
 .lang-switch:focus-visible {
   outline: 2px solid var(--accent-primary);
-  outline-offset: 3px;
-  color: var(--accent-primary-on);
+  outline-offset: 2px;
 }
 
-.lang-switch:focus-visible::before {
-  transform: scaleX(1);
+.lang-switch-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(50% - 2px);
+  height: calc(100% - 4px);
+  border-radius: 4px;
+  background: var(--ls-thumb);
+  transform: translateX(calc(var(--ls-pos) * 100%));
+  transition: transform 0.3s cubic-bezier(0.3, 0.8, 0.3, 1);
+  pointer-events: none;
 }
 
-.lang-switch:focus-visible .inactive,
-.lang-switch:focus-visible .lang-sep {
-  color: var(--accent-primary-on);
-  opacity: 0.6;
+.lang-switch-it,
+.lang-switch-en {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  text-align: center;
+  transition: color 0.2s ease;
+}
+
+.lang-switch-it { color: var(--ls-thumb-on); }
+.lang-switch-en { color: var(--ls-rest); }
+
+.lang-switch.is-en { --ls-pos: 1; }
+.lang-switch.is-en .lang-switch-it { color: var(--ls-rest); }
+.lang-switch.is-en .lang-switch-en { color: var(--ls-thumb-on); }
+
+@media (hover: hover) {
+  .lang-switch:not(.is-locked):hover { --ls-pos: 1; }
+  .lang-switch:not(.is-locked):hover .lang-switch-it { color: var(--ls-rest); }
+  .lang-switch:not(.is-locked):hover .lang-switch-en { color: var(--ls-thumb-on); }
+
+  .lang-switch.is-en:not(.is-locked):hover { --ls-pos: 0; }
+  .lang-switch.is-en:not(.is-locked):hover .lang-switch-it { color: var(--ls-thumb-on); }
+  .lang-switch.is-en:not(.is-locked):hover .lang-switch-en { color: var(--ls-rest); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lang-switch-thumb,
+  .lang-switch-it,
+  .lang-switch-en { transition: none; }
 }
