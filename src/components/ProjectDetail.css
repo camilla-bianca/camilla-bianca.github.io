@@ -18,7 +18,14 @@
 .header-right {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 24px;
+}
+
+@media (max-width: 640px) {
+  .header-right { gap: 16px; }
+
+  /* match the home header height (its hamburger button is taller than the lang switch) */
+  .project-detail-header-inner { min-height: 73px; }
 }
 
 .back-link {

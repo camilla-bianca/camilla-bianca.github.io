@@ -178,13 +178,14 @@ function ProjectDetail() {
     <div key={project.slug}>
       <header className="project-detail-header">
         <div className="project-detail-header-inner">
-          <Link to="/#projects" className="back-link underline-hover">
-            <LuLayoutGrid />
-            <span>{t('projectDetail.backToProjects')}</span>
-          </Link>
+          <Link to="/" className="project-detail-logo underline-hover">Camilla Bianca</Link>
           <div className="header-right">
+            <Link to="/#projects" className="back-link underline-hover">
+              <LuLayoutGrid />
+              {/* short label on mobile, same key as the home nav item */}
+              <span>{t(isMobile ? 'header.nav.projects' : 'projectDetail.backToProjects')}</span>
+            </Link>
             <LangSwitch />
-            <Link to="/" className="project-detail-logo underline-hover">Camilla Bianca</Link>
           </div>
         </div>
       </header>
