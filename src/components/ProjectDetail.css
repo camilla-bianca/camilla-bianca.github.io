@@ -26,6 +26,18 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  color: var(--accent-primary);
+  transition: color 0.2s ease;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--text-primary);
+}
+
+@media (hover: none) {
+  .back-link:hover { color: var(--accent-primary); }
+  .back-link:active { color: #fff; transition: none; }
 }
 
 .back-link svg {

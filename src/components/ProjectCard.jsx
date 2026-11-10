@@ -83,8 +83,10 @@ function ProjectCard({ project, staggerIndex = 0 }) {
         <div className="card-origin">
           {originIcons[project.origin]}
           <div className="card-origin-text">
-            <div>{t(`projects.items.${project.slug}.role`)}</div>
-            {project.company && <div className="card-origin-company">{project.company}</div>}
+            {/* company/entity name if present, otherwise the role (e.g. Solo Developer) */}
+            {project.company
+              ? <div className="card-origin-company">{project.company}</div>
+              : <div>{t(`projects.items.${project.slug}.role`)}</div>}
           </div>
         </div>
         <div className="card-footer-row">

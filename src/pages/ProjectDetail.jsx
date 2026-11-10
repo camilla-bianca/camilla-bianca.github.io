@@ -178,7 +178,7 @@ function ProjectDetail() {
     <div key={project.slug}>
       <header className="project-detail-header">
         <div className="project-detail-header-inner">
-          <Link to="/#projects" className="back-link link-accent">
+          <Link to="/#projects" className="back-link underline-hover">
             <LuLayoutGrid />
             <span>{t('projectDetail.backToProjects')}</span>
           </Link>
