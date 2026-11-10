@@ -68,3 +68,7 @@
 .nav-link:hover .nav-title::after {
   width: 100%;
 }
+
+@media (hover: none) {
+  .nav-link:hover .nav-title::after { width: 0; }
+}

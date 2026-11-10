@@ -126,3 +126,21 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+@media (hover: none) {
+  .card { -webkit-tap-highlight-color: transparent; }
+
+  /* cancel the sticky hover (touch devices keep :hover after a tap) */
+  .card:hover { transform: none; }
+  .card:hover .card-hover-preview { opacity: 0; }
+  .card:hover .card-title { transform: none; color: var(--accent-primary); }
+  .card:hover .card-title::after { transform: scaleX(0); }
+
+  /* tap feedback */
+  .card:active {
+    transform: scale(0.98);
+    border-color: var(--accent-primary);
+    transition: transform 0.1s ease, border-color 0.1s ease;
+  }
+  .card:active .card-title { color: #fff; transition: none; }
+}

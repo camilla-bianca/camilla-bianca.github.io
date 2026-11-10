@@ -40,6 +40,7 @@ function ProjectCard({ project, staggerIndex = 0 }) {
   const [cardRef, isVisible] = useInView()
 
   function handleMouseEnter() {
+    if (!window.matchMedia('(hover: hover)').matches) return
     const video = videoRef.current
     if (!previewLoaded) {
       video.src = project.preview

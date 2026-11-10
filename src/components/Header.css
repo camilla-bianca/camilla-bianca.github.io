@@ -27,6 +27,11 @@
   color: var(--text-primary);
 }
 
+@media (hover: none) {
+  .logo:hover { color: var(--accent-primary); }
+  .logo:active { color: #fff; transition: none; }
+}
+
 .nav {
   display: flex;
   align-items: center;

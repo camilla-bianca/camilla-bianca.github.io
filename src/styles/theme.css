@@ -87,6 +87,10 @@
   white-space: pre;
 }
 
+.roll-col > span:last-child {
+  color: #fff;
+}
+
 /* :hover only where it actually exists (no sticky hover on touch devices):
    there the effect is tied to :active, i.e. to the touch. */
 @media (hover: hover) {
@@ -94,6 +98,15 @@
   .btn-secondary:hover .roll-col {
     transform: translateY(-50%);
     transition-delay: var(--roll-delay, 0ms); /* per-letter stagger, on hover-in only */
+  }
+}
+
+/* Touch: niente roll, resta solo il feedback di scale(0.98) su :active */
+@media (hover: none) {
+  .btn-primary .roll-col,
+  .btn-secondary .roll-col {
+    transform: none !important;
+    transition: none;
   }
 }
 
@@ -138,6 +151,12 @@
 
 .link-accent:hover::after {
   width: 100%;
+}
+
+@media (hover: none) {
+  .link-accent:hover { color: var(--accent-primary); }
+  .link-accent:hover::after { width: 0; }
+  .link-accent:active { color: #fff; transition: none; }
 }
 
 .highlight {
@@ -210,4 +229,13 @@
 .underline-hover:hover::after,
 .underline-hover:focus-visible::after {
   transform: scaleX(1);
+}
+
+.underline-hover,
+.link-accent {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (hover: none) {
+  .underline-hover:hover::after { transform: scaleX(0); }
 }

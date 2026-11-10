@@ -71,3 +71,14 @@
   color: var(--accent-primary);
   transform: translateX(-8px);
 }
+
+@media (hover: none) {
+  .contact-row:hover { border-bottom-color: var(--border-default); background: none; }
+  .contact-row:hover .contact-label { color: var(--text-muted); }
+  .contact-row:hover .contact-value { color: var(--text-primary); transform: none; }
+  .contact-row:active {
+    border-bottom-color: var(--accent-primary);
+    background: var(--btn-contact-background);
+    transition: none;
+  }
+}
