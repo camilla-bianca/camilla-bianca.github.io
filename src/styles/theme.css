@@ -28,6 +28,18 @@
   --skill-badge-icon: #232323;
 
   --btn-contact-background: rgba(46, 213, 115, 0.12);
+
+  --selection-bg: #0B3D1E;
+  --selection-text: #2ED573;
+  /*
+  --selection-bg: #2A1F52;
+  --selection-text: #C9BBF5;
+  */
+}
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-text);
 }
 
 .btn-primary,
