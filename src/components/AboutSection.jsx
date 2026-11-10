@@ -5,6 +5,19 @@ import { useInView } from '../hooks/useInView'
 import SkillsSection from './SkillsSection'
 import './AboutSection.css'
 
+function TimelineTitle({ children }) {
+  const [ref, isVisible] = useInView()
+
+  return (
+    <span
+      ref={ref}
+      className={`timeline-title fade-in-section ${isVisible ? 'is-visible' : ''}`}
+    >
+      {children}
+    </span>
+  )
+}
+
 function TimelineItem({ item, index }) {
   const { t } = useTranslation()
   const [ref, isVisible] = useInView()
@@ -72,10 +85,10 @@ function AboutSection() {
           <SkillsSection />
         </div>
 
-        <span className="timeline-title">{t('about.experienceTitle')}</span>
+        <TimelineTitle>{t('about.experienceTitle')}</TimelineTitle>
         <TimelineList items={workExperience} />
 
-        <span className="timeline-title">{t('about.educationTitle')}</span>
+        <TimelineTitle>{t('about.educationTitle')}</TimelineTitle>
         <TimelineList items={education} />
       </div>
     </section>
