@@ -234,6 +234,51 @@
   white-space: nowrap;
 }
 
+/* Arrow icons (external CTA, metadata link, itch fallback in ProjectHero).
+   The arrow moves along its own direction on hover; on the CTA it also
+   turns white together with the rolled text. */
+.arrow-icon {
+  width: 1.1em;
+  height: 1.1em;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, color 0.2s ease;
+}
+
+.link-with-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+@media (hover: hover) {
+  .external-cta:hover .arrow-icon {
+    color: #fff;
+  }
+
+  .external-cta:hover .arrow-icon--ne,
+  .link-with-arrow:hover .arrow-icon--ne {
+    transform: translate(3px, -3px);
+  }
+}
+
+/* same triggers as the roll text in theme.css (keyboard focus and touch press) */
+.external-cta:focus-visible .arrow-icon,
+.external-cta:active .arrow-icon {
+  color: #fff;
+}
+
+.external-cta:focus-visible .arrow-icon--ne,
+.external-cta:active .arrow-icon--ne {
+  transform: translate(3px, -3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arrow-icon {
+    transition: none;
+    transform: none !important;
+  }
+}
+
 .lightbox {
   position: fixed;
   inset: 0;

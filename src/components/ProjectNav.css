@@ -37,9 +37,19 @@
 }
 
 .nav-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 11px;
   color: var(--text-muted);
   letter-spacing: 0.03em;
+}
+
+.nav-arrow {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, color 0.2s ease;
 }
 
 .nav-title {
@@ -69,6 +79,26 @@
   width: 100%;
 }
 
+/* the arrow moves toward the side it points to and picks up the accent color */
+@media (hover: hover) {
+  .nav-link.prev:hover .nav-arrow {
+    transform: translateX(-4px);
+    color: var(--accent-primary);
+  }
+
+  .nav-link.next:hover .nav-arrow {
+    transform: translateX(4px);
+    color: var(--accent-primary);
+  }
+}
+
 @media (hover: none) {
   .nav-link:hover .nav-title::after { width: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-arrow {
+    transition: none;
+    transform: none !important;
+  }
 }

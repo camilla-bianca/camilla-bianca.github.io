@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { IoGameControllerOutline } from 'react-icons/io5'
 import { TbMovie } from 'react-icons/tb'
+import { PiArrowUpRightBold } from 'react-icons/pi'
 import RollButton from './RollButton'
 import './ProjectHero.css'
 
@@ -62,7 +63,9 @@ function EmbedFallback({ project }) {
           href={project.externalLink.url}
           target="_blank"
           rel="noopener noreferrer"
-        />
+        >
+          <PiArrowUpRightBold className="arrow-icon arrow-icon--ne" aria-hidden="true" />
+        </RollButton>
       </div>
     </div>
   )

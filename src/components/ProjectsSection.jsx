@@ -4,6 +4,7 @@ import ProjectCard from './ProjectCard'
 import { projects } from '../data/projects'
 import { useMediaQuery } from '../hooks/useMediaQuery'
 import { useInView } from '../hooks/useInView'
+import { PiCaretDownBold } from 'react-icons/pi'
 import RollButton from './RollButton'
 import './ProjectsSection.css'
 
@@ -36,13 +37,10 @@ function ProjectsSection() {
               label={showAll ? t('projects.showLess') : t('projects.showAll')}
               onClick={() => setShowAll(!showAll)}
             >
-              <svg
+              <PiCaretDownBold
                 className={`toggle-icon ${showAll ? 'open' : ''}`}
-                viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
-                strokeLinecap="round" strokeLinejoin="round"
-              >
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
+                aria-hidden="true"
+              />
             </RollButton>
           )}
         </div>

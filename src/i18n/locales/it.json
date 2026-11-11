@@ -109,8 +109,8 @@
     "galleryAlt": "immagine"
   },
   "projectNav": {
-    "previous": "← Precedente",
-    "next": "Successivo →"
+    "previous": "Precedente",
+    "next": "Successivo"
   },
   "about": {
     "title": "Chi sono",
@@ -180,7 +180,7 @@
   },
   "projectHero": {
     "desktopOnly": "Gioca su desktop",
-    "goToItch": "Vai su itch.io ↗",
+    "goToItch": "Vai su itch.io",
     "play": "Avvia"
   }
 }

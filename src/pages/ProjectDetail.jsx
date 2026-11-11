@@ -6,6 +6,7 @@ import { getProjectBySlug, getAdjacentProjects, getFourthField, engineLabels } f
 import { useMediaQuery } from '../hooks/useMediaQuery'
 import { useInView } from '../hooks/useInView'
 import { LuLayoutGrid, LuMonitor, LuChevronLeft, LuChevronRight } from 'react-icons/lu'
+import { PiArrowUpRightBold } from 'react-icons/pi'
 import { SiApple, SiAndroid } from 'react-icons/si'
 import { BsNintendoSwitch, BsPlaystation, BsXbox } from "react-icons/bs";
 import { trackEvent } from '../utils/analytics'
@@ -255,8 +256,14 @@ function ProjectDetail() {
                 <div className="metadata-label">{t(`projectDetail.labels.${fourthField.labelKey}`)}</div>
                 <div className="metadata-value">
                   {fourthField.url ? (
-                    <a href={fourthField.url} target="_blank" rel="noopener noreferrer" className="link-accent">
-                      {fourthValue} ↗
+                    <a
+                      href={fourthField.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-accent link-with-arrow"
+                    >
+                      {fourthValue}
+                      <PiArrowUpRightBold className="arrow-icon arrow-icon--ne" aria-hidden="true" />
                     </a>
                   ) : (
                     fourthValue
@@ -284,11 +291,13 @@ function ProjectDetail() {
             <RollButton
               as="a"
               className="external-cta"
-              label={`${t(`projects.externalLinkLabels.${project.externalLink.type}`)} ↗`}
+              label={t(`projects.externalLinkLabels.${project.externalLink.type}`)}
               href={project.externalLink.url}
               target="_blank"
               rel="noopener noreferrer"
-            />
+            >
+              <PiArrowUpRightBold className="arrow-icon arrow-icon--ne" aria-hidden="true" />
+            </RollButton>
           </div>
         </div>
       </div>

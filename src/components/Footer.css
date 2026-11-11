@@ -41,3 +41,9 @@
 .footer-inner:has(.footer-logo:hover) .footer-text-right {
   transform: translateX(40px);
 }
+
+.footer-group {
+  display: flex;
+  gap: 4px;
+  transition: transform 0.3s ease;
+}

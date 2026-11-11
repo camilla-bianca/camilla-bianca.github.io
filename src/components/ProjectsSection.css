@@ -41,9 +41,39 @@
 .toggle-icon {
   width: 16px;
   height: 16px;
-  transition: transform 0.2s ease;
+  flex-shrink: 0;
+  transform: rotate(0deg) translateY(0);
+  transition: transform 0.25s ease, color 0.2s ease;
 }
 
 .toggle-icon.open {
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateY(0);
+}
+
+@media (hover: hover) {
+  .toggle-btn:hover .toggle-icon {
+    color: #fff;
+    transform: rotate(0deg) translateY(3px);
+  }
+
+  .toggle-btn:hover .toggle-icon.open {
+    transform: rotate(180deg) translateY(3px);
+  }
+}
+
+.toggle-btn:focus-visible .toggle-icon,
+.toggle-btn:active .toggle-icon {
+  color: #fff;
+  transform: rotate(0deg) translateY(3px);
+}
+
+.toggle-btn:focus-visible .toggle-icon.open,
+.toggle-btn:active .toggle-icon.open {
+  transform: rotate(180deg) translateY(3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toggle-icon {
+    transition: none;
+  }
 }

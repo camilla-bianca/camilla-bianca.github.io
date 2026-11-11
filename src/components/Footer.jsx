@@ -8,14 +8,18 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-inner">
-        <span className="footer-text-left">{year} · Camilla Bianca </span>
+        <span className="footer-text-left footer-group">
+          <span>{year}</span>
+          <span aria-hidden="true">·</span>
+          <span>Camilla Bianca</span>
+        </span>
         <img
           src="/images/cgs/cgs_logo.png"
           alt="Cama's Game Slice"
           className="footer-logo"
         />
-        <span className="footer-text-right">
-          {t('footer.origin')}{' '}
+        <span className="footer-text-right footer-group">
+          {t('footer.origin')}
           <a
             href="https://camilla-bianca.itch.io/"
             target="_blank"
