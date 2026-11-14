@@ -91,6 +91,43 @@
   margin-top: 2px;
 }
 
+/* Nome e freccia sono un unico link: il nome resta viola, la freccia è verde
+   (verde = azione, viola = enfasi, come da regola del brief) */
+.company-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.company-arrow {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--accent-primary);
+  transition: transform 0.25s ease;
+}
+
+/* stesso movimento della freccia nei project details */
+@media (hover: hover) {
+  .company-link:hover .company-arrow {
+    transform: translate(3px, -3px);
+  }
+}
+
+.company-link:focus-visible .company-arrow,
+.company-link:active .company-arrow {
+  transform: translate(3px, -3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .company-arrow {
+    transition: none;
+    transform: none !important;
+  }
+}
+
 .timeline-period {
   color: var(--text-muted);
   font-size: 14px;

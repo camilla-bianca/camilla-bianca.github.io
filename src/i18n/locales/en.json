@@ -117,6 +117,7 @@
     "introText": "I'm a <hl>Game Programmer</hl> and I work mainly on <hl>Unreal Engine</hl> and <hl>Unity</hl>, using C++, Blueprint, and C#. After my Master's degree in <hl>Computer Engineering</hl> I kept learning by building games: solo <hl>indie</hl> prototypes, <hl>team</hl> projects, then studio development on <hl>published</hl> titles. What I've always loved about Game Dev is watching something that doesn't exist become <hl>real</hl>.",
     "experienceTitle": "Experience",
     "educationTitle": "Education",
+    "companySiteAria": "{{name}} website (opens in a new tab)",
     "stats": {
       "gamedevYears": "years in Game Dev",
       "itYears": "years in IT",
@@ -133,7 +134,7 @@
       "miniclip": {
         "role": "Game Programmer",
         "period": "Sep 2024 → May 2026",
-        "description": "Implementing gameplay mechanics and UI with player experience as the guiding metric. Developing live features and automated tests, with performance optimization for mobile."
+        "description": "Implementing gameplay mechanics and UI, developing live features and automated tests. Performance optimization for mobile platforms."
       },
       "red-hog-studio": {
         "role": "Game Programmer",

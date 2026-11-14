@@ -1,4 +1,5 @@
 import { Trans, useTranslation } from 'react-i18next'
+import { PiArrowUpRightBold } from 'react-icons/pi'
 import { stats, workExperience, education } from '../data/experience'
 import { engineLabels } from '../data/projects'
 import { useInView } from '../hooks/useInView'
@@ -35,9 +36,21 @@ function TimelineItem({ item, index }) {
           <span className={`engine-badge ${item.engine}`}>{engineLabels[item.engine]}</span>
         )}
       </div>
-      {item.company && (
-        <div className="timeline-company">{item.company}</div>
-      )}
+      {item.company &&
+        (item.companyUrl ? (
+          <a
+            href={item.companyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="timeline-company company-link"
+            aria-label={t('about.companySiteAria', { name: item.company })}
+          >
+            <span>{item.company}</span>
+            <PiArrowUpRightBold className="company-arrow" aria-hidden="true" />
+          </a>
+        ) : (
+          <div className="timeline-company">{item.company}</div>
+        ))}
       <div className="timeline-period">{t(`experience.items.${item.id}.period`)}</div>
       {description && <div className="timeline-description">{description}</div>}
     </div>

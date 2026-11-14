@@ -117,6 +117,7 @@
     "introText": "Sono una <hl>Game Programmer</hl> e lavoro principalmente su <hl>Unreal Engine</hl> e <hl>Unity</hl>, con C++, Blueprint e C#. Dopo la laurea magistrale in <hl>Ingegneria Informatica</hl> ho continuato a imparare costruendo videogiochi: prototipi <hl>indie</hl> in autonomia, progetti in <hl>team</hl>, poi sviluppo in studio su titoli <hl>pubblicati</hl>. Del Game Dev mi appassiona da sempre vedere qualcosa che non esiste diventare <hl>reale</hl>.",
     "experienceTitle": "Esperienza",
     "educationTitle": "Formazione",
+    "companySiteAria": "Sito di {{name}} (si apre in una nuova scheda)",
     "stats": {
       "gamedevYears": "anni nel Game Dev",
       "itYears": "anni nell'IT",
@@ -133,7 +134,7 @@
       "miniclip": {
         "role": "Game Programmer",
         "period": "Set 2024 → Mag 2026",
-        "description": "Implementazione di meccaniche di gameplay e UI con l'esperienza del giocatore come metro di giudizio. Sviluppo di live feature e test automatizzati, con ottimizzazione delle performance per il mobile."
+        "description": "Implementazione di meccaniche di gameplay e UI, sviluppo di live feature e test automatizzati. Ottimizzazione delle performance per piattaforme mobile."
       },
       "red-hog-studio": {
         "role": "Game Programmer",
